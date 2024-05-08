@@ -5,19 +5,19 @@ import "../Foldder-Header/headerMedia.css";
 function header() {
   return (
     <>
-      <header className={styles.header} id="header">
+      <header className={styles.header} id={styles.header}>
         <div className="container" id="container">
-          <div className={styles.headerClass} id="headerClass">
-            <p className={styles.headerClass_P} id="headerClass_P">
+          <div className={styles.headerClass} id={styles.headerClass}>
+            <p className={styles.headerClass_P} id={styles.headerClass_P}>
               Summer Sale For All Swim Suits And Free Express Delivery - OFF
               50%!
             </p>
             <div className={styles.headerSelect}>
-              <a className={styles.headerSelect_A} id="headerSelect_A" href="#">
+              <a className={styles.headerSelect_A} id={styles.headerSelect_A} href="#">
                 ShopNow
               </a>
             </div>
-            <select className={styles.selectHeader} id="selectHeader">
+            <select className={styles.selectHeader} id={styles.selectHeader}>
               <option value="0">English</option>
             </select>
           </div>

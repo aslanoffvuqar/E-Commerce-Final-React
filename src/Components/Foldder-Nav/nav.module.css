@@ -10,6 +10,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 25%;
 }
 .searchIcon {
   font-size: 18px;
@@ -43,10 +44,10 @@ nav {
 }
 .navBar {
   display: flex;
-  width: 38%;
+  width: 50%;
 }
 .navBar_li {
-  width: 100px;
+  margin-left: 70px;
 }
 .navBar_a {
   color: black;
@@ -54,4 +55,85 @@ nav {
 }
 .navBar_a:hover {
   border-bottom: 2px solid gray;
+}
+/* ?1************************************************************* */
+@media only screen and (max-width: 835px) {
+  .nav_h1 {
+    font-size: 20px;
+  }
+  #navBar_a {
+    font-size: 13px;
+  }
+  #inputDivNav {
+    width: 200px;
+    padding: 2px 20px;
+  }
+  #navBar_li {
+    margin-left: 30px;
+  }
+  #searchIcon {
+    font-size: 12px;
+  }
+  #HeartIcon {
+    font-size: 20px;
+  }
+  #ShoppinghIcon {
+    font-size: 19px;
+  }
+  #allInputBox {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 415px) {
+  #container {
+    width: 95%;
+  }
+  #nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  .nav_h1 {
+    font-size: 12px;
+  }
+  #navBar {
+    width: 50%;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+  }
+  #navBar_a {
+    font-size: 9px;
+  }
+  #navBar_li {
+    margin-left: 9px;
+  }
+  #inputDivNav {
+    width: 0px;
+    padding: 2px 2px;
+  }
+  #allInputBox {
+    width: 30%;
+  }
+  #inputDivNav_input {
+    width: 60px;
+    font-size: 5px;
+  }
+  #searchIcon {
+    font-size: 7px;
+  }
+  #HeartIcon {
+    font-size: 10px;
+  }
+  #ShoppinghIcon {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+  #HeartShoppingIcon {
+    position: absolute;
+    top: 15%;
+    left: 92%;
+    width: 30px;
+  }
 }
