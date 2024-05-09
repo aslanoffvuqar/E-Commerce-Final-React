@@ -1,12 +1,26 @@
+.container {
+  width: 80%;
+  margin: auto;
+}
+#container {
+  width: 80%;
+  margin: auto;
+}
 header {
   width: 100%;
   height: 48px;
   background-color: #000;
   display: flex;
 }
+.header_P_A{
+  display: flex;
+  gap: 20px;
+  margin-left: 30%;
+}
 .headerClass {
   display: flex;
-  margin-left: 27%;
+  width: 100%;
+  justify-content: space-between;
 }
 .headerClass_P {
   color: rgb(250, 250, 250);
@@ -26,7 +40,6 @@ header {
   text-decoration-line: underline;
 }
 .selectHeader {
-  margin-left: 37%;
   background-color: #000;
   color: #fff;
   border: none;
@@ -38,6 +51,9 @@ header {
 @media only screen and (max-width: 835px) {
   #headerClass_P {
     font-size: 9px;
+  }
+  #header_P_A{
+    margin-left: 0px;
   }
   #headerSelect_A {
     font-size: 9px;

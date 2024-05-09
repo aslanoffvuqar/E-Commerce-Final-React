@@ -4,6 +4,7 @@ import Header from "./Components/Foldder-Header/Header";
 import Nav from "./Components/Foldder-Nav/Nav";
 import Footer from "./Components/Foldder-Footer/Footer";
 import Home from "./Components/Home";
+import Aside from "./Components/Foldder-Aside/Aside";
 function App() {
   return (
     <BrowserRouter>
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/Home" element={<Home />} />
       </Routes>
+      <Aside/>
       <Footer />
     </BrowserRouter>
   );

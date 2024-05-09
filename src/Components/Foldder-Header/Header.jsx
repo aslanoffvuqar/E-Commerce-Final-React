@@ -6,14 +6,18 @@ function header() {
   return (
     <>
       <header className={styles.header} id={styles.header}>
-        <div className="container" id="container">
+        <div className={styles.container} id={styles.container}>
           <div className={styles.headerClass} id={styles.headerClass}>
-            <p className={styles.headerClass_P} id={styles.headerClass_P}>
-              Summer Sale For All Swim Suits And Free Express Delivery - OFF
-              50%!
-            </p>
-            <div className={styles.headerSelect}>
-              <a className={styles.headerSelect_A} id={styles.headerSelect_A} href="#">
+            <div className={styles.header_P_A} id={styles.header_P_A}>
+              <p className={styles.headerClass_P} id={styles.headerClass_P}>
+                Summer Sale For All Swim Suits And Free Express Delivery - OFF
+                50%!
+              </p>
+              <a
+                className={styles.headerSelect_A}
+                id={styles.headerSelect_A}
+                href="#"
+              >
                 ShopNow
               </a>
             </div>

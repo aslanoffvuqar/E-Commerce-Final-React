@@ -128,7 +128,7 @@ function Footer() {
                     Save $3 with App New User Only
                   </a>
                 </p>
-                <div className={styles.allImgFooter}id="allImgFooter">
+                <div className={styles.allImgFooter} id="allImgFooter">
                   <img
                     src={Qrimg}
                     alt="burda sekil var"
@@ -176,8 +176,10 @@ function Footer() {
             </div>
           </div>
           <hr className={styles.HrFooter} />
-          <div className={styles.logoFooter}id="logoFooter">
-            <span className={styles.logospan} id="logospan">C</span>
+          <div className={styles.logoFooter} id="logoFooter">
+            <span className={styles.logospan} id="logospan">
+              C
+            </span>
             <p className={styles.logo_P} id="logo_P">
               Copyright Rimel 2022. All right reserved
             </p>
