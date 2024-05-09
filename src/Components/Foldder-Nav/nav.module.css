@@ -9,8 +9,7 @@ nav {
 .allInputBox {
   display: flex;
   align-items: center;
-  gap: 24px;
-  width: 22%;
+  width: 25%;
 }
 .searchIcon {
   font-size: 18px;
