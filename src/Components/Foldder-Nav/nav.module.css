@@ -2,9 +2,15 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2% 0;
+  padding: 1% 0;
   margin-top: 1%;
   width: 100%;
+}
+.nav_h1 {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
 }
 .allInputBox {
   display: flex;
@@ -12,16 +18,16 @@ nav {
   width: 23%;
 }
 .searchIcon {
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
 }
 .HeartIcon {
-  font-size: 20px;
+  font-size: 30px;
   cursor: pointer;
+  padding-left: 20px;
 }
 .ShoppinghIcon {
-  font-size: 20px;
-  /* margin-left: 20px; */
+  font-size: 30px;
   padding-left: 20px;
   cursor: pointer;
 }
@@ -33,13 +39,16 @@ nav {
 .inputDivNav {
   display: flex;
   align-items: center;
-  border-radius: 10px;
-  padding: 8px 30px;
+  border-radius: 5px;
+  padding: 10px 20px;
   width: 255px;
+  background-color: #f5f5f5;
 }
 .inputDivNav_input {
   border: none;
   outline: none;
+  background-color: #f5f5f5;
+  font-size: 15px;
 }
 .HrFooter {
   border: 1px solid rgba(128, 128, 128, 0.249);
@@ -57,6 +66,10 @@ nav {
 }
 .navBar_a:hover {
   border-bottom: 2px solid gray;
+}
+
+#selectHeader{
+  display: none;
 }
 /* ?1************************************************************* */
 @media only screen and (max-width: 835px) {
@@ -95,48 +108,23 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
   }
   .nav_h1 {
-    font-size: 12px;
+    font-size: 25px;
+    font-weight: 1000;
+    margin-bottom: 8px;
+    margin-top: 10px;
   }
   #navBar {
-    width: 50%;
-    position: absolute;
-    top: 15%;
-    left: 20%;
+    display: none;
   }
-  #navBar_a {
-    font-size: 9px;
+  #allInputBox{
+    display: none;
   }
-  #navBar_li {
-    margin-left: 9px;
-  }
-  #inputDivNav {
-    width: 0px;
-    padding: 2px 2px;
-  }
-  #allInputBox {
-    width: 30%;
-  }
-  #inputDivNav_input {
-    width: 60px;
-    font-size: 5px;
-  }
-  #searchIcon {
-    font-size: 7px;
-  }
-  #HeartIcon {
-    font-size: 10px;
-  }
-  #ShoppinghIcon {
-    font-size: 10px;
-    margin-left: 5px;
-  }
-  #HeartShoppingIcon {
-    position: absolute;
-    top: 15%;
-    left: 92%;
-    width: 30px;
+  #selectHeader{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

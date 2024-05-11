@@ -78,34 +78,7 @@ header {
 
 @media only screen and (max-width: 415px) {
   #header {
-    height: 30px;
-    position: relative;
+    display: none;
   }
-  #headerClass {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-  }
-  #headerClass_P {
-    font-size: 8px;
-    position: absolute;
-    top: 33%;
-    left: 3%;
-  }
-  #headerSelect_A {
-    font-size: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 30%;
-    left: 75%;
-  }
-  #selectHeader {
-    margin: 0;
-    font-size: 7px;
-    position: absolute;
-    top: 11px;
-    left: 87%;
-  }
+
 }

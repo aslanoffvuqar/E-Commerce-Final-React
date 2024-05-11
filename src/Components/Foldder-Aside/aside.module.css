@@ -40,3 +40,50 @@
   height: 375px;
   margin-left: 30px;
 }
+.iconBars {
+  display: none;
+}
+.mediaIconAndImput {
+  display: none;
+}
+@media only screen and (max-width: 415px) {
+  .asideBox {
+    display: none;
+  }
+  .iconBars {
+    display: flex;
+    font-size: 30px;
+  }
+  .mediaIconAndImput {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .inputDivNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    gap: 10px;
+  }
+  .inputDivNav_input {
+    border: none;
+    outline: none;
+    font-size: 17px;
+    background-color: #f5f5f5;
+  }
+  .HeartIcon,
+  .ShoppinghIcon {
+    font-size: 30px;
+  }
+  .HeartShoppingIcon {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+  }
+ 
+}
