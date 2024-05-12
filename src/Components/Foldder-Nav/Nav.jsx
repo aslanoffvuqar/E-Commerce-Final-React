@@ -9,6 +9,7 @@ import "boxicons";
 import Input from "./Folder-Input/Input";
 import Favorites from "./Folder-Favorites/Favorites";
 import Basket from "./Folder-Basket/Basket";
+import Language from "../Foldder-Header/Folder-Language/Language";
 function Nav() {
   return (
     <>
@@ -44,6 +45,7 @@ function Nav() {
               <Basket />
             </div>
           </div>
+          {/* <Language/> */}
           <select className={styles.selectHeader} id={styles.selectHeader}>
             <option value="0">English</option>
           </select>

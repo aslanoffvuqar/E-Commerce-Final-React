@@ -40,10 +40,10 @@ nav {
 .navBar_a:hover {
   border-bottom: 2px solid gray;
 }
-
 #selectHeader{
   display: none;
 }
+
 /* ?1************************************************************* */
 @media only screen and (max-width: 835px) {
   .nav_h1 {
@@ -88,9 +88,6 @@ nav {
     display: none;
   }
   #selectHeader{
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
   }
 }

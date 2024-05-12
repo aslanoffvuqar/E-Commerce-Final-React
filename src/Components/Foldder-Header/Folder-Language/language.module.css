@@ -1,0 +1,20 @@
+.selectHeader {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 15px;
+  }
+
+
+  @media only screen and (max-width: 415px) {
+    #selectHeader{
+      font-size: 20px;
+      display: flex;
+      visibility:unset;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      color: #000;
+    }
+}
