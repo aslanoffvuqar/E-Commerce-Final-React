@@ -15,172 +15,148 @@ function Footer() {
   return (
     <>
       <footer>
-        <div className={styles.footerBackground} id="footerBackground">
+        <div className={styles.footerBackground} id={styles.footerBackground}>
           <div className="container">
-            <div className={styles.allBoxFooter} id="allBoxFooter">
-              <div className={styles.BoxFooter} id="BoxFooter">
-                <h2 className={styles.h2} id="h2">
+            <div className={styles.allBoxFooter}>
+              <div className={styles.BoxFooter}>
+                <h2 className={styles.Exclusive} responsive="fontSize">
                   Exclusive
                 </h2>
                 <h3>
-                  <a className={styles.a} id="a" href="#">
+                  <a className={styles.a} fontFooterRespons="fontFooterRespons" href="#">
                     Subscribe
                   </a>
                 </h3>
                 <p>
-                  <a className={styles.a} id="a" href="#">
+                  <a className={styles.a} fontFooterRespons="fontFooterRespons" href="#">
                     Get 10% off your first order
                   </a>
                 </p>
-                <div className={styles.inputDivFooter} id="inputDivFooter">
+                <div className={styles.inputDivFooter}>
                   <input
                     type="text"
                     placeholder="Enter your email"
                     className={styles.inputFooter}
-                    id="inputFooter"
                   />
                   <FontAwesomeIcon
                     icon={faPaperPlane}
                     className={styles.faPaperPlane}
-                    id="faPaperPlane"
                   />
                 </div>
               </div>
-              <div className={styles.BoxFooter} id="BoxFooter">
-                <h3 className={styles.h3} id="h3">
+              <div className={styles.BoxFooter}>
+                <h3 className={styles.h3} responsive="fontSize">
                   Support
                 </h3>
                 <p>
-                  <a className={styles.a} id="a" href="#">
+                  <a className={styles.a}  fontFooterRespons="fontFooterRespons" href="#">
                     111 Bijoy sarani, Dhaka, <br /> DH 1515, Bangladesh.
                   </a>
                 </p>
                 <p>
-                  <a className={styles.a} id="a" href="#">
+                  <a className={styles.a}  fontFooterRespons="fontFooterRespons" href="#">
                     exclusive@gmail.com
                   </a>
                 </p>
-                <a className={styles.a} id="a" href="#">
+                <a className={styles.a} fontFooterRespons="fontFooterRespons" href="#">
                   +88015-88888-9999
                 </a>
               </div>
-              <div className={styles.BoxFooter} id="BoxFooter">
-                <h3 className={styles.h3_third} id="h3_third">
+              <div className={styles.BoxFooter}>
+                <h3 className={styles.h3_third} responsive="fontSize">
                   Account
                 </h3>
                 <p>
-                  <a className={styles.a_third} id="a_third" href="#">
+                  <a className={styles.a_third}  fontFooterRespons="fontFooterRespons" href="#">
                     My Account
                   </a>
                 </p>
                 <p>
-                  <a className={styles.a_third} id="a_third" href="#">
+                  <a className={styles.a_third}  fontFooterRespons="fontFooterRespons" href="#">
                     Login / Register
                   </a>
                 </p>
                 <p>
-                  <a className={styles.a_third} id="a_third" href="#">
+                  <a className={styles.a_third}  fontFooterRespons="fontFooterRespons" href="#">
                     Cart
                   </a>
                 </p>
                 <p>
-                  <a className={styles.a_third} id="a_third" href="#">
+                  <a className={styles.a_third}  fontFooterRespons="fontFooterRespons" href="#">
                     Wishlist
                   </a>
                 </p>
                 <p>
-                  <a className={styles.a_third} id="a_third" href="#">
+                  <a className={styles.a_third}  fontFooterRespons="fontFooterRespons" href="#">
                     Shop
                   </a>
                 </p>
               </div>
-              <div className={styles.BoxFooter} id="BoxFooter">
-                <h3 className={styles.h3} id="h3">
+              <div className={styles.BoxFooter}Quick_div="Quick_div">
+                <h3 className={styles.h3} responsive="fontSize">
                   Quick Link
                 </h3>
-                <p>
-                  <a className={styles.a} id="a" href="#">
+                <p className={styles.a} >
+                  <a className={styles.a}  fontFooterRespons="fontFooterRespons"  href="#">
                     Privacy Policy
                   </a>
                 </p>
-                <p>
-                  <a className={styles.a} id="a" href="#">
+                <p className={styles.a} >
+                  <a className={styles.a}  fontFooterRespons="fontFooterRespons"  href="#">
                     Terms Of Use
                   </a>
                 </p>
-                <p>
-                  <a className={styles.a} id="a" href="#">
+                <p className={styles.a} >
+                  <a className={styles.a}  fontFooterRespons="fontFooterRespons"  href="#">
                     FAQ
                   </a>
                 </p>
-                <p>
-                  <a className={styles.a} id="a" href="#">
+                <p className={styles.a} >
+                  <a className={styles.a}  fontFooterRespons="fontFooterRespons"  href="#">
                     Contact
                   </a>
                 </p>
               </div>
-              <div className={styles.BoxFooter} id="BoxFooter">
-                <h3 className={styles.h3} id="h3">
+              <div className={styles.BoxFooter} Download_App="Download_App">
+                <h3 className={styles.h3} responsive="fontSize">
                   Download App
                 </h3>
                 <p>
-                  <a className={styles.Doownload_a} id="Doownload_a" href="#">
+                  <a className={styles.Doownload_a} fontFooterRespons="fontFooterRespons" href="#">
                     Save $3 with App New User Only
                   </a>
                 </p>
-                <div className={styles.allImgFooter} id="allImgFooter">
+                <div className={styles.allImgFooter}>
                   <img
                     src={Qrimg}
                     alt="burda sekil var"
                     className={styles.QrImg}
-                    id="QrImg"
+                    id={styles.QrImg}
                   />
-                  <div className={styles.googleAppImg} id="googleAppImg">
-                    <img
-                      src={googleimg}
-                      alt=""
-                      className={styles.GooglApp}
-                      id="GooglApp"
-                    />
-                    <img
-                      src={AppStore}
-                      alt=""
-                      className={styles.GooglApp}
-                      id="GooglApp"
-                    />
+                  <div className={styles.googleAppImg}>
+                    <img src={googleimg} alt="" className={styles.GooglApp} />
+                    <img src={AppStore} alt="" className={styles.GooglApp} />
                   </div>
                 </div>
-                <div className={styles.allIconFooter} id="allIconFooter">
+                <div className={styles.allIconFooter}>
                   <FontAwesomeIcon
                     icon={faFacebookF}
                     className={styles.icons}
-                    id="icons"
                   />
-                  <FontAwesomeIcon
-                    icon={faTwitter}
-                    className={styles.icons}
-                    id="icons"
-                  />
+                  <FontAwesomeIcon icon={faTwitter} className={styles.icons} />
                   <FontAwesomeIcon
                     icon={faInstagram}
                     className={styles.icons}
-                    id="icons"
                   />
-                  <FontAwesomeIcon
-                    icon={faLinkedin}
-                    className={styles.icons}
-                    id="icons"
-                  />
+                  <FontAwesomeIcon icon={faLinkedin} className={styles.icons} />
                 </div>
               </div>
             </div>
           </div>
           <hr className={styles.HrFooter} />
-          <div className={styles.logoFooter} id="logoFooter">
-            <span className={styles.logospan} id="logospan">
-              C
-            </span>
-            <p className={styles.logo_P} id="logo_P">
+          <div className={styles.logoFooter}>
+            <span className={styles.logospan}>C</span>
+            <p className={styles.logo_P}>
               Copyright Rimel 2022. All right reserved
             </p>
           </div>

@@ -29,7 +29,7 @@ nav {
 }
 .navBar {
   display: flex;
-  width: 37%;
+  width: 30%;
   justify-content: space-between;
 }
 

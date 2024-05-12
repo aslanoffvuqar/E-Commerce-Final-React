@@ -7,7 +7,8 @@ function Input() {
   return (
     <div>
     
-      <div className={styles.inputDivNav} id={styles.inputDivNav}>
+      <div >
+        <form className={styles.inputDivNav} id={styles.inputDivNav} action="#">
         <input
           className={styles.inputDivNav_input}
           id={styles.inputDivNav_input}
@@ -19,6 +20,7 @@ function Input() {
           className={styles.searchIcon}
           id={styles.searchIcon}
         />
+        </form>
       </div>
     </div>
   );
