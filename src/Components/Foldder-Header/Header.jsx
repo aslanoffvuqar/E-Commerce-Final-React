@@ -2,6 +2,7 @@ import React from "react";
 import "./header.css";
 import styles from "./header.module.css";
 import "../Foldder-Header/headerMedia.css";
+import Language from "./Folder-Language/Language";
 function header() {
   return (
     <>
@@ -21,9 +22,7 @@ function header() {
                 ShopNow
               </a>
             </div>
-            <select className={styles.selectHeader} id={styles.selectHeader}>
-              <option value="0">English</option>
-            </select>
+          <Language/>
           </div>
         </div>
       </header>

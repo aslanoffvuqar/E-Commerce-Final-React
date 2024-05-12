@@ -15,51 +15,24 @@ nav {
 .allInputBox {
   display: flex;
   align-items: center;
-  width: 23%;
+  width: 27%;
 }
-.searchIcon {
-  font-size: 20px;
-  cursor: pointer;
-}
-.HeartIcon {
-  font-size: 30px;
-  cursor: pointer;
-  padding-left: 20px;
-}
-.ShoppinghIcon {
-  font-size: 30px;
-  padding-left: 20px;
-  cursor: pointer;
-}
+
+
 .HeartShoppingIcon {
   width: 100%;
   display: flex;
   justify-content: space-between;
-}
-.inputDivNav {
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-  padding: 10px 20px;
-  width: 255px;
-  background-color: #f5f5f5;
-}
-.inputDivNav_input {
-  border: none;
-  outline: none;
-  background-color: #f5f5f5;
-  font-size: 15px;
 }
 .HrFooter {
   border: 1px solid rgba(128, 128, 128, 0.249);
 }
 .navBar {
   display: flex;
-  width: 50%;
+  width: 37%;
+  justify-content: space-between;
 }
-.navBar_li {
-  margin-left: 70px;
-}
+
 .navBar_a {
   color: black;
   font-family: "Poppins", sans-serif;
@@ -79,19 +52,12 @@ nav {
   #navBar_a {
     font-size: 13px;
   }
-  #inputDivNav {
-    width: 200px;
-    padding: 2px 20px;
-  }
+ 
   #navBar_li {
     margin-left: 30px;
   }
-  #searchIcon {
-    font-size: 12px;
-  }
-  #HeartIcon {
-    font-size: 20px;
-  }
+
+ 
   #ShoppinghIcon {
     font-size: 19px;
   }

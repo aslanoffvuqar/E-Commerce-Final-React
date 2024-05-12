@@ -2,13 +2,13 @@ import React from "react";
 import styles from "./nav.module.css";
 import "../Foldder-Nav/navMedia.css";
 import "./nav.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 import { Link } from "react-router-dom";
 import "boxicons";
+
+import Input from "./Folder-Input/Input";
+import Favorites from "./Folder-Favorites/Favorites";
+import Basket from "./Folder-Basket/Basket";
 function Nav() {
   return (
     <>
@@ -38,38 +38,15 @@ function Nav() {
             </li>
           </ul>
           <div className={styles.allInputBox} id={styles.allInputBox}>
-            <div className={styles.inputDivNav} id={styles.inputDivNav}>
-              <input
-                className={styles.inputDivNav_input}
-                id={styles.inputDivNav_input}
-                type="text"
-                placeholder="What are you looking for?"
-              />
-              <FontAwesomeIcon
-                icon={faSearch}
-                className={styles.searchIcon}
-                id={styles.searchIcon}
-              />
-            </div>
-            <div
-              className={styles.HeartShoppingIcon}
-              id={styles.HeartShoppingIcon}
-            >
-              <FontAwesomeIcon
-                icon={faHeart}
-                className={styles.HeartIcon}
-                id={styles.HeartIcon}
-              />
-              <FontAwesomeIcon
-                icon={faCartShopping}
-                className={styles.ShoppinghIcon}
-                id={styles.ShoppinghIcon}
-              />
+            <Input />
+            <div className={styles.HeartShoppingIcon}id={styles.HeartShoppingIcon}>
+              <Favorites />
+              <Basket />
             </div>
           </div>
           <select className={styles.selectHeader} id={styles.selectHeader}>
-              <option value="0">English</option>
-            </select>
+            <option value="0">English</option>
+          </select>
         </nav>
       </div>
 

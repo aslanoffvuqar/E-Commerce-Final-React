@@ -52,7 +52,7 @@
   }
   .iconBars {
     display: flex;
-    font-size: 30px;
+    font-size: 25px;
   }
   .mediaIconAndImput {
     display: flex;
@@ -78,7 +78,7 @@
   }
   .HeartIcon,
   .ShoppinghIcon {
-    font-size: 30px;
+    font-size: 25px;
   }
   .HeartShoppingIcon {
     width: 20%;

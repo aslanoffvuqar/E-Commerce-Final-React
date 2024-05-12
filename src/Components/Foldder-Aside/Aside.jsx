@@ -13,6 +13,9 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 // import Image from "react-bootstrap/Image";
 
 function Aside() {
+
+
+
   return (
     <>
       <div className="container">
@@ -54,22 +57,10 @@ function Aside() {
               </a>
             </div>
             <div className={styles.Line}></div>
-            {/* <Carousel>
-              <Carousel.Item>
-                <Image src={img} text="First slide" />
-                <Carousel.Caption></Carousel.Caption>
-              </Carousel.Item>
-              <Carousel.Item>
-                <Image src={img} text="Second slide" />
-                <Carousel.Caption></Carousel.Caption>
-              </Carousel.Item>
-              <Carousel.Item>
-                <Image src={img} text="Third slide" />
-                <Carousel.Caption></Carousel.Caption>
-              </Carousel.Item>
-            </Carousel> */}
+         
           </div>
         </aside>
+        {/* ****************** Mobil*************************** */}
         <div className={styles.mediaIconAndImput}>
           <FontAwesomeIcon icon={faBars} className={styles.iconBars} />
           <div className={styles.inputDivNav} id={styles.inputDivNav}>
@@ -101,6 +92,7 @@ function Aside() {
               />
             </div>
         </div>
+        {/* ****************** Mobil*************************** */}
       </div>
     </>
   );
