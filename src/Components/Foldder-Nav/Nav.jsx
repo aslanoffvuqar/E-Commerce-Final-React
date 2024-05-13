@@ -47,7 +47,7 @@ function Nav() {
           </div>
           {/* <Language/> */}
           <select className={styles.selectHeader} id={styles.selectHeader}>
-            <option value="0">English</option>
+            <option value="0">En</option>
           </select>
         </nav>
       </div>
