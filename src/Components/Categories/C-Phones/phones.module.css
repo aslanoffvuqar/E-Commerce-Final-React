@@ -1,0 +1,26 @@
+.PhonesBox {
+  width: 180px;
+  height: 150px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: color 0.9s ease, 0.9s ease;
+}
+.PhonesBox:hover {
+  background-color: #db4444;
+  color: #fff;
+  transition: color 0.9s ease, 0.9s ease;
+}
+.Phones {
+  width: 56px;
+  height: 56px;
+}
+.PhonesCatogori {
+  font-family: Poppins;
+}

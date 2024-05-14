@@ -6,6 +6,7 @@ import Footer from "./Components/Foldder-Footer/Footer";
 import Home from "./Components/Home";
 import Aside from "./Components/Foldder-Aside/Aside";
 import MainCarousel from "./Components/Folder-Main/MainCarosel";
+import Categories from "./Components/Categories/Categories";
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +17,7 @@ function App() {
       </Routes>
       <Aside/>
       {/* <MainCarousel/> */}
+      <Categories/>
 
       <Footer />
     </BrowserRouter>

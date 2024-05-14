@@ -1,0 +1,27 @@
+.logoToday {
+  color: rgb(219, 68, 68);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.BrowseCategory {
+  color: rgb(0, 0, 0);
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 4%;
+  margin-top: 20px;
+}
+.iconLeftCategori {
+  width: 24px;
+  height: 24px;
+  bottom: 23.91%;
+}
+.HrFooter {
+  border: 1px solid rgba(128, 128, 128, 0.249);
+  margin-bottom: 60px;
+}
