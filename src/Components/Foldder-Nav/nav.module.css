@@ -40,51 +40,27 @@ nav {
 .navBar_a:hover {
   border-bottom: 2px solid gray;
 }
-#selectHeader{
+.selectHeader{
   display: none;
 }
 
 /* ?1************************************************************* */
-@media only screen and (max-width: 835px) {
-  .nav_h1 {
-    font-size: 20px;
-  }
-  #navBar_a {
-    font-size: 13px;
-  }
- 
-  #navBar_li {
-    margin-left: 30px;
-  }
 
- 
-  #ShoppinghIcon {
-    font-size: 19px;
-  }
-  #allInputBox {
-    width: 45%;
-    gap: 10px;
-  }
-}
 @media only screen and (max-width: 415px) {
   #container {
-    width: 95%;
+    width: 91%;
   }
-  #nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+
   .nav_h1 {
     font-size: 25px;
     font-weight: 1000;
     margin-bottom: 8px;
     margin-top: 10px;
   }
-  #navBar {
+  .navBar {
     display: none;
   }
-  #allInputBox{
+  .allInputBox{
     display: none;
   }
   #selectHeader{

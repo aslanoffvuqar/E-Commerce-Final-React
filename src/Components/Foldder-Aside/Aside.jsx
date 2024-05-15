@@ -1,13 +1,15 @@
 import React from "react";
-import styles from "../Foldder-Aside/aside.module.css";
+import Asidestyles from "../Foldder-Aside/aside.module.css";
 import "../Foldder-Aside/aside.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+// import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import Slider from "./Slider/Slider";
+import { SlBasket } from "react-icons/sl";
+
 // import img from "../Foldder-Aside/Aside-Img/Frame 560.png";
 
 // import Carousel from "react-bootstrap/Carousel";
@@ -18,77 +20,76 @@ function Aside() {
     <>
       <div className="container">
         <div className="flex w-full gap-20">
-          <aside className={styles.asideBox}>
-            <div className={styles.allBox}>
-              <div className={styles.asideDiv}>
-                <a className={styles.a} href="#">
+          <aside className={Asidestyles.asideBox}>
+            <div className={Asidestyles.allBox}>
+              <div className={Asidestyles.asideDiv}>
+                <a className={Asidestyles.a} href="#">
                   Woman’s Fashion
-                  <span className={styles.a_icon}>
+                  <span className={Asidestyles.a_icon}>
                     <FontAwesomeIcon icon={faChevronRight} />
                   </span>
                 </a>
-                <a className={styles.a} href="#">
+                <a className={Asidestyles.a} href="#">
                   Men’s Fashion
-                  <span className={styles.a_icon2}>
+                  <span className={Asidestyles.a_icon2}>
                     <FontAwesomeIcon icon={faChevronRight} />
                   </span>
                 </a>
-                <a className={styles.a} href="#">
+                <a className={Asidestyles.a} href="#">
                   Electronics
                 </a>
-                <a className={styles.a} href="#">
+                <a className={Asidestyles.a} href="#">
                   Home & Lifestyle
                 </a>
-                <a className={styles.a} href="#">
+                <a className={Asidestyles.a} href="#">
                   Medicine
                 </a>
-                <a className={styles.a} href="#">
+                <a className={Asidestyles.a} href="#">
                   Sports & Outdoor
                 </a>
-                <a className={styles.a} href="#">
+                <a className={Asidestyles.a} href="#">
                   Baby’s & Toys
                 </a>
-                <a className={styles.a} href="#">
+                <a className={Asidestyles.a} href="#">
                   Groceries & Pets
                 </a>
-                <a className={styles.a} href="#">
+                <a className={Asidestyles.a} href="#">
                   Health & Beauty
                 </a>
               </div>
-              <div className={styles.Line}></div>
+              <div className={Asidestyles.Line}></div>
             </div>
           </aside>
           <Slider />
         </div>
         {/* ****************** Mobil*************************** */}
-        <div className={styles.mediaIconAndImput}>
-          <FontAwesomeIcon icon={faBars} className={styles.iconBars} />
-          <div className={styles.inputDivNav} id={styles.inputDivNav}>
+        <div className={Asidestyles.mediaIconAndImput}>
+          <FontAwesomeIcon icon={faBars} className={Asidestyles.iconBars} />
+          <div className={Asidestyles.inputDivNav} id={Asidestyles.inputDivNav}>
             <input
-              className={styles.inputDivNav_input}
-              id={styles.inputDivNav_input}
+              className={Asidestyles.inputDivNav_input}
+              id={Asidestyles.inputDivNav_input}
               type="text"
               placeholder="What are you looking for?"
             />
             <FontAwesomeIcon
               icon={faSearch}
-              className={styles.searchIcon}
-              id={styles.searchIcon}
+              className={Asidestyles.searchIcon}
+              id={Asidestyles.searchIcon}
             />
           </div>
           <div
-            className={styles.HeartShoppingIcon}
-            id={styles.HeartShoppingIcon}
+            className={Asidestyles.HeartShoppingIcon}
+            id={Asidestyles.HeartShoppingIcon}
           >
             <FontAwesomeIcon
               icon={faHeart}
-              className={styles.HeartIcon}
-              id={styles.HeartIcon}
+              className={Asidestyles.HeartIcon}
+              id={Asidestyles.HeartIcon}
             />
-            <FontAwesomeIcon
-              icon={faCartShopping}
-              className={styles.ShoppinghIcon}
-              id={styles.ShoppinghIcon}
+            <SlBasket
+              className={Asidestyles.ShoppinghIcon}
+              id={Asidestyles.ShoppinghIcon}
             />
           </div>
         </div>

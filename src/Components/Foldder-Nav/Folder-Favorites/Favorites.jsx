@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./favorites.module.css";
+import Favoritesstyles from "./favorites.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 
@@ -8,8 +8,8 @@ function Favorites() {
     <div>
       <FontAwesomeIcon
         icon={faHeart}
-        className={styles.HeartIcon}
-        id={styles.HeartIcon}
+        className={Favoritesstyles.HeartIcon}
+        id={Favoritesstyles.HeartIcon}
       />
     </div>
   );

@@ -7,7 +7,6 @@
   display: flex;
   justify-content: space-between;
   padding-top: 7%;
-  height: 55vh;
 }
 .inputDivFooter {
   border: 1px solid rgb(250, 250, 250);
@@ -165,6 +164,9 @@
   letter-spacing: 0%;
   text-align: left;
 }
+.hrAllBox{
+margin-top: 90px;
+}
 @media only screen and (max-width: 415px) {
   #footerBackground {
     height: 108rem;
@@ -215,7 +217,7 @@
   .allIconFooter{
     gap: 62px;
   }
-.HrFooter{
-  margin-top: 320%;
+.hrAllBox{
+  margin-top: 180px;
 }
 }

@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./language.module.css";
+import Languagestyles from "./language.module.css";
 
 function Language() {
   return (
     <div>
-      <select className={styles.selectHeader} id={styles.selectHeader}>
+      <select className={Languagestyles.selectHeader} id={Languagestyles.selectHeader}>
         <option value="0">English</option>
       </select>
     </div>

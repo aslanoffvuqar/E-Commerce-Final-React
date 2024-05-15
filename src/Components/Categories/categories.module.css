@@ -25,3 +25,24 @@
   border: 1px solid rgba(128, 128, 128, 0.249);
   margin-bottom: 60px;
 }
+#allBoxCategoriMobil{
+  display: none;
+}
+@media only screen and (max-width: 415px) {
+ 
+  .logoToday {
+    font-size: 23px;
+  }
+  .BrowseCategory {
+    font-size: 35px;
+  }
+  #allBoxCategori{
+    display: none;
+  }
+  #allBoxCategoriMobil{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+}
