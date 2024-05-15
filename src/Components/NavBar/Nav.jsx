@@ -1,6 +1,6 @@
 import React from "react";
 import Navstyles from "./nav.module.css";
-import "../Foldder-Nav/navMedia.css";
+import "../NavBar/navMedia.css";
 import "./nav.css";
 
 import { Link } from "react-router-dom";
@@ -9,7 +9,7 @@ import "boxicons";
 import Input from "./Folder-Input/Input";
 import Favorites from "./Folder-Favorites/Favorites";
 import Basket from "./Folder-Basket/Basket";
-import Language from "../Foldder-Header/Folder-Language/Language";
+import Language from "../HeaderBar/Folder-Language/Language";
 function Nav() {
   return (
     <>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.css";
 import Headerstyles from "./header.module.css";
-import "../Foldder-Header/headerMedia.css";
+import "../HeaderBar/headerMedia.css";
 import Language from "./Folder-Language/Language";
 function header() {
   return (

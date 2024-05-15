@@ -1,16 +1,16 @@
 import React from "react";
 import Footerstyles from "./footer.module.css";
-import "../Foldder-Footer/footer.css";
-import "../Foldder-Footer/footerMedia.css";
+import "../FooterBar/footer.css";
+import "../FooterBar/footerMedia.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import Qrimg from "../Foldder-Footer/Footer-Imge/Qrcode 1.png";
-import googleimg from "../Foldder-Footer/Footer-Imge/GooglePlay.png";
-import AppStore from "../Foldder-Footer/Footer-Imge/AppStore.png";
+import Qrimg from "../FooterBar/Footer-Imge/Qrcode 1.png";
+import googleimg from "../FooterBar/Footer-Imge/GooglePlay.png";
+import AppStore from "../FooterBar/Footer-Imge/AppStore.png";
 function Footer() {
   return (
     <>

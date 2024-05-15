@@ -1,6 +1,6 @@
 import React from "react";
-import Asidestyles from "../Foldder-Aside/aside.module.css";
-import "../Foldder-Aside/aside.css";
+import Asidestyles from "../AsideBar/aside.module.css"
+import "../AsideBar/aside.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +10,7 @@ import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import Slider from "./Slider/Slider";
 import { SlBasket } from "react-icons/sl";
 
-// import img from "../Foldder-Aside/Aside-Img/Frame 560.png";
+// import img from "../Aside/Aside-Img/Frame 560.png";
 
 // import Carousel from "react-bootstrap/Carousel";
 // import Image from "react-bootstrap/Image";
