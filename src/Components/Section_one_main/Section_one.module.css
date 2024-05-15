@@ -10,9 +10,9 @@
 
 .text_span {
     padding: 10px 8px;
-    background-color: red;
+    background-color:  rgb(219, 68, 68);
     border-radius: 5px;
-    color: red;
+    color: rgb(219, 68, 68);
 
 }
 
@@ -21,7 +21,7 @@
     align-items: center;
     gap: 10px;
     font-family: Inter;
-    color: red;
+    color:  rgb(219, 68, 68);
     font-weight: 600;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .span_red {
-    color: red;
+    color:  rgb(219, 68, 68);
     font: 500 30px Inter;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .product_value {
-    color: red;
+    color:  rgb(219, 68, 68);
     margin: 0px 10px 0px 0px;
 }
 
@@ -96,7 +96,7 @@
 }
 
 .svg_product:hover {
-    background-color: red;
+    background-color:  rgb(219, 68, 68);
     cursor: pointer;
     transition: color 0.5s ease, 0.5s ease;
 }
@@ -110,7 +110,7 @@
 
 .product_span {
     padding: 0px 5px;
-    background: red;
+    background:  rgb(219, 68, 68);
     height: 25px;
     border-radius: 5px;
     color: white;
@@ -179,7 +179,7 @@
 
 .all_products {
     border-radius: 5px;
-    background: red;
+    background:  rgb(219, 68, 68);
     padding: 14px 40px;
     color: white;
     font: 500 17px Inter;
