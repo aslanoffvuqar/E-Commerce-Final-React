@@ -1,0 +1,32 @@
+.WatchBox {
+  width: 180px;
+  height: 150px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: color 0.9s ease, 0.9s ease;
+}
+.WatchBox:hover {
+  background-color: #db4444;
+  color: #fff;
+  transition: color 0.9s ease, 0.9s ease;
+}
+.SmartWatch {
+  width: 56px;
+  height: 56px;
+}
+.SmartWatchCatogori {
+  font-family: Poppins;
+}
+@media only screen and (max-width: 415px) {
+  .WatchBox {
+    width: 160px;
+    height: 130px;
+  }
+}

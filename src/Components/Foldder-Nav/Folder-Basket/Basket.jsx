@@ -1,16 +1,15 @@
 import React from "react";
-import styles from "./basket.module.css";
+import Basketstyles from "./basket.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-
+import { SlBasket } from "react-icons/sl";
 function Basket() {
   return (
     <div>
-        <FontAwesomeIcon
-          icon={faCartShopping}
-          className={styles.ShoppinghIcon}
-          id={styles.ShoppinghIcon}
-        />
+      <SlBasket
+        className={Basketstyles.ShoppinghIcon}
+        id={Basketstyles.ShoppinghIcon}
+      />
     </div>
   );
 }

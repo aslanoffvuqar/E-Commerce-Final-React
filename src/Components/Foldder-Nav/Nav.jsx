@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./nav.module.css";
+import Navstyles from "./nav.module.css";
 import "../Foldder-Nav/navMedia.css";
 import "./nav.css";
 
@@ -13,46 +13,46 @@ import Language from "../Foldder-Header/Folder-Language/Language";
 function Nav() {
   return (
     <>
-      <div className="container" id={styles.container}>
-        <nav className={styles.nav} id={styles.nav}>
-          <h1 className={styles.nav_h1}>Exclusive</h1>
-          <ul className={styles.navBar} id={styles.navBar}>
-            <li className={styles.navBar_li} id={styles.navBar_li}>
-              <Link className={styles.navBar_a} id={styles.navBar_a} to="/Home">
+      <div className="container" id={Navstyles.container}>
+        <nav className={Navstyles.nav}>
+          <h1 className={Navstyles.nav_h1}>Exclusive</h1>
+          <ul className={Navstyles.navBar}>
+            <li className={Navstyles.navBar_li}>
+              <Link className={Navstyles.navBar_a} to="/Home">
                 Home
               </Link>
             </li>
-            <li className={styles.navBar_li} id={styles.navBar_li}>
-              <a className={styles.navBar_a} id={styles.navBar_a} href="#">
+            <li className={Navstyles.navBar_li}>
+              <a className={Navstyles.navBar_a} href="#">
                 Contact
               </a>
             </li>
-            <li className={styles.navBar_li} id={styles.navBar_li}>
-              <a className={styles.navBar_a} id={styles.navBar_a} href="#">
+            <li className={Navstyles.navBar_li}>
+              <a className={Navstyles.navBar_a} href="#">
                 About
               </a>
             </li>
-            <li className={styles.navBar_li} id={styles.navBar_li}>
-              <a className={styles.navBar_a} id={styles.navBar_a} href="#">
+            <li className={Navstyles.navBar_li}>
+              <a className={Navstyles.navBar_a} href="#">
                 Sign Up
               </a>
             </li>
           </ul>
-          <div className={styles.allInputBox} id={styles.allInputBox}>
+          <div className={Navstyles.allInputBox}>
             <Input />
-            <div className={styles.HeartShoppingIcon}id={styles.HeartShoppingIcon}>
+            <div className={Navstyles.HeartShoppingIcon}>
               <Favorites />
               <Basket />
             </div>
           </div>
           {/* <Language/> */}
-          <select className={styles.selectHeader} id={styles.selectHeader}>
-            <option value="0">English</option>
+          <select className={Navstyles.selectHeader}id={Navstyles.selectHeader}>
+            <option value="0">En</option>
           </select>
         </nav>
       </div>
 
-      <hr className={styles.HrFooter} />
+      <hr className={Navstyles.HrFooter} />
     </>
   );
 }
