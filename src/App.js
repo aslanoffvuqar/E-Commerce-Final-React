@@ -6,7 +6,10 @@ import Footer from "./Components/Foldder-Footer/Footer";
 import Home from "./Components/Home";
 import Aside from "./Components/Foldder-Aside/Aside";
 import MainCarousel from "./Components/Folder-Main/MainCarosel";
+
+import Section_one from "./Components/Section_one_main/Section_one";
 import Categories from "./Components/Categories/Categories";
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,11 +18,14 @@ function App() {
       <Routes>
         <Route path="/Home" element={<Home />} />
       </Routes>
-      <Aside/>
+      <Aside />
       {/* <MainCarousel/> */}
+
+      <Section_one />
       <Categories/>
 
       <Footer />
+
     </BrowserRouter>
   );
 }
