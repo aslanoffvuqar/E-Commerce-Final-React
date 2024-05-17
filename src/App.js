@@ -9,6 +9,7 @@ import Aside from "./Components/AsideBar/Aside";
 import Section_one from "./Components/Section_one_main/Section_one";
 import Categories from "./Components/Categories/Categories";
 import SectionFour from "./Components/Section_four_main/SectionFour";
+import NewArrival from "./Components/NewArrivalBar/NewArrival";
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
       <Categories />
 
       <SectionFour />
+
+      <NewArrival/>
       <Footer />
     </BrowserRouter>
   );

@@ -1,0 +1,97 @@
+.logoToday {
+  color: rgb(219, 68, 68);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.BrowseCategory {
+  color: rgb(0, 0, 0);
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 4%;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+.playStationbackground {
+  width: 700px;
+  height: 600px;
+  border-radius: 4px;
+  background: rgb(0, 0, 0);
+  margin-bottom: 40px;
+}
+.womensBackground {
+  width: 700px;
+  height: 284px;
+  border-radius: 4px;
+  background: rgb(13, 13, 13);
+  position: relative;
+  margin-bottom: 32px;
+}
+.speakersBackground {
+  width: 335px;
+  height: 284px;
+  border-radius: 4px;
+  background: #1a1a1a;
+  position: relative;
+}
+.perfumeBackground {
+  width: 335px;
+  height: 284px;
+  border-radius: 4px;
+  background: #2e2e2e;
+  position: relative;
+}
+.DELIVERY {
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  margin-bottom: 8px;
+}
+.DELIVERYText {
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+@media only screen and (max-width: 415px) {
+  .BrowseCategory {
+    margin-bottom: 30px;
+  }
+  #NewArrivalBar {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+  .playStationbackground {
+    width: 100%;
+    height: 440.5px;
+    margin-bottom: 33px;
+  }
+  .womensBackground {
+    width: 100%;
+    height: 231px;
+  }
+  .speakersBackground {
+    width: 355px;
+    height: 284px;
+  }
+  #speakAndperfum {
+    gap: 15px;
+  }
+  #sectionBar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    gap: 40px;
+  }
+}
