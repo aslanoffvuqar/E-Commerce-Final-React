@@ -17,22 +17,22 @@ export default function Section_one() {
                     <div className={styles.product_whatc}>
                         <div>
                             <span className={styles.whatc_span}>Days</span>
-                            <h2>03</h2>
+                            <h2 className={styles.num}>03</h2>
                         </div>
                         <span className={styles.span_red}>:</span>
                         <div>
                             <span className={styles.whatc_span}>Hours</span>
-                            <h2>23</h2>
+                            <h2 className={styles.num}>23</h2>
                         </div>
                         <span className={styles.span_red}>:</span>
                         <div>
                             <span className={styles.whatc_span}>Minuts</span>
-                            <h2>19</h2>
+                            <h2 className={styles.num}>19</h2>
                         </div>
                         <span className={styles.span_red}>:</span>
                         <div>
                             <span className={styles.whatc_span}>Seconds</span>
-                            <h2>56</h2>
+                            <h2 className={styles.num}>56</h2>
                         </div>
                     </div>
                 </div>
@@ -309,6 +309,7 @@ export default function Section_one() {
                 <div className={styles.all_products_div}>
                    <a className={styles.all_products} href="#">View Products All</a>
                 </div>
+                <hr className={styles.HrFooter} />
             </div>
 
 
