@@ -5,10 +5,10 @@ import Nav from "./Components/NavBar/Nav";
 import Footer from "./Components/FooterBar/Footer";
 import Home from "./Components/Home";
 import Aside from "./Components/AsideBar/Aside";
-import MainCarousel from "./Components/Folder-Main/MainCarosel";
 
 import Section_one from "./Components/Section_one_main/Section_one";
 import Categories from "./Components/Categories/Categories";
+import SectionFour from "./Components/Section_four_main/SectionFour";
 
 function App() {
   return (
@@ -22,10 +22,10 @@ function App() {
       {/* <MainCarousel/> */}
 
       <Section_one />
-      <Categories/>
+      <Categories />
 
+      <SectionFour />
       <Footer />
-
     </BrowserRouter>
   );
 }
