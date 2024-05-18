@@ -25,9 +25,10 @@
   margin-bottom: 40px;
   transition: filter 0.3s ease;
   cursor: pointer;
+  filter: blur(1.5px) brightness(70%);
 }
 .playStationbackground:hover {
-  filter: blur(1.5px) brightness(70%);
+  filter: blur(0px);
 }
 .womensBackground {
   width: 700px;
@@ -38,9 +39,10 @@
   margin-bottom: 32px;
   transition: filter 0.3s ease;
   cursor: pointer;
+  filter: blur(1.5px) brightness(70%);
 }
 .womensBackground:hover {
-  filter: blur(1.5px) brightness(70%);
+  filter: blur(0px);
 }
 .speakersBackground {
   width: 335px;
@@ -50,9 +52,10 @@
   position: relative;
   transition: filter 0.3s ease;
   cursor: pointer;
+  filter: blur(1.5px) brightness(70%);
 }
 .speakersBackground:hover {
-  filter: blur(1.5px) brightness(70%);
+  filter: blur(0px);
 }
 .perfumeBackground {
   width: 335px;
@@ -62,9 +65,10 @@
   position: relative;
   transition: filter 0.3s ease;
   cursor: pointer;
+  filter: blur(1.5px) brightness(70%);
 }
 .perfumeBackground:hover {
-  filter: blur(1.5px) brightness(70%);
+  filter: blur(0px);
 }
 .DELIVERY {
   color: rgb(0, 0, 0);
