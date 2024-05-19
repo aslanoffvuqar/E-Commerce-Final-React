@@ -1,0 +1,48 @@
+
+.callNum {
+    color: rgb(0, 0, 0);
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  .callText {
+    color: rgb(0, 0, 0);
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+  .callNumText {
+    color: rgb(0, 0, 0);
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+  }
+  .line {
+    width: 270px;
+    border: 1px solid #7f7f7f;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  .Emails {
+    margin-bottom: 16px;
+  }
+  .AllBoxOne {
+    border-radius: 4px;
+    box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+    background: rgb(255, 255, 255);
+    width: 340px;
+    height: 457px;
+    padding: 40px 35px 51px 35px;
+  }
+  @media only screen and (max-width: 415px) {
+    #transitionAbout {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  
