@@ -19,7 +19,7 @@ function Aside() {
   return (
     <>
       <div className="container">
-        <div className="flex w-full gap-20">
+        <div className="flex w-full justify-between	">
           <aside className={Asidestyles.asideBox}>
             <div className={Asidestyles.allBox}>
               <div className={Asidestyles.asideDiv}>
