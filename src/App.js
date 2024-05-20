@@ -10,8 +10,12 @@ import Section_one from "./Components/Section_one_main/Section_one";
 import Categories from "./Components/Categories/Categories";
 import SectionFour from "./Components/Section_four_main/SectionFour";
 import NewArrival from "./Components/NewArrivalBar/NewArrival";
+
 import BestProducts from "./Components/Best_product/BestProduct";
 import ExploreProduct from "./Components/Explore_product/ExploreProduct";
+
+import Contact from "./Components/Contact/Contact";
+
 
 function AppContent() {
   const location = useLocation();
@@ -22,8 +26,10 @@ function AppContent() {
       <Routes>
         <Route path="/Home" element={<Home />} />
         <Route path="/About" element={<About />} />
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
-      {location.pathname !== "/About" && (
+      {location.pathname !== "/About" &&
+      location.pathname !== "/Contact" && (
         <>
           <Aside />
           <Section_one />

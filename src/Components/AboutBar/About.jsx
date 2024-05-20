@@ -14,15 +14,16 @@ import WillSmith from "./AboutImg/Will Smith.png";
 import { RxTwitterLogo } from "react-icons/rx";
 import { FaInstagram } from "react-icons/fa";
 import { RiLinkedinLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
     <div>
       <div className="container">
         <div className="flex gap-1 mt-20	mb-20" id={Aboutstyles.transitionAbout}>
-          <span className="text-gray-600	text-sm	font-normal	leading-5	">
+          <Link to="/Home" className="text-gray-600	text-sm	font-normal	leading-5	">
             Home /
-          </span>
+          </Link>
           <p className="text-sm	font-medium		leading-5	">About</p>
         </div>
       </div>

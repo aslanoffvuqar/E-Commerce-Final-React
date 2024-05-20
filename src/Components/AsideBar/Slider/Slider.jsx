@@ -9,8 +9,8 @@ function Slider() {
     <div>
       <div className={Sliderstyles.sliderBackground}>
         <div className={Sliderstyles.allbox}>
-          <div>
-            <div className="flex items-center gap-7 pt-20	">
+          <div className="pl-16	">
+            <div className="flex items-center gap-7 pt-14		">
               <img src={IphoneLogo} alt="" />
               <p className={Sliderstyles.IphoneSeria}>iPhone 14 Series</p>
             </div>
@@ -24,7 +24,7 @@ function Slider() {
               </span>
             </a>
           </div>
-          <div className="pt-10">
+          <div className="pt-4	">
             <img src={Iphone14Pro} alt="" />
           </div>
         </div>

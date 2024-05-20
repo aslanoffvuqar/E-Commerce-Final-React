@@ -1,3 +1,4 @@
+
 import React from "react";
 import Navstyles from "./nav.module.css";
 import "../NavBar/navMedia.css";
@@ -23,9 +24,9 @@ function Nav() {
               </Link>
             </li>
             <li className={Navstyles.navBar_li}>
-              <a className={Navstyles.navBar_a} href="#">
+              <Link className={Navstyles.navBar_a} to="/Contact">
                 Contact
-              </a>
+              </Link>
             </li>
             <li className={Navstyles.navBar_li}>
               <Link className={Navstyles.navBar_a} to="/About">
