@@ -44,13 +44,15 @@
   background: rgb(255, 255, 255);
   width: 100%;
   height: 457px;
-  padding: 40px 32px 40px 31px;
   margin-bottom: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .YourName {
   border-radius: 4px;
   background: rgb(245, 245, 245);
-  width: 300px;
+  width: 235px;
   height: 50px;
   padding: 13px 118px 13px 16px;
 }
@@ -68,8 +70,11 @@
   width: 100%;
   gap: 16px;
 }
+.formBox {
+  width: 737px;
+}
 .YourMassage {
-  width: 100%;
+  width: 737px;
   height: 207px;
   background: rgb(245, 245, 245);
   margin-top: 32px;
@@ -83,6 +88,11 @@
   overflow: hidden;
   outline: none;
   border: none;
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 .SendButton {
   border-radius: 4px;

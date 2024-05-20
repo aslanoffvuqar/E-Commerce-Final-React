@@ -1,5 +1,5 @@
 .container {
-    width: 90%;
+    width: 80%;
     margin: auto;
 
 }
@@ -212,4 +212,5 @@
     display: flex;
     gap: 30px;
     margin: 0px 0px 50px;
+    justify-content: space-evenly;
 }
