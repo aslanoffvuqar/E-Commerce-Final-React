@@ -194,16 +194,16 @@
   padding: 14px 40px;
   color: white;
   font: 500 17px Inter;
+  transition: color 0.5s ease, 0.5s ease;
 }
 
 .all_products_div {
   display: flex;
   justify-content: center;
   margin: 35px 0px;
-  transition: color 0.5s ease, 0.5s ease;
 }
 
-.all_products_div:hover {
+.all_products:hover {
   transform: scale(1.1);
 }
 
