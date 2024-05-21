@@ -16,10 +16,50 @@ import { FaInstagram } from "react-icons/fa";
 import { RiLinkedinLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
+// mobil
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { SlBasket } from "react-icons/sl";
+// mobil
 function About() {
   return (
     <div>
       <div className="container">
+         {/* ****************** Mobil*************************** */}
+         <div className={Aboutstyles.mediaIconAndImput}>
+          <FontAwesomeIcon icon={faBars} className={Aboutstyles.iconBars} />
+          <div className={Aboutstyles.inputDivNav} id={Aboutstyles.inputDivNav}>
+            <input
+              className={Aboutstyles.inputDivNav_input}
+              id={Aboutstyles.inputDivNav_input}
+              type="text"
+              placeholder="What are you looking for?"
+            />
+            <FontAwesomeIcon
+              icon={faSearch}
+              className={Aboutstyles.searchIcon}
+              id={Aboutstyles.searchIcon}
+            />
+          </div>
+          <div
+            className={Aboutstyles.HeartShoppingIcon}
+            id={Aboutstyles.HeartShoppingIcon}
+          >
+            <FontAwesomeIcon
+              icon={faHeart}
+              className={Aboutstyles.HeartIcon}
+              id={Aboutstyles.HeartIcon}
+            />
+            <SlBasket
+              className={Aboutstyles.ShoppinghIcon}
+              id={Aboutstyles.ShoppinghIcon}
+            />
+          </div>
+        </div>
+        {/* ****************** Mobil*************************** */}
         <div className="flex gap-1 mt-20	mb-20" id={Aboutstyles.transitionAbout}>
           <Link to="/Home" className="text-gray-600	text-sm	font-normal	leading-5	">
             Home /

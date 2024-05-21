@@ -59,7 +59,12 @@
   font-weight: 400;
   line-height: 21px;
 }
-
+.mediaIconAndImput {
+  display: none;
+}
+.iconBars {
+  display: none;
+}
 @media only screen and (max-width: 415px) {
   #displayColum {
     display: flex;
@@ -102,4 +107,47 @@
     margin-left: 0;
     padding: 0 20px 0 20px;
   }
+  /* mobil */
+  .inputDivNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f5f5f5;
+    gap: 10px;
+  }
+  .inputDivNav_input {
+    border: none;
+    outline: none;
+    font-size: 17px;
+    background-color: #f5f5f5;
+  }
+  .inputDivNav_input {
+    border: none;
+    outline: none;
+    font-size: 17px;
+    background-color: #f5f5f5;
+  }
+  .HeartShoppingIcon {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .HeartIcon,
+  .ShoppinghIcon {
+    font-size: 20px;
+  }
+  .mediaIconAndImput {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .iconBars {
+    display: flex;
+    font-size: 20px;
+  }
+  /* mobil */
 }
