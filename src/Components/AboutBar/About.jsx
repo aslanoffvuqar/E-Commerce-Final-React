@@ -29,7 +29,7 @@ function About() {
       </div>
       <div className="	flex justify-between	" id={Aboutstyles.displayColum}>
         <div className="flex ">
-          <div className="mt-28	ml-40	">
+          <div className="mt-28	ml-40	" id={Aboutstyles.mobilText}>
             <h1 className={Aboutstyles.Story}>Our Story</h1>
             <p className={Aboutstyles.StoryText}>
               Launced in 2015, Exclusive is South Asia’s premier online shopping{" "}

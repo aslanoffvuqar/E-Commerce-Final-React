@@ -2,10 +2,49 @@ import React from "react";
 import Contactstyles from "./contact.module.css";
 import { Link } from "react-router-dom";
 import { BsTelephone } from "react-icons/bs";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { SlBasket } from "react-icons/sl";
+
 function Contact() {
   return (
     <div>
       <div className="container">
+         {/* ****************** Mobil*************************** */}
+         <div className={Contactstyles.mediaIconAndImput}>
+          <FontAwesomeIcon icon={faBars} className={Contactstyles.iconBars} />
+          <div className={Contactstyles.inputDivNav} id={Contactstyles.inputDivNav}>
+            <input
+              className={Contactstyles.inputDivNav_input}
+              id={Contactstyles.inputDivNav_input}
+              type="text"
+              placeholder="What are you looking for?"
+            />
+            <FontAwesomeIcon
+              icon={faSearch}
+              className={Contactstyles.searchIcon}
+              id={Contactstyles.searchIcon}
+            />
+          </div>
+          <div
+            className={Contactstyles.HeartShoppingIcon}
+            id={Contactstyles.HeartShoppingIcon}
+          >
+            <FontAwesomeIcon
+              icon={faHeart}
+              className={Contactstyles.HeartIcon}
+              id={Contactstyles.HeartIcon}
+            />
+            <SlBasket
+              className={Contactstyles.ShoppinghIcon}
+              id={Contactstyles.ShoppinghIcon}
+            />
+          </div>
+        </div>
+        {/* ****************** Mobil*************************** */}
         <div
           className="flex gap-1 mt-20	mb-20"
           id={Contactstyles.transitionAbout}
