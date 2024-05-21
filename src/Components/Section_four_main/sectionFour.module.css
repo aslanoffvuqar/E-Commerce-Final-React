@@ -106,16 +106,15 @@
     display: none;
   }
   #gapDiv {
-    gap: 41px;
     margin-top: 20px;
     margin-bottom: 15px;
+    padding: 0 30px 0 30px;
   }
   .mobile {
     display: block;
   }
   .JBLBassMobil {
     display: block;
-    width: 100%;
     height: 150px;
   }
   .timeRound {

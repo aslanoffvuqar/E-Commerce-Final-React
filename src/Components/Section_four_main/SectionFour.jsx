@@ -7,7 +7,10 @@ function SectionFour() {
   return (
     <div>
       <div className="container">
-        <div className="w-full bg-black mb-16 flex" style={{ height: "500px" }}>
+        <div
+          className="w-full bg-black mb-16 flex rounded	"
+          style={{ height: "500px" }}
+        >
           <div className={SectionFourstyles.allbox}>
             <div className={SectionFourstyles.leftSideBox}>
               <p className={SectionFourstyles.Categories}>Categories</p>
@@ -16,7 +19,13 @@ function SectionFour() {
                 Experience
               </h1>
               {/*  ***********Mobile************************* */}
-            <img className={SectionFourstyles.JBLBassMobil} src={JBLBass} alt="" />
+              <div className="flex justify-center	">
+                <img
+                  className={SectionFourstyles.JBLBassMobil}
+                  src={JBLBass}
+                  alt=""
+                />
+              </div>
               {/*  ***********Mobile************************* */}
 
               <div className="flex gap-6 mb-8" id={SectionFourstyles.gapDiv}>
