@@ -34,12 +34,6 @@ function SectionFour() {
                 />
               </div>
 
-              <img
-                className={SectionFourstyles.JBLBassMobil}
-                src={JBLBass}
-                alt=""
-              />
-
               {/*  ***********Mobile************************* */}
 
               <div className="flex gap-6 mb-8" id={SectionFourstyles.gapDiv}>
