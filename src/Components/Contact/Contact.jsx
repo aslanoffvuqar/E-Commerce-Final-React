@@ -43,7 +43,7 @@ function Contact() {
             <p className={Contactstyles}>Emails: support@exclusive.com</p>
           </div>
           <div className={Contactstyles.AllBoxWwo}>
-            <form action="#" className={Contactstyles.formBox}>
+            <form action="#">
               <div className={Contactstyles.allInput}>
                 <div className={Contactstyles.YourName}>
                   <input
