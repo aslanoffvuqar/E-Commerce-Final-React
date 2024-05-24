@@ -4,6 +4,11 @@ import Header from "./Components/HeaderBar/Header";
 import Nav from "./Components/NavBar/Nav";
 import Footer from "./Components/FooterBar/Footer";
 import Home from "./Components/Home";
+import Aside from "./Components/Foldder-Aside/Aside";
+import Login from "./Components/Login/Login";
+
+
+function App() {
 import Aside from "./Components/AsideBar/Aside";
 import About from "./Components/AboutBar/About"
 import Section_one from "./Components/Section_one_main/Section_one";
@@ -27,9 +32,14 @@ function AppContent() {
         <Route path="/Home" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/Login" element={<Login />} />
       </Routes>
+      <Aside/>
+      
+
       {location.pathname !== "/About" &&
-      location.pathname !== "/Contact" && (
+      location.pathname !== "/Contact" && 
+       location.pathname !== "/Login" &&(
         <>
           <Aside />
           <Section_one />
