@@ -1,0 +1,19 @@
+.inputDivNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px 20px;
+  width: 255px;
+  background-color: #f5f5f5;
+}
+.inputDivNav_input {
+  border: none;
+  outline: none;
+  background-color: #f5f5f5;
+  font-size: 15px;
+}
+.searchIcon {
+  font-size: 20px;
+  cursor: pointer;
+}

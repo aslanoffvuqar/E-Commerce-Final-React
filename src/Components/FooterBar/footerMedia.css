@@ -1,0 +1,75 @@
+@media only screen and (max-width: 835px) {
+  #allBoxFooter {
+    height: 22vh;
+  }
+  #footerBackground {
+    height: 280px;
+  }
+  #h2 {
+    font-size: 15px;
+  }
+  #a {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  #inputDivFooter {
+    width: 130px;
+    height: 30px;
+  }
+  #inputFooter {
+    font-size: 8px;
+    width: 90px;
+  }
+  #faPaperPlane {
+    font-size: 10px;
+  }
+  #h3 {
+    font-size: 15px;
+  }
+  #h3_third {
+    font-size: 15px;
+    margin-bottom: 11px;
+  }
+  #BoxFooter {
+    height: 130px;
+  }
+  #a_third {
+    font-size: 10px;
+    line-height: 23px;
+  }
+  #Doownload_a {
+    font-size: 6px;
+  }
+  #QrImg {
+    width: 40px;
+    height: 40px;
+  }
+  #GooglApp {
+    width: 50px;
+    height: 20px;
+  }
+  #icons {
+    font-size: 14px;
+  }
+  #allIconFooter {
+    gap: 15px;
+  }
+  #allImgFooter {
+    height: 50px;
+  }
+  #logospan {
+    width: 15px;
+    height: 15px;
+    font-size: 9px;
+  }
+  #logo_P {
+    font-size: 10px;
+  }
+  #logoFooter {
+    height: 35px;
+  }
+  #googleAppImg {
+    width: 0px;
+  }
+}
+

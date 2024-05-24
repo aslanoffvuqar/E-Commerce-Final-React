@@ -1,0 +1,196 @@
+.callNum {
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.callText {
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+.callNumText {
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.line {
+  width: 270px;
+  border: 1px solid #7f7f7f;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.Emails {
+  margin-bottom: 16px;
+}
+.AllBoxOne {
+  border-radius: 4px;
+  box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+  background: rgb(255, 255, 255);
+  width: 340px;
+  height: 457px;
+  padding: 40px 35px 51px 35px;
+}
+.AllBoxWwo {
+  border-radius: 4px;
+  box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+  background: rgb(255, 255, 255);
+  width: 100%;
+  height: 457px;
+  margin-bottom: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.YourName {
+  border-radius: 4px;
+  background: rgb(245, 245, 245);
+  width: 235px;
+  height: 50px;
+  padding: 13px 118px 13px 16px;
+}
+.YourNameInput {
+  outline: none;
+  border: none;
+  background: rgb(245, 245, 245);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.allInput {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+}
+.formBox {
+  width: 737px;
+}
+.YourMassage {
+  width: 737px;
+  height: 207px;
+  background: rgb(245, 245, 245);
+  margin-top: 32px;
+  padding: 13px 16px 0 16px;
+}
+.YourMassageInput {
+  width: 100%;
+  background: rgb(245, 245, 245);
+  display: flex;
+  padding-bottom: 150px;
+  overflow: hidden;
+  outline: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.SendButton {
+  border-radius: 4px;
+  background: rgb(219, 68, 68);
+  padding: 16px 48px 16px 48px;
+  color: rgb(250, 250, 250);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 32px;
+  display: flex;
+  transition: color 0.9s ease, 0.9s ease;
+}
+.SendButton:hover {
+  background-color: #fff;
+  color: rgb(219, 68, 68);
+  transition: color 0.9s ease, 0.9s ease;
+  border: 1px solid rgb(219, 68, 68);
+}
+.mediaIconAndImput {
+  display: none;
+}
+.iconBars {
+  display: none;
+}
+@media only screen and (max-width: 415px) {
+  #transitionAbout {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #mobilSection {
+    display: flex;
+    flex-direction: column;
+  }
+  .allInput {
+    display: flex;
+    flex-direction: column;
+  }
+  #mobilSend {
+    display: flex;
+    justify-content: center;
+  }
+  .AllBoxOne {
+    width: 100%;
+  }
+  .YourMassage {
+    width: 300px;
+  }
+  .AllBoxWwo {
+    height: 587px;
+    margin-bottom: 60px;
+  }
+  .YourName {
+    width: 100%;
+  }
+  .YourMassage {
+    width: 100%;
+  }
+  .inputDivNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f5f5f5;
+    gap: 10px;
+  }
+  .inputDivNav_input {
+    border: none;
+    outline: none;
+    font-size: 17px;
+    background-color: #f5f5f5;
+  }
+  .inputDivNav_input {
+    border: none;
+    outline: none;
+    font-size: 17px;
+    background-color: #f5f5f5;
+  }
+  .HeartShoppingIcon {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .HeartIcon,
+  .ShoppinghIcon {
+    font-size: 20px;
+  }
+  .mediaIconAndImput {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .iconBars {
+    display: flex;
+    font-size: 20px;
+  }
+}

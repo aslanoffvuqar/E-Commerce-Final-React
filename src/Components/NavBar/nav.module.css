@@ -1,0 +1,70 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 0;
+  margin-top: 1%;
+  width: 100%;
+}
+.nav_h1 {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  width: 20%;
+}
+.allInputBox {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+
+
+.HeartShoppingIcon {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.HrFooter {
+  border: 1px solid rgba(128, 128, 128, 0.249);
+}
+.navBar {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
+
+.navBar_a {
+  color: black;
+  font-family: "Poppins", sans-serif;
+}
+.navBar_a:hover {
+  border-bottom: 2px solid gray;
+}
+.selectHeader{
+  display: none;
+}
+
+/* ?1************************************************************* */
+
+@media only screen and (max-width: 415px) {
+  #container {
+    width: 91%;
+  }
+
+  .nav_h1 {
+    font-size: 25px;
+    font-weight: 1000;
+    margin-bottom: 8px;
+    margin-top: 10px;
+  }
+  .navBar {
+    display: none;
+  }
+  .allInputBox{
+    display: none;
+  }
+  #selectHeader{
+    display: block;
+  }
+}
