@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navstyles from "./nav.module.css";
 import "../NavBar/navMedia.css";
@@ -34,9 +33,9 @@ function Nav() {
               </Link>
             </li>
             <li className={Navstyles.navBar_li}>
-              <a className={Navstyles.navBar_a} href="#">
+              <Link className={Navstyles.navBar_a} to="/Login">
                 Sign Up
-              </a>
+              </Link>
             </li>
           </ul>
           <div className={Navstyles.allInputBox}>
@@ -47,7 +46,10 @@ function Nav() {
             </div>
           </div>
           {/* <Language/> */}
-          <select className={Navstyles.selectHeader}id={Navstyles.selectHeader}>
+          <select
+            className={Navstyles.selectHeader}
+            id={Navstyles.selectHeader}
+          >
             <option value="0">En</option>
           </select>
         </nav>

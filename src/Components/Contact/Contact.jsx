@@ -1,22 +1,55 @@
-import React from "react";
+import React, { useRef } from "react";
 import Contactstyles from "./contact.module.css";
 import { Link } from "react-router-dom";
 import { BsTelephone } from "react-icons/bs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import {faChevronRight, faBars, faSearch,} from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { SlBasket } from "react-icons/sl";
 
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../../Firebase/Firebase";
+
 function Contact() {
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const phoneRef = useRef(null);
+  const messageRef = useRef(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const nameValue = nameRef.current.value;
+    const emailValue = emailRef.current.value;
+    const phoneValue = phoneRef.current.value;
+    const messageValue = messageRef.current.value;
+
+    const fullData = {
+      name: nameValue,
+      email: emailValue,
+      phone: phoneValue,
+      message: messageValue,
+    };
+
+    console.log(fullData);
+
+    await addDoc(collection(db, "Contact-Messages"), fullData);
+
+    nameRef.current.value = "";
+    emailRef.current.value = "";
+    phoneRef.current.value = "";
+    messageRef.current.value = "";
+  };
+
   return (
     <div>
       <div className="container">
-         {/* ****************** Mobil*************************** */}
-         <div className={Contactstyles.mediaIconAndImput}>
+        {/* ****************** Mobil*************************** */}
+        <div className={Contactstyles.mediaIconAndImput}>
           <FontAwesomeIcon icon={faBars} className={Contactstyles.iconBars} />
-          <div className={Contactstyles.inputDivNav} id={Contactstyles.inputDivNav}>
+          <div
+            className={Contactstyles.inputDivNav}
+            id={Contactstyles.inputDivNav}
+          >
             <input
               className={Contactstyles.inputDivNav_input}
               id={Contactstyles.inputDivNav_input}
@@ -46,19 +79,22 @@ function Contact() {
         </div>
         {/* ****************** Mobil*************************** */}
         <div
-          className="flex gap-1 mt-20	mb-20"
+          className="flex gap-1 mt-20 mb-20"
           id={Contactstyles.transitionAbout}
         >
-          <Link to="/Home" className="text-gray-600	text-sm	font-normal	leading-5	">
+          <Link
+            to="/Home"
+            className="text-gray-600 text-sm font-normal leading-5"
+          >
             Home /
           </Link>
-          <p className="text-sm	font-medium		leading-5	">Contact</p>
+          <p className="text-sm font-medium leading-5">Contact</p>
         </div>
-        <section className="flex gap-8	" id={Contactstyles.mobilSection}>
+        <section className="flex gap-8" id={Contactstyles.mobilSection}>
           <div className={Contactstyles.AllBoxOne}>
-            <div className="flex items-center gap-4	 ">
-              <span className="flex w-10 h-10 bg-red-500 rounded-full	justify-center items-center		">
-                <BsTelephone className="text-white	w-5	h-5	" />
+            <div className="flex items-center gap-4">
+              <span className="flex w-10 h-10 bg-red-500 rounded-full justify-center items-center">
+                <BsTelephone className="text-white w-5 h-5" />
               </span>
               <p className={Contactstyles.callNum}>Call To Us</p>
             </div>
@@ -67,9 +103,9 @@ function Contact() {
             </p>
             <p className={Contactstyles.callNumText}>Phone: +8801611112222</p>
             <div className={Contactstyles.line}></div>
-            <div className="flex items-center gap-4	 ">
-              <span className="flex w-10 h-10 bg-red-500 rounded-full	justify-center items-center		">
-                <BsTelephone className="text-white	w-5	h-5	" />
+            <div className="flex items-center gap-4">
+              <span className="flex w-10 h-10 bg-red-500 rounded-full justify-center items-center">
+                <BsTelephone className="text-white w-5 h-5" />
               </span>
               <p className={Contactstyles.callNum}>Call To Us</p>
             </div>
@@ -82,12 +118,14 @@ function Contact() {
             <p className={Contactstyles}>Emails: support@exclusive.com</p>
           </div>
           <div className={Contactstyles.AllBoxWwo}>
-            <form action="#">
+            <form onSubmit={handleSubmit}>
               <div className={Contactstyles.allInput}>
                 <div className={Contactstyles.YourName}>
                   <input
                     className={Contactstyles.YourNameInput}
                     type="text"
+                    name="name"
+                    ref={nameRef}
                     placeholder="Your Name *"
                   />
                 </div>
@@ -95,6 +133,8 @@ function Contact() {
                   <input
                     className={Contactstyles.YourNameInput}
                     type="email"
+                    name="email"
+                    ref={emailRef}
                     placeholder="Your Email *"
                   />
                 </div>
@@ -102,6 +142,7 @@ function Contact() {
                   <input
                     className={Contactstyles.YourNameInput}
                     type="number"
+                    ref={phoneRef}
                     placeholder="Your Phone *"
                   />
                 </div>
@@ -110,12 +151,13 @@ function Contact() {
                 <input
                   className={Contactstyles.YourMassageInput}
                   type="text"
-                  placeholder="Your Massage"
+                  ref={messageRef}
+                  placeholder="Your Message"
                 />
               </div>
               <div className="flex justify-end" id={Contactstyles.mobilSend}>
-                <button className={Contactstyles.SendButton}>
-                  Send Massage
+                <button type="submit" className={Contactstyles.SendButton}>
+                  Send Message
                 </button>
               </div>
             </form>
