@@ -8,6 +8,7 @@ import img5 from '../Explore_product/img/5.png'
 import img6 from '../Explore_product/img/66.png'
 import img7 from '../Explore_product/img/77.png'
 import img8 from '../Explore_product/img/888.png'
+import { Link } from "react-router-dom";
 export default function ExploreProduct() {
     return (
         <>
@@ -284,7 +285,7 @@ export default function ExploreProduct() {
                     </div>
                 </div>
                 <div className={styles.all_products_div}>
-                   <a className={styles.all_products} href="/#">View Products All</a>
+                   <Link className={styles.all_products} to="/ViewAllProduct">View Products All</Link>
                 </div>
                
             </div >

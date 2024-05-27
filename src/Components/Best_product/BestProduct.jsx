@@ -4,6 +4,7 @@ import img1 from "../Best_product/img/1e9f94261b28e16ea21bacb4144473e8.png";
 import img2 from "../Best_product/img/2722dbdf98f25179d3c0b785988c513d.png";
 import img3 from "../Best_product/img/c218c97b645d616c8188a4f2e6aaf84b.png";
 import img4 from "../Best_product/img/7777.png";
+import { Link } from "react-router-dom";
 export default function BestProducts() {
   return (
     <>
@@ -14,7 +15,7 @@ export default function BestProducts() {
         </div>
         <div className={styles.all_view}>
           <h1>Best Selling Products</h1>
-          <a href="#">View All</a>
+          <Link to="/ViewAllProduct">View All</Link>
         </div>
         <div className={styles.wrapper}>
           {/* <div className={styles.card_img_wraper}> */}
@@ -186,8 +187,7 @@ export default function BestProducts() {
             </div>
           </div>
 
-          {/* </div> */}
-          {/* <div className={styles.card_img_wraper}> */}
+          
           <div>
             <div className={styles.products}>
               <div className={styles.product_icon}>
@@ -355,7 +355,6 @@ export default function BestProducts() {
             </div>
           </div>
 
-          {/* </div> */}
         </div>
       </div>
     </>
