@@ -106,7 +106,7 @@ function Aside() {
           className={`${Asidestyles.mobileAsideBox} ${isSidebarOpen ? Asidestyles.open : ""}`}
         >
           <div className={Asidestyles.asideDiv}>
-            <div className="flex w-full justify-between">
+            <div className="flex w-full justify-between ">
               <li className={Navstyles.navBar_li}>
                 <Link className={Navstyles.navBar_a} to="/Home">
                   Home
