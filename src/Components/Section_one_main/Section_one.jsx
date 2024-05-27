@@ -4,6 +4,7 @@ import img1 from "../Section_one_main/img/50752d55f8b60f2aa2923183dadbc135.png";
 import img2 from "../Section_one_main/img/8cc24eeff489863523b63971c3ff8e4a.png";
 import img3 from "../Section_one_main/img/4444.png";
 import img4 from "../Section_one_main/img/5555.png";
+import { Link } from "react-router-dom";
 export default function Section_one() {
   return (
     <>
@@ -735,9 +736,9 @@ export default function Section_one() {
           </div>
         </div>
         <div className={styles.all_products_div}>
-          <a className={styles.all_products} href="#">
+          <Link className={styles.all_products} to="/ViewAllProduct">
             View Products All
-          </a>
+          </Link>
         </div>
         <hr className={styles.HrFooter} />
       </div>
