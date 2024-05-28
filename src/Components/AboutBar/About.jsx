@@ -16,50 +16,10 @@ import { FaInstagram } from "react-icons/fa";
 import { RiLinkedinLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
-// mobil
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
-import { SlBasket } from "react-icons/sl";
-// mobil
 function About() {
   return (
     <div>
       <div className="container">
-         {/* ****************** Mobil*************************** */}
-         <div className={Aboutstyles.mediaIconAndImput}>
-          <FontAwesomeIcon icon={faBars} className={Aboutstyles.iconBars} />
-          <div className={Aboutstyles.inputDivNav} id={Aboutstyles.inputDivNav}>
-            <input
-              className={Aboutstyles.inputDivNav_input}
-              id={Aboutstyles.inputDivNav_input}
-              type="text"
-              placeholder="What are you looking for?"
-            />
-            <FontAwesomeIcon
-              icon={faSearch}
-              className={Aboutstyles.searchIcon}
-              id={Aboutstyles.searchIcon}
-            />
-          </div>
-          <div
-            className={Aboutstyles.HeartShoppingIcon}
-            id={Aboutstyles.HeartShoppingIcon}
-          >
-            <FontAwesomeIcon
-              icon={faHeart}
-              className={Aboutstyles.HeartIcon}
-              id={Aboutstyles.HeartIcon}
-            />
-            <SlBasket
-              className={Aboutstyles.ShoppinghIcon}
-              id={Aboutstyles.ShoppinghIcon}
-            />
-          </div>
-        </div>
-        {/* ****************** Mobil*************************** */}
         <div className="flex gap-1 mt-20	mb-20" id={Aboutstyles.transitionAbout}>
           <Link to="/Home" className="text-gray-600	text-sm	font-normal	leading-5	">
             Home /
@@ -67,33 +27,33 @@ function About() {
           <p className="text-sm	font-medium		leading-5	">About</p>
         </div>
       </div>
-      <div className="	flex justify-between	" id={Aboutstyles.displayColum}>
-        <div className="flex ">
-          <div className="mt-28	ml-40	" id={Aboutstyles.mobilText}>
-            <h1 className={Aboutstyles.Story}>Our Story</h1>
-            <p className={Aboutstyles.StoryText}>
-              Launced in 2015, Exclusive is South Asia’s premier online shopping{" "}
-              <br />
-              makterplace with an active presense in Bangladesh. Supported
-              <br /> by wide range of tailored marketing, data and service
-              solutions, <br />
-              Exclusive has 10,500 sallers and 300 brands and serves 3 <br />
-              millioons customers across the region.
-            </p>
-            <p className={Aboutstyles.StoryTexttow}>
-              Exclusive has more than 1 Million products to offer, growing at a{" "}
-              <br />
-              very fast. Exclusive offers a diverse assotment in categories
-              <br />
-              ranging from consumer.
-            </p>
+      <div className="flex" id={Aboutstyles.displayColum}>
+        <div className="container">
+          <div className="flex 	justify-center			">
+            <div>
+              <h1 className={Aboutstyles.Story}>Our Story</h1>
+              <p className={Aboutstyles.StoryText}>
+                Launced in 2015, Exclusive is South Asia’s premier online
+                shopping <br />
+                makterplace with an active presense in Bangladesh. Supported
+                <br /> by wide range of tailored marketing, data and service
+                solutions, <br />
+                Exclusive has 10,500 sallers and 300 brands and serves 3 <br />
+                millioons customers across the region.
+              </p>
+              <p className={Aboutstyles.StoryTexttow}>
+                Exclusive has more than 1 Million products to offer, growing at
+                a <br />
+                very fast. Exclusive offers a diverse assotment in categories
+                <br />
+                ranging from consumer.
+              </p>
+            </div>
           </div>
         </div>
-        <div className={Aboutstyles.AboutimgSize}>
-          <img src={Aboutimg} alt="" />
-        </div>
-      </div>
 
+        <img className={Aboutstyles.AboutimgSize} src={Aboutimg} alt="" />
+      </div>
       <div className="container">
         <section
           className="flex justify-between mt-28	mb-32	 "
@@ -103,14 +63,12 @@ function About() {
           <Mopnthly />
           <Customer />
           <Sale />
+       
         </section>
 
-        <section
-          className="flex justify-between	"
-          id={Aboutstyles.SectionAllbox}
-        >
+        <section className="flex justify-between	" id={Aboutstyles.SectionAllbox}>
           <div className="FounderData">
-            <img src={TomCruise} alt="" />
+            <img  src={TomCruise} alt="" />
             <h1 className={Aboutstyles.name}>Tom Cruise</h1>
             <p className={Aboutstyles.position}>Founder & Chairman</p>
             <div className="flex gap-4" id={Aboutstyles.SosialMedia}>
@@ -123,7 +81,7 @@ function About() {
             <img src={EmmaWatson} alt="" />
             <h1 className={Aboutstyles.name}>Emma Watson</h1>
             <p className={Aboutstyles.position}>Managing Director</p>
-            <div className="flex gap-4" id={Aboutstyles.SosialMedia}>
+            <div className="flex gap-4"id={Aboutstyles.SosialMedia}>
               <RxTwitterLogo className="w-5	 h-5	" />
               <FaInstagram className="w-5	 h-5	" />
               <RiLinkedinLine className="w-5	 h-5	" />
