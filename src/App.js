@@ -4,23 +4,17 @@ import Header from "./Components/HeaderBar/Header";
 import Nav from "./Components/NavBar/Nav";
 import Footer from "./Components/FooterBar/Footer";
 import Home from "./Components/Home";
-import Aside from "./Components/Foldder-Aside/Aside";
 import Login from "./Components/Login/Login";
-
-
-function App() {
+import SignUp from "./Components/Sign-up/Sign_up"; // Обновленный путь
 import Aside from "./Components/AsideBar/Aside";
-import About from "./Components/AboutBar/About"
+import About from "./Components/AboutBar/About";
 import Section_one from "./Components/Section_one_main/Section_one";
 import Categories from "./Components/Categories/Categories";
 import SectionFour from "./Components/Section_four_main/SectionFour";
 import NewArrival from "./Components/NewArrivalBar/NewArrival";
-
 import BestProducts from "./Components/Best_product/BestProduct";
 import ExploreProduct from "./Components/Explore_product/ExploreProduct";
-
 import Contact from "./Components/Contact/Contact";
-
 
 function AppContent() {
   const location = useLocation();
@@ -33,23 +27,23 @@ function AppContent() {
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/SignUp" element={<SignUp />} /> {/* Добавьте маршрут */}
       </Routes>
-      <Aside/>
-      
 
       {location.pathname !== "/About" &&
-      location.pathname !== "/Contact" && 
-       location.pathname !== "/Login" &&(
-        <>
-          <Aside />
-          <Section_one />
-          <Categories />
-          <BestProducts />
-          <SectionFour />
-          <ExploreProduct />
-          <NewArrival />
-        </>
-      )}
+        location.pathname !== "/Contact" &&
+        location.pathname !== "/Login" &&
+        location.pathname !== "/SignUp" && ( // Исключите SignUp
+          <>
+            <Aside />
+            <Section_one />
+            <Categories />
+            <BestProducts />
+            <SectionFour />
+            <ExploreProduct />
+            <NewArrival />
+          </>
+        )}
       <Footer />
     </>
   );
