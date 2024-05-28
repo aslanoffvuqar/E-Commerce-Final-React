@@ -1,25 +1,29 @@
-import React from "react";
-import Asidestyles from "../AsideBar/aside.module.css"
-import "../AsideBar/aside.css"
+import React, { useState } from "react";
+import Asidestyles from "../AsideBar/aside.module.css";
+import "../AsideBar/aside.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronRight,
+  faBars,
+  faSearch,
+} from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
-// import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import Slider from "./Slider/Slider";
 import { SlBasket } from "react-icons/sl";
-
-// import img from "../Aside/Aside-Img/Frame 560.png";
-
-// import Carousel from "react-bootstrap/Carousel";
-// import Image from "react-bootstrap/Image";
+import { Link } from "react-router-dom";
+import Navstyles from "../NavBar/nav.module.css";
 
 function Aside() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <>
       <div className="container">
-        <div className="flex w-full justify-between	">
+        <div className="flex w-full justify-between">
           <aside className={Asidestyles.asideBox}>
             <div className={Asidestyles.allBox}>
               <div className={Asidestyles.asideDiv}>
@@ -31,7 +35,7 @@ function Aside() {
                 </a>
                 <a className={Asidestyles.a} href="#">
                   Men’s Fashion
-                  <span className={Asidestyles.a_icon2}>
+                  <span className={Asidestyles.a_icon}>
                     <FontAwesomeIcon icon={faChevronRight} />
                   </span>
                 </a>
@@ -64,7 +68,11 @@ function Aside() {
         </div>
         {/* ****************** Mobil*************************** */}
         <div className={Asidestyles.mediaIconAndImput}>
-          <FontAwesomeIcon icon={faBars} className={Asidestyles.iconBars} />
+          <FontAwesomeIcon
+            icon={faBars}
+            className={Asidestyles.iconBars}
+            onClick={toggleSidebar}
+          />
           <div className={Asidestyles.inputDivNav} id={Asidestyles.inputDivNav}>
             <input
               className={Asidestyles.inputDivNav_input}
@@ -94,6 +102,63 @@ function Aside() {
           </div>
         </div>
         {/* ****************** Mobil*************************** */}
+        <aside
+          className={`${Asidestyles.mobileAsideBox} ${isSidebarOpen ? Asidestyles.open : ""}`}
+        >
+          <div className={Asidestyles.asideDiv}>
+            <div className="flex w-full justify-between ">
+              <li className={Navstyles.navBar_li}>
+                <Link className={Navstyles.navBar_a} to="/Home">
+                  Home
+                </Link>
+              </li>
+              <li className={Navstyles.navBar_li}>
+                <Link className={Navstyles.navBar_a} to="/Contact">
+                  Contact
+                </Link>
+              </li>
+              <li className={Navstyles.navBar_li}>
+                <Link className={Navstyles.navBar_a} to="/About">
+                  About
+                </Link>
+              </li>
+              <li className={Navstyles.navBar_li}>
+                <Link className={Navstyles.navBar_a} to="/Login">
+                  Sign Up
+                </Link>
+              </li>
+            </div>
+            <div className={Asidestyles.asideDiv}>
+              <a className={Asidestyles.a} href="#">
+                Woman’s Fashion
+              </a>
+              <a className={Asidestyles.a} href="#">
+                Men’s Fashion
+              </a>
+              <a className={Asidestyles.a} href="#">
+                Electronics
+              </a>
+              <a className={Asidestyles.a} href="#">
+                Home & Lifestyle
+              </a>
+              <a className={Asidestyles.a} href="#">
+                Medicine
+              </a>
+              <a className={Asidestyles.a} href="#">
+                Sports & Outdoor
+              </a>
+              <a className={Asidestyles.a} href="#">
+                Baby’s & Toys
+              </a>
+              <a className={Asidestyles.a} href="#">
+                Groceries & Pets
+              </a>
+              <a className={Asidestyles.a} href="#">
+                Health & Beauty
+              </a>
+            </div>
+          </div>
+        </aside>
       </div>
     </>
   );
