@@ -141,14 +141,14 @@ function Footer() {
                 <div className={Footerstyles.allIconFooter}>
                   <FontAwesomeIcon
                     icon={faFacebookF}
-                    className={Footerstyles.icons}
+                    className={Footerstyles.iconsFa}
                   />
-                  <FontAwesomeIcon icon={faTwitter} className={Footerstyles.icons} />
+                  <FontAwesomeIcon icon={faTwitter} className={Footerstyles.iconsTw} />
                   <FontAwesomeIcon
                     icon={faInstagram}
-                    className={Footerstyles.icons}
+                    className={Footerstyles.iconsIns}
                   />
-                  <FontAwesomeIcon icon={faLinkedin} className={Footerstyles.icons} />
+                  <FontAwesomeIcon icon={faLinkedin} className={Footerstyles.iconsLi} />
                 </div>
               </div>
             </div>

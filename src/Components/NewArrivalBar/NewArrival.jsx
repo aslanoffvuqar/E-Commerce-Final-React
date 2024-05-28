@@ -37,35 +37,48 @@ function NewArrival() {
           </div>
         </div>
 
-        <section className="flex justify-evenly		mt-28	mb-32	 " id={NewArrivalstyles.sectionBar}>
-          <div className="flex flex-col	justify-center items-center">
+        <section
+          className="flex justify-evenly		mt-28	mb-32	 "
+          id={NewArrivalstyles.sectionBar}
+        >
+          <div className="flex flex-col	justify-center items-center shadow p-12 cursor-pointer">
             <div className="w-20	h-20	bg-zinc-400	rounded-full flex		justify-center items-center	mb-7		">
               <span className="flex justify-center items-center	 w-14	h-14 bg-black	rounded-full	">
-                <TbTruckDelivery className="text-white	w-10	h-10		" />
+                <TbTruckDelivery
+                  className="text-white	w-10	h-10"
+                  id={NewArrivalstyles.iconRotate}
+                />
               </span>
             </div>
-            <h1 className={NewArrivalstyles.DELIVERY}>FREE AND FAST DELIVERY</h1>
-            <p className={NewArrivalstyles.DELIVERYText}>Free delivery for all orders over $140</p>
+            <h1 className={NewArrivalstyles.DELIVERY}>
+              FREE AND FAST DELIVERY
+            </h1>
+            <p className={NewArrivalstyles.DELIVERYText}>
+              Free delivery for all orders over $140
+            </p>
           </div>
-          <div className="flex flex-col	justify-center items-center">
+          <div className="flex flex-col	justify-center items-center shadow p-12 cursor-pointer">
             <div className="w-20	h-20	bg-zinc-400	rounded-full flex		justify-center items-center	mb-7		">
               <span className="flex justify-center items-center	 w-14	h-14 bg-black	rounded-full	">
-                <RiCustomerService2Line  className="text-white	w-10	h-10		" />
+                <RiCustomerService2Line className="text-white	w-10	h-10		"id={NewArrivalstyles.iconRotate} />
               </span>
             </div>
             <h1 className={NewArrivalstyles.DELIVERY}>24/7 CUSTOMER SERVICE</h1>
-            <p className={NewArrivalstyles.DELIVERYText}>Friendly 24/7 customer support</p>
+            <p className={NewArrivalstyles.DELIVERYText}>
+              Friendly 24/7 customer support
+            </p>
           </div>
-          <div className="flex flex-col	justify-center items-center">
+          <div className="flex flex-col	justify-center items-center shadow p-12 cursor-pointer">
             <div className="w-20	h-20	bg-zinc-400	rounded-full flex		justify-center items-center	mb-7		">
               <span className="flex justify-center items-center	 w-14	h-14 bg-black	rounded-full	">
-                <HiOutlineBadgeCheck  className="text-white	w-10	h-10		" />
+                <HiOutlineBadgeCheck className="text-white	w-10	h-10		" id={NewArrivalstyles.iconRotate}/>
               </span>
             </div>
             <h1 className={NewArrivalstyles.DELIVERY}>MONEY BACK GUARANTEE</h1>
-            <p className={NewArrivalstyles.DELIVERYText}>We reurn money within 30 days</p>
+            <p className={NewArrivalstyles.DELIVERYText}>
+              We reurn money within 30 days
+            </p>
           </div>
-          
         </section>
       </div>
     </div>

@@ -118,14 +118,26 @@
   flex-direction: column;
   margin: 0px 8px;
 }
-.icons {
+.iconsFa,
+.iconsTw,
+.iconsIns,
+.iconsLi {
   color: #fff;
   font-size: 24px;
   cursor: pointer;
   transition: color 0.5s ease, 0.5s ease;
 }
-.icons:hover {
-  color: rgba(61, 118, 197, 0.693);
+.iconsFa:hover {
+  color: #0866ff;
+}
+.iconsTw:hover {
+  color: #249ef0;
+}
+.iconsIns:hover {
+  color: #fe2399;
+}
+.iconsLi:hover{
+  color: #0C84C2;
 }
 .allIconFooter {
   display: flex;
@@ -164,8 +176,8 @@
   letter-spacing: 0%;
   text-align: left;
 }
-.hrAllBox{
-margin-top: 90px;
+.hrAllBox {
+  margin-top: 90px;
 }
 @media only screen and (max-width: 415px) {
   #footerBackground {
@@ -183,10 +195,10 @@ margin-top: 90px;
   .a {
     margin-bottom: 20px;
   }
-  [Download_App]{
+  [Download_App] {
     margin-top: 60px;
   }
-  
+
   [Quick_div] {
     margin-top: 170px;
     height: 233px;
@@ -204,20 +216,20 @@ margin-top: 90px;
   .inputFooter {
     font-size: 18px;
   }
-  #QrImg{
+  #QrImg {
     width: 130px;
     height: 120px;
   }
-  .googleAppImg{
+  .googleAppImg {
     width: 166px;
   }
-  .icons{
+  .icons {
     font-size: 35px;
   }
-  .allIconFooter{
+  .allIconFooter {
     gap: 73px;
   }
-.hrAllBox{
-  margin-top: 150px;
-}
+  .hrAllBox {
+    margin-top: 150px;
+  }
 }
