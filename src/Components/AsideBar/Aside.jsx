@@ -12,6 +12,7 @@ import Slider from "./Slider/Slider";
 import { SlBasket } from "react-icons/sl";
 import { Link } from "react-router-dom";
 import Navstyles from "../NavBar/nav.module.css";
+import { useTranslation } from "react-i18next";
 
 function Aside() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -19,6 +20,7 @@ function Aside() {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+  const { t } = useTranslation();
 
   return (
     <>
@@ -28,37 +30,37 @@ function Aside() {
             <div className={Asidestyles.allBox}>
               <div className={Asidestyles.asideDiv}>
                 <a className={Asidestyles.a} href="#">
-                  Woman’s Fashion
+                  {t("Woman’s Fashion")}
                   <span className={Asidestyles.a_icon}>
                     <FontAwesomeIcon icon={faChevronRight} />
                   </span>
                 </a>
                 <a className={Asidestyles.a} href="#">
-                  Men’s Fashion
+                  {t("Men’s Fashion")}
                   <span className={Asidestyles.a_icon}>
                     <FontAwesomeIcon icon={faChevronRight} />
                   </span>
                 </a>
                 <a className={Asidestyles.a} href="#">
-                  Electronics
+                  {t("Electronics")}
                 </a>
                 <a className={Asidestyles.a} href="#">
-                  Home & Lifestyle
+                  {t("Home & Lifestyle")}
                 </a>
                 <a className={Asidestyles.a} href="#">
-                  Medicine
+                  {t("Medicine")}
                 </a>
                 <a className={Asidestyles.a} href="#">
-                  Sports & Outdoor
+                  {t("Sports & Outdoor")}
                 </a>
                 <a className={Asidestyles.a} href="#">
-                  Baby’s & Toys
+                  {t("Baby’s & Toys")}
                 </a>
                 <a className={Asidestyles.a} href="#">
-                  Groceries & Pets
+                  {t("Groceries & Pets")}
                 </a>
                 <a className={Asidestyles.a} href="#">
-                  Health & Beauty
+                  {t("Health & Beauty")}
                 </a>
               </div>
               <div className={Asidestyles.Line}></div>
@@ -103,7 +105,9 @@ function Aside() {
         </div>
         {/* ****************** Mobil*************************** */}
         <aside
-          className={`${Asidestyles.mobileAsideBox} ${isSidebarOpen ? Asidestyles.open : ""}`}
+          className={`${Asidestyles.mobileAsideBox} ${
+            isSidebarOpen ? Asidestyles.open : ""
+          }`}
         >
           <div className={Asidestyles.asideDiv}>
             <div className="flex w-full justify-between ">

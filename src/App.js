@@ -15,6 +15,8 @@ import BestProducts from "./Components/Best_product/BestProduct";
 import ExploreProduct from "./Components/Explore_product/ExploreProduct";
 import Contact from "./Components/Contact/Contact";
 import Product_page from "./Components/Product_page/Product_page";
+import "./i18n";
+
 function AppContent() {
   const location = useLocation();
   return (
@@ -31,7 +33,7 @@ function AppContent() {
 
       {location.pathname !== "/About" &&
         location.pathname !== "/Contact" &&
-        location.pathname !== "/Login" && 
+        location.pathname !== "/Login" &&
         location.pathname !== "/ViewAllProduct" && (
           <>
             <Aside />
@@ -41,7 +43,6 @@ function AppContent() {
             <SectionFour />
             <ExploreProduct />
             <NewArrival />
-            
           </>
         )}
 
@@ -51,6 +52,7 @@ function AppContent() {
 }
 
 function App() {
+
   return (
     <BrowserRouter>
       <AppContent />
