@@ -11,7 +11,7 @@ export default function Sign_up() {
       <div className={style.create_account}>
 
 <div className={style.main_text}>
-<h1 className={style.exclusive_h1}>Log in to Exclusive</h1>
+<h1 className={style.exclusive_h1}>Create an account</h1>
 <p className={style.details_p}>Enter your details below</p>
 </div>
 

@@ -2,7 +2,7 @@
 .container_signup{
 position: relative;
 width: 1305px;
-height: 781px;
+height: 924px;
 display: flex;
 flex-direction: row;
 justify-content: flex-start;
@@ -28,19 +28,28 @@ padding: 0px;
     order: 1;
     flex-grow: 0;
     margin: 48px 0px;
-    left: 31%;
+    left: 40%;
     top: 20%;
 }
 
 
 .img_sign_up>img{
-width: 100%;
+width: 99%;
 height: 100%;
-
+}
+ 
+.img_sign_up{
+  width: 65%;
+  position: absolute;
+  bottom: 9%;
 }
 
 
+.main_text{
+width: 27%;
 
+
+}
 
 
 
@@ -95,6 +104,156 @@ height: 100%;
     opacity: 1;
 }
 
+.buttons_div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 22px;
+    
+  }
+  
+  .button_create, .button_google {
+    width: 57%;
+    max-width: 353px;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+  
+  .button_create {
+    background-color: #f04e3e;
+    color: white;
+  }
+  
+  .button_google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+  }
+  
+  .buttonImage {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+  }
+  
+  .footer_signup {
+    display: flex;
+    width: 47%;
+    max-width: 400px;
+    margin-top: 1rem;
+    align-content: flex-end;
+    align-items: stretch;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 48%;
+  }
+
+  .have_account{
+color: rgb(0, 0, 0);
+font-family: Poppins;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: left;
+opacity: 0.7;
+
+  }
+
+  .havelog{
+color: rgb(0, 0, 0);
+font-family: Poppins;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: left;
+opacity: 0.7;
 
 
+  }
 
+
+  .havelog a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #f04e3e;
+    transition: width 0.3s;
+  }
+  
+  .havelog a:hover::after {
+    width: 100%;
+  }
+
+
+  .have_account a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #f04e3e;
+    transition: width 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    bottom: -2px;
+    left: 3;
+  }
+  
+  .have_account a:hover::after {
+    width: 47%;
+    transform: scaleX(1);
+  }
+  
+  .havelog a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #f04e3e;
+    transition: width 0.3s;
+  }
+  
+  .havelog a:hover::after {
+    width: 100%;
+  }
+
+
+  .button_create:hover {
+    background-color: #d84333;
+    transform: translateY(-2px);
+    transition: transform 500ms ease;
+  }
+  
+  .button_create:active {
+    background-color: #c23329;
+    transform: translateY(1px);
+  }
+  
+  .button_google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+  }
+  
+  .button_google:hover {
+    background-color: #f7f7f7;
+    transform: translateY(-2px);
+    transition: transform 500ms ease;
+  }
+  
+  .button_google:active {
+    background-color: #e0e0e0;
+    transform: translateY(1px);
+
+  }
