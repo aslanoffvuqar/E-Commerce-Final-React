@@ -15,7 +15,7 @@ function Nav() {
     <>
       <div className="container" id={Navstyles.container}>
         <nav className={Navstyles.nav}>
-          <h1 className={Navstyles.nav_h1}>Exclusive</h1>
+          <Link className={Navstyles.nav_h1} to="/Home">Exclusive</Link>
           <ul className={Navstyles.navBar}>
             <li className={Navstyles.navBar_li}>
               <Link className={Navstyles.navBar_a} to="/Home">

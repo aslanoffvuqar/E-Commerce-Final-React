@@ -48,7 +48,7 @@ function Slider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % sliderData.length);
-    }, 4000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 

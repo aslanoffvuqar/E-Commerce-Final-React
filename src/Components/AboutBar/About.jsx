@@ -29,7 +29,7 @@ function About() {
       </div>
       <div className="flex" id={Aboutstyles.displayColum}>
         <div className="container">
-          <div className="flex 	justify-center			">
+          <div className={Aboutstyles.allTextBox}>
             <div>
               <h1 className={Aboutstyles.Story}>Our Story</h1>
               <p className={Aboutstyles.StoryText}>

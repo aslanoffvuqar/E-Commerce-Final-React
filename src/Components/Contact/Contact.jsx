@@ -3,7 +3,11 @@ import Contactstyles from "./contact.module.css";
 import { Link } from "react-router-dom";
 import { BsTelephone } from "react-icons/bs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faChevronRight, faBars, faSearch,} from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronRight,
+  faBars,
+  faSearch,
+} from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { SlBasket } from "react-icons/sl";
 

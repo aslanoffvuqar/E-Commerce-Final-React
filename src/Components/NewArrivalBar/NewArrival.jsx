@@ -41,7 +41,10 @@ function NewArrival() {
           className="flex justify-evenly		mt-28	mb-32	 "
           id={NewArrivalstyles.sectionBar}
         >
-          <div className="flex flex-col	justify-center items-center shadow p-12 cursor-pointer">
+          <div
+            className="flex flex-col	justify-center items-center shadow p-12 cursor-pointer "
+            id={NewArrivalstyles.services}
+          >
             <div className="w-20	h-20	bg-zinc-400	rounded-full flex		justify-center items-center	mb-7		">
               <span className="flex justify-center items-center	 w-14	h-14 bg-black	rounded-full	">
                 <TbTruckDelivery
@@ -57,10 +60,13 @@ function NewArrival() {
               Free delivery for all orders over $140
             </p>
           </div>
-          <div className="flex flex-col	justify-center items-center shadow p-12 cursor-pointer">
+          <div className="flex flex-col	justify-center items-center shadow p-12 cursor-pointer"id={NewArrivalstyles.services}>
             <div className="w-20	h-20	bg-zinc-400	rounded-full flex		justify-center items-center	mb-7		">
               <span className="flex justify-center items-center	 w-14	h-14 bg-black	rounded-full	">
-                <RiCustomerService2Line className="text-white	w-10	h-10		"id={NewArrivalstyles.iconRotate} />
+                <RiCustomerService2Line
+                  className="text-white	w-10	h-10		"
+                  id={NewArrivalstyles.iconRotate}
+                />
               </span>
             </div>
             <h1 className={NewArrivalstyles.DELIVERY}>24/7 CUSTOMER SERVICE</h1>
@@ -68,10 +74,13 @@ function NewArrival() {
               Friendly 24/7 customer support
             </p>
           </div>
-          <div className="flex flex-col	justify-center items-center shadow p-12 cursor-pointer">
+          <div className="flex flex-col	justify-center items-center shadow p-12 cursor-pointer" id={NewArrivalstyles.services}>
             <div className="w-20	h-20	bg-zinc-400	rounded-full flex		justify-center items-center	mb-7		">
               <span className="flex justify-center items-center	 w-14	h-14 bg-black	rounded-full	">
-                <HiOutlineBadgeCheck className="text-white	w-10	h-10		" id={NewArrivalstyles.iconRotate}/>
+                <HiOutlineBadgeCheck
+                  className="text-white	w-10	h-10		"
+                  id={NewArrivalstyles.iconRotate}
+                />
               </span>
             </div>
             <h1 className={NewArrivalstyles.DELIVERY}>MONEY BACK GUARANTEE</h1>
