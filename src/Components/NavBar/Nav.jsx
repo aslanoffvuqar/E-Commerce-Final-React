@@ -1,9 +1,6 @@
 import React from "react";
-import Navstyles from "./nav.module.css";
-import "../NavBar/navMedia.css";
-import "./nav.css";
-
-import { Link } from "react-router-dom"; // Импортируем Link из react-router-dom
+import { Link, useLocation } from "react-router-dom"; // Добавляем необходимые импорты
+import Navstyles from "./nav.module.css"; // Импортируем стили
 
 import Input from "./Folder-Input/Input";
 import Favorites from "./Folder-Favorites/Favorites";
@@ -11,6 +8,8 @@ import Basket from "./Folder-Basket/Basket";
 import Language from "../HeaderBar/Folder-Language/Language";
 
 function Nav() {
+  const location = useLocation(); // Используем хук useLocation для получения текущего маршрута
+
   return (
     <>
       <div className="container" id={Navstyles.container}>
@@ -33,25 +32,25 @@ function Nav() {
               </Link>
             </li>
             <li className={Navstyles.navBar_li}>
-              <Link className={Navstyles.navBar_a} to="/SignUp"> {/* Изменяем на Link и добавляем путь к SignUp */}
+              <Link className={Navstyles.navBar_a} to="/SignUp">
                 Sign Up
               </Link>
             </li>
           </ul>
           <div className={Navstyles.allInputBox}>
             <Input />
-            <div className={Navstyles.HeartShoppingIcon}>
-              <Favorites />
-              <Basket />
-            </div>
+            {location.pathname !== "/SignUp" && (
+              <div className={Navstyles.HeartShoppingIcon}>
+                <Favorites />
+                <Basket />
+              </div>
+            )}
           </div>
-          {/* <Language/> */}
           <select className={Navstyles.selectHeader} id={Navstyles.selectHeader}>
             <option value="0">En</option>
           </select>
         </nav>
       </div>
-
       <hr className={Navstyles.HrFooter} />
     </>
   );

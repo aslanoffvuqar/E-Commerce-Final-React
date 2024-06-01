@@ -1,8 +1,8 @@
 import React from 'react';
-import style from './Sign_up.module.css';  // Ensure this path is correct
-import Contactstyles from "./Sign_up.module.css"
-import signImage from './Side Image.jpg';  // Ensure this path is correct
-import googleImage from './google.png';  // Ensure this path is correct
+import  style from './Sign_up.module.css'
+import Signstyle from './Sign_up.module.css';  
+import signImage from './Side Image.jpg';  
+import googleImage from './google.png';  
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -12,58 +12,38 @@ export default function Sign_up() {
   return (
     <div className={style.container_signup}>
      {/* ****************** Mobil*************************** */}
-
-
-     <div className={Contactstyles.mediaIconAndImput}>
-          <FontAwesomeIcon icon={faBars} className={Contactstyles.iconBars} />
-          <div className={Contactstyles.inputDivNav} id={Contactstyles.inputDivNav}>
+     <div className={Signstyle.mediaIconAndImput}>
+          <FontAwesomeIcon icon={faBars} className={Signstyle.iconBars} />
+          <div className={Signstyle.inputDivNav} id={Signstyle.inputDivNav}>
             <input
-              className={Contactstyles.inputDivNav_input}
-              id={Contactstyles.inputDivNav_input}
+              className={Signstyle.inputDivNav_input}
+              id={Signstyle.inputDivNav_input}
               type="text"
               placeholder="What are you looking for?"
             />
             <FontAwesomeIcon
               icon={faSearch}
-              className={Contactstyles.searchIcon}
-              id={Contactstyles.searchIcon}
+              className={Signstyle.searchIcon}
+              id={Signstyle.searchIcon}
             />
           </div>
           <div
-            className={Contactstyles.HeartShoppingIcon}
-            id={Contactstyles.HeartShoppingIcon}
+            className={Signstyle.HeartShoppingIcon}
+            id={Signstyle.HeartShoppingIcon}
           >
             <FontAwesomeIcon
               icon={faHeart}
-              className={Contactstyles.HeartIcon}
-              id={Contactstyles.HeartIcon}
+              className={Signstyle.HeartIcon}
+              id={Signstyle.HeartIcon}
             />
             <SlBasket
-              className={Contactstyles.ShoppinghIcon}
-              id={Contactstyles.ShoppinghIcon}
+              className={Signstyle.ShoppinghIcon}
+              id={Signstyle.ShoppinghIcon}
             />
           </div>
         </div>
-   
 
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+     
 
 
         {/* ****************** Mobil*************************** */}
