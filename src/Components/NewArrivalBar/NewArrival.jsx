@@ -7,16 +7,19 @@ import Perfume from "./PerfumeBar/Perfume";
 import { TbTruckDelivery } from "react-icons/tb";
 import { RiCustomerService2Line } from "react-icons/ri";
 import { HiOutlineBadgeCheck } from "react-icons/hi";
+import { useTranslation } from "react-i18next";
 
 function NewArrival() {
+  const { t } = useTranslation();
+
   return (
     <div>
       <div className="container">
         <div className="flex items-center gap-4">
           <div className="w-5 h-10 bg-red-500 rounded"> </div>
-          <p className={NewArrivalstyles.logoToday}>Featured</p>
+          <p className={NewArrivalstyles.logoToday}>{t("Featured")}</p>
         </div>
-        <h1 className={NewArrivalstyles.BrowseCategory}>New Arrival</h1>
+        <h1 className={NewArrivalstyles.BrowseCategory}>{t("New Arrival")}</h1>
         <div className="flex gap-8	" id={NewArrivalstyles.NewArrivalBar}>
           <div className={NewArrivalstyles.playStationbackground}>
             <PlayStation />
@@ -54,10 +57,11 @@ function NewArrival() {
               </span>
             </div>
             <h1 className={NewArrivalstyles.DELIVERY}>
-              FREE AND FAST DELIVERY
+              {t("FREE AND FAST DELIVERY")}
             </h1>
             <p className={NewArrivalstyles.DELIVERYText}>
-              Free delivery for all orders over $140
+              {t("Free delivery for all orders over $140")}
+              
             </p>
           </div>
           <div className="flex flex-col	justify-center items-center shadow p-12 cursor-pointer"id={NewArrivalstyles.services}>
@@ -69,9 +73,12 @@ function NewArrival() {
                 />
               </span>
             </div>
-            <h1 className={NewArrivalstyles.DELIVERY}>24/7 CUSTOMER SERVICE</h1>
+            <h1 className={NewArrivalstyles.DELIVERY}>
+            {t("24/7 CUSTOMER SERVICE")}
+            </h1>
             <p className={NewArrivalstyles.DELIVERYText}>
-              Friendly 24/7 customer support
+            {t("Friendly 24/7 customer support")}
+              
             </p>
           </div>
           <div className="flex flex-col	justify-center items-center shadow p-12 cursor-pointer" id={NewArrivalstyles.services}>
@@ -83,9 +90,13 @@ function NewArrival() {
                 />
               </span>
             </div>
-            <h1 className={NewArrivalstyles.DELIVERY}>MONEY BACK GUARANTEE</h1>
+            <h1 className={NewArrivalstyles.DELIVERY}> 
+            {t("MONEY BACK GUARANTEE")}
+            </h1>
             <p className={NewArrivalstyles.DELIVERYText}>
-              We reurn money within 30 days
+              
+            {t("We reurn money within 30 days")}
+
             </p>
           </div>
         </section>

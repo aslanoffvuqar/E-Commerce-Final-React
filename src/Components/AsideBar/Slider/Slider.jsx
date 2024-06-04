@@ -8,6 +8,7 @@ import Iphone4 from "../Slider/imgSlider/Iphoneseri4.png";
 import Iphone5 from "../Slider/imgSlider/Iphoneseri5.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
 
 const sliderData = [
   {
@@ -43,6 +44,9 @@ const sliderData = [
 ];
 
 function Slider() {
+
+
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -52,6 +56,8 @@ function Slider() {
     return () => clearInterval(interval);
   }, []);
 
+  const { t } = useTranslation();
+  
   return (
     <div className={Sliderstyles.sliderContainer}>
       <div
@@ -67,7 +73,8 @@ function Slider() {
               </div>
               <p className={Sliderstyles.description}>{slide.description}</p>
               <a className={Sliderstyles.shopNow} href="#">
-                Shop Now
+                
+                {t("Shop Now")}
                 <span>
                   <FontAwesomeIcon
                     icon={faArrowRight}
