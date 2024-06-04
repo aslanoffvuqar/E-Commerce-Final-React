@@ -26,7 +26,7 @@ export default function ExploreProduct() {
                     <h1>{t("Best Selling Products")}</h1>
 
                 </div>
-                <div className={styles.wrapper}>
+                <div className={styles.wrapper1}>
 
 
 
@@ -157,7 +157,7 @@ export default function ExploreProduct() {
                 </div>
 
 
-                <div className={styles.wrapper}>
+                <div className={styles.wrapper2}>
 
 
 
