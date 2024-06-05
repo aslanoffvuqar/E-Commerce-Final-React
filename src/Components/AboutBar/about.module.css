@@ -65,13 +65,49 @@
 .iconBars {
   display: none;
 }
-.allTextBox{
+.allTextBox {
   display: flex;
   margin-left: 20%;
 }
 #services:hover #iconRotate {
   transition: all 0.95s;
   transform: rotateY(360deg);
+}
+.mediaIconAndImput {
+  display: none;
+}
+.mobileAsideBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: rgb(177, 167, 160);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  padding: 10px;
+  transform: translateX(-100%);
+  transition: transform 0.7s ease-in-out;
+  opacity: 0;
+}
+.mobileAsideBox.open {
+  transform: translateX(0);
+  opacity: 1;
+  top: 103px;
+}
+.asideDiv {
+  margin-top: 32px;
+}
+.a {
+  width: 203px;
+  display: flex;
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 16px;
 }
 @media only screen and (max-width: 415px) {
   #displayColum {
@@ -115,9 +151,14 @@
     margin-left: 0;
     padding: 0 20px 0 20px;
   }
-  .allTextBox{
+  .allTextBox {
     display: flex;
     margin-left: 0;
+  }
+  .asideDiv {
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: 600;
   }
   /* mobil */
   .inputDivNav {

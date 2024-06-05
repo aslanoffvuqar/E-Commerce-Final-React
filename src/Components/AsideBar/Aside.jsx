@@ -80,7 +80,7 @@ function Aside() {
               className={Asidestyles.inputDivNav_input}
               id={Asidestyles.inputDivNav_input}
               type="text"
-              placeholder="What are you looking for?"
+              placeholder={t("What are you looking for?")}
             />
             <FontAwesomeIcon
               icon={faSearch}
@@ -113,52 +113,59 @@ function Aside() {
             <div className="flex w-full justify-between ">
               <li className={Navstyles.navBar_li}>
                 <Link className={Navstyles.navBar_a} to="/Home">
-                  Home
+                  {t("Home")}
                 </Link>
               </li>
               <li className={Navstyles.navBar_li}>
                 <Link className={Navstyles.navBar_a} to="/Contact">
-                  Contact
+                  {t("Contact")}
                 </Link>
               </li>
               <li className={Navstyles.navBar_li}>
                 <Link className={Navstyles.navBar_a} to="/About">
-                  About
+                  {t("About")}
                 </Link>
               </li>
               <li className={Navstyles.navBar_li}>
                 <Link className={Navstyles.navBar_a} to="/Login">
-                  Sign Up
+                  {t("Sign Up")}
                 </Link>
               </li>
             </div>
             <div className={Asidestyles.asideDiv}>
               <a className={Asidestyles.a} href="#">
-                Woman’s Fashion
+                {t("Woman’s Fashion")}
               </a>
               <a className={Asidestyles.a} href="#">
-                Men’s Fashion
+                {t("Men’s Fashion")}
               </a>
               <a className={Asidestyles.a} href="#">
-                Electronics
+                {t("Electronics")}
+                
               </a>
               <a className={Asidestyles.a} href="#">
-                Home & Lifestyle
+                {t("Home & Lifestyle")}
+                
               </a>
               <a className={Asidestyles.a} href="#">
-                Medicine
+                {t("Medicine")}
+                
               </a>
               <a className={Asidestyles.a} href="#">
-                Sports & Outdoor
+                {t("Sports & Outdoor")}
+                
               </a>
               <a className={Asidestyles.a} href="#">
-                Baby’s & Toys
+                {t("Baby’s & Toys")}
+                
               </a>
               <a className={Asidestyles.a} href="#">
-                Groceries & Pets
+                {t("Groceries & Pets")}
+                
               </a>
               <a className={Asidestyles.a} href="#">
-                Health & Beauty
+                {t("Health & Beauty")}
+                
               </a>
             </div>
           </div>
