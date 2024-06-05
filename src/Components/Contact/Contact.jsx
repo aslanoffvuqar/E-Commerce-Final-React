@@ -13,6 +13,7 @@ import { SlBasket } from "react-icons/sl";
 
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../Firebase/Firebase";
+import { useTranslation } from "react-i18next";
 
 function Contact() {
   const nameRef = useRef(null);
@@ -43,7 +44,11 @@ function Contact() {
     phoneRef.current.value = "";
     messageRef.current.value = "";
   };
+// Language
 
+  const { t } = useTranslation();
+
+// Language
   return (
     <div>
       <div className="container">
@@ -58,7 +63,7 @@ function Contact() {
               className={Contactstyles.inputDivNav_input}
               id={Contactstyles.inputDivNav_input}
               type="text"
-              placeholder="What are you looking for?"
+              placeholder={t("What are you looking for?")}
             />
             <FontAwesomeIcon
               icon={faSearch}
@@ -90,9 +95,9 @@ function Contact() {
             to="/Home"
             className="text-gray-600 text-sm font-normal leading-5"
           >
-            Home /
+             {t("Home")} /
           </Link>
-          <p className="text-sm font-medium leading-5">Contact</p>
+          <p className="text-sm font-medium leading-5">{t("Contact")}</p>
         </div>
         <section className="flex gap-8" id={Contactstyles.mobilSection}>
           <div className={Contactstyles.AllBoxOne}>
@@ -100,26 +105,26 @@ function Contact() {
               <span className="flex w-10 h-10 bg-red-500 rounded-full justify-center items-center">
                 <BsTelephone className="text-white w-5 h-5" />
               </span>
-              <p className={Contactstyles.callNum}>Call To Us</p>
+              <p className={Contactstyles.callNum}>{t("Call To Us")}</p>
             </div>
             <p className={Contactstyles.callText}>
-              We are available 24/7, 7 days a week.
+              {t("We are available 24/7, 7 days a week.")}
             </p>
-            <p className={Contactstyles.callNumText}>Phone: +8801611112222</p>
+            <p className={Contactstyles.callNumText}>{t("Phone")} : +8801611112222</p>
             <div className={Contactstyles.line}></div>
             <div className="flex items-center gap-4">
               <span className="flex w-10 h-10 bg-red-500 rounded-full justify-center items-center">
                 <BsTelephone className="text-white w-5 h-5" />
               </span>
-              <p className={Contactstyles.callNum}>Call To Us</p>
+              <p className={Contactstyles.callNum}>{t("Call To Us")}</p>
             </div>
             <p className={Contactstyles.callText}>
-              Fill out our form and we will contact <br /> you within 24 hours.
+              {t("Fill out our form and we will contact you within 24 hours.")}
             </p>
             <p className={Contactstyles.Emails}>
-              Emails: customer@exclusive.com
+            {t("Emails")} : customer@exclusive.com
             </p>
-            <p className={Contactstyles}>Emails: support@exclusive.com</p>
+            <p className={Contactstyles}>{t("Emails")} : support@exclusive.com</p>
           </div>
           <div className={Contactstyles.AllBoxWwo}>
             <form onSubmit={handleSubmit}>
@@ -130,7 +135,7 @@ function Contact() {
                     type="text"
                     name="name"
                     ref={nameRef}
-                    placeholder="Your Name *"
+                    placeholder={t("Your Name *")}
                   />
                 </div>
                 <div className={Contactstyles.YourName}>
@@ -139,7 +144,7 @@ function Contact() {
                     type="email"
                     name="email"
                     ref={emailRef}
-                    placeholder="Your Email *"
+                    placeholder={t("Your Email *")}
                   />
                 </div>
                 <div className={Contactstyles.YourName}>
@@ -147,7 +152,7 @@ function Contact() {
                     className={Contactstyles.YourNameInput}
                     type="number"
                     ref={phoneRef}
-                    placeholder="Your Phone *"
+                    placeholder={t("Your Phone *")}
                   />
                 </div>
               </div>
@@ -156,12 +161,12 @@ function Contact() {
                   className={Contactstyles.YourMassageInput}
                   type="text"
                   ref={messageRef}
-                  placeholder="Your Message"
+                  placeholder={t("Your Message")}
                 />
               </div>
               <div className="flex justify-end" id={Contactstyles.mobilSend}>
                 <button type="submit" className={Contactstyles.SendButton}>
-                  Send Message
+                {t("Send Message")}
                 </button>
               </div>
             </form>

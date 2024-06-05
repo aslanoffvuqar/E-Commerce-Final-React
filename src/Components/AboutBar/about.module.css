@@ -69,6 +69,10 @@
   display: flex;
   margin-left: 20%;
 }
+#services:hover #iconRotate {
+  transition: all 0.95s;
+  transform: rotateY(360deg);
+}
 @media only screen and (max-width: 415px) {
   #displayColum {
     display: flex;

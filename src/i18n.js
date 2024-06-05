@@ -14,7 +14,9 @@ const resources = {
   az: {
     translation: {
       home: "Ev",
+      Home: "Ev",
       contact: "Əlaqə",
+      Contact: "Əlaqə",
       "Sign Up": "Abunə olun",
       Exclusive: "Eksklüziv",
       "Woman’s Fashion": "Qadın Moda",
@@ -97,7 +99,8 @@ const resources = {
       "DH 1515, Bangladesh.": "DH 1515, Banqladeş.",
       Account: "Hesab",
       "My Account": "Mənim Hesabım",
-      "Login": "Giriş / Qeydiyyat",
+      Login: "Giriş",
+      Register: "Qeydiyyat",
       Cart: "Səbət",
       Wishlist: "İstək siyahısı",
       Shop: "Mağaza",
@@ -107,9 +110,45 @@ const resources = {
       FAQ: "Tez-tez verilən suallar",
       Contact: "Əlaqə",
       "Download App": "Proqramı yükləyin",
-      "Save $3 with App New User Only":"Yalnız Yeni İstifadəçi Tətbiqi ilə $3 qənaət edin",
-      "Copyright Rimel 2022. All right reserved":"Copyright Rimel 2022. Bütün hüquqlar qorunur",
-      "Enter your email":"E-poçtunuzu daxil edin"
+      "Save $3 with App New User Only":
+        "Yalnız Yeni İstifadəçi Tətbiqi ilə $3 qənaət edin",
+      "Copyright Rimel 2022. All right reserved":
+        "Copyright Rimel 2022. Bütün hüquqlar qorunur",
+      "Enter your email": "E-poçtunuzu daxil edin",
+      "Call To Us": "Bizə Zəng Edin",
+      "We are available 24/7, 7 days a week.":
+        "Həftənin 7 günü, 24/7 xidmətinizdəyik.",
+      Phone: "Telefon",
+      "Fill out our form and we will contact you within 24 hours.":
+        "Formumuzu doldurun və 24 saat ərzində sizinlə əlaqə saxlayacağıq.",
+      Emails: "E-postalar",
+      "Your Name *": "Adınız *",
+      "Your Email *": "E-posta adresiniz *",
+      "Your Phone *": "Telefonunuz *",
+      "Your Message": "Mesajın",
+      "Send Message": "Mesaj göndər",
+      About: "Haqqında",
+      "Our Story":"Bizim Hekayəmiz",
+      "Launced in 2015, Exclusive is South Asia’s premier online shopping":"2015-ci ildə satışa çıxarılan Exclusive, Cənubi Asiyanın ilk onlayn alış-verişidir",
+      "makterplace with an active presense in Bangladesh. Supported":"Banqladeşdə aktiv təqdimatı olan istehsalçı. Dəstəklənir",
+      "by wide range of tailored marketing, data and service solutions,":"geniş çeşiddə uyğunlaşdırılmış marketinq, məlumat və xidmət həlləri ilə,",
+      "Exclusive has 10,500 sallers and 300 brands and serves 3":"Exclusive-in 10.500 satıcısı və 300 markası var və 3-ə xidmət edir",
+      "millioons customers across the region.":"regionda milyonlarla müştəri.",
+      "Exclusive has more than 1 Million products to offer, growing at a":"Exclusive-in təklif etmək üçün 1 milyondan çox məhsulu var",
+      "very fast. Exclusive offers a diverse assotment in categories":"çox sürətli. Exclusive kateqoriyalar üzrə müxtəlif çeşid təklif edir",
+      "ranging from consumer.":"istehlakçıdan tutmuş.",
+      "Sallers active our site":"Satıcılar saytımızda aktivdir",
+      "Mopnthly Produduct Sale":"Aylıq Məhsul satışı",
+      "Customer active in our site":"Saytımızda aktiv müştəri",
+      "Anual gross sale in our site":"Saytımızda illik ümumi satış",
+      "Tom Cruise":"Tom Kruz",
+      "Founder & Chairman":"Qurucu və Sədr",
+      "Emma Watson":"Emma Vatson",
+      "Managing Director":"İcraçı direktor",
+      "Will Smith":"Vill Smith",
+      "Product Designer":"Məhsul Dizayneri",
+    
+    
     },
   },
 };

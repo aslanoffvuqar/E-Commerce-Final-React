@@ -14,6 +14,12 @@ import { useTranslation } from "react-i18next";
 
 function Nav() {
   const { t } = useTranslation();
+  const { i18n } = useTranslation();
+
+  const handleChangeLanguage = (e) => {
+    console.log("Changing language to:", e.target.value);
+    i18n.changeLanguage(e.target.value);
+  };
 
   return (
     <>
@@ -55,8 +61,11 @@ function Nav() {
           <select
             className={Navstyles.selectHeader}
             id={Navstyles.selectHeader}
+            onChange={handleChangeLanguage}
+            value={i18n.language}
           >
-            <option value="0">En</option>
+            <option value="en">English</option>
+            <option value="az">Azəbaycan</option>
           </select>
         </nav>
       </div>
