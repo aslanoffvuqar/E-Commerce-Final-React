@@ -4,6 +4,9 @@ import Header from "./Components/HeaderBar/Header";
 import Nav from "./Components/NavBar/Nav";
 import Footer from "./Components/FooterBar/Footer";
 import Home from "./Components/Home";
+import Login from "./Components/Login/Login";
+import SignUp from "./Components/Sign-up/Sign_up"; // Обновленный путь
+import Aside from "./Components/AsideBar/Aside";
 import Aside from "./Components/AsideBar/Aside";
 import Login from "./Components/Login/Login";
 import About from "./Components/AboutBar/About";
@@ -28,13 +31,16 @@ function AppContent() {
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/SignUp" element={<SignUp />} /> {/* Добавьте маршрут */}
         <Route path="/ViewAllProduct" element={<Product_page />} />
       </Routes>
 
       {location.pathname !== "/About" &&
         location.pathname !== "/Contact" &&
         location.pathname !== "/Login" &&
+        location.pathname !== "/SignUp" && 
         location.pathname !== "/ViewAllProduct" && (
+
           <>
             <Aside />
             <Section_one />
@@ -45,7 +51,6 @@ function AppContent() {
             <NewArrival />
           </>
         )}
-
       <Footer />
     </>
   );
