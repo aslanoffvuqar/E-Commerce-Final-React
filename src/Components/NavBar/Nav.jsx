@@ -10,30 +10,50 @@ import Language from "../HeaderBar/Folder-Language/Language";
 function Nav() {
   const location = useLocation(); // Используем хук useLocation для получения текущего маршрута
 
+// import Language from "../HeaderBar/Folder-Language/Language";
+import { useTranslation } from "react-i18next";
+
+function Nav() {
+  const { t } = useTranslation();
+  const { i18n } = useTranslation();
+
+  const handleChangeLanguage = (e) => {
+    console.log("Changing language to:", e.target.value);
+    i18n.changeLanguage(e.target.value);
+  };
+
+
   return (
     <>
       <div className="container" id={Navstyles.container}>
         <nav className={Navstyles.nav}>
-          <h1 className={Navstyles.nav_h1}>Exclusive</h1>
+          <Link className={Navstyles.nav_h1} to="/Home">
+            {t("Exclusive")}
+          </Link>
           <ul className={Navstyles.navBar}>
             <li className={Navstyles.navBar_li}>
               <Link className={Navstyles.navBar_a} to="/Home">
-                Home
+                {t("home")}
               </Link>
             </li>
             <li className={Navstyles.navBar_li}>
               <Link className={Navstyles.navBar_a} to="/Contact">
-                Contact
+                {t("contact")}
               </Link>
             </li>
             <li className={Navstyles.navBar_li}>
               <Link className={Navstyles.navBar_a} to="/About">
-                About
+                {t("About")}
               </Link>
             </li>
             <li className={Navstyles.navBar_li}>
+
               <Link className={Navstyles.navBar_a} to="/SignUp">
                 Sign Up
+
+              <Link className={Navstyles.navBar_a} to="/Login">
+                {t("Sign Up")}
+
               </Link>
             </li>
           </ul>
@@ -46,8 +66,20 @@ function Nav() {
               </div>
             )}
           </div>
+
           <select className={Navstyles.selectHeader} id={Navstyles.selectHeader}>
             <option value="0">En</option>
+
+          {/* <Language/> */}
+          <select
+            className={Navstyles.selectHeader}
+            id={Navstyles.selectHeader}
+            onChange={handleChangeLanguage}
+            value={i18n.language}
+          >
+            <option value="en">English</option>
+            <option value="az">Azəbaycan</option>
+
           </select>
         </nav>
       </div>

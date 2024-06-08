@@ -1,8 +1,11 @@
 import React from "react";
 import Customerstyles from "./customer.module.css";
 import { RiShoppingBag4Line } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
 
 function Customer() {
+  const { t } = useTranslation();
+
   return (
     <div>
       <div className={`group ${Customerstyles.SallersBox}`}>
@@ -19,7 +22,7 @@ function Customer() {
         <p
           className={`${Customerstyles.DELIVERYText} group-hover:text-white transition-colors duration-700`}
         >
-          Customer active in our site
+          {t("Customer active in our site")}
         </p>
       </div>
     </div>

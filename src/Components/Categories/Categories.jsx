@@ -7,16 +7,17 @@ import SmartWatch from "./C-SmartWatch/SmartWatch";
 import Camera from "./C-Camera/Camera";
 import HeadPhones from "./C-HeadPhones/HeadPhones";
 import Gaming from "./C-Gaming/Gaming";
-
+import { useTranslation } from "react-i18next";
 function Categories() {
+  const { t } = useTranslation();
   return (
     <div>
       <div className="container">
         <div className="flex items-center gap-4">
           <div className="w-5 h-10 bg-red-500 rounded"> </div>
-          <p className={cstegoristyles.logoToday}>Categories</p>
+          <p className={cstegoristyles.logoToday}>{t("Categories")}</p>
         </div>
-        <h1 className={cstegoristyles.BrowseCategory}>Browse By Category</h1>
+        <h1 className={cstegoristyles.BrowseCategory}>{t("Browse By Category")}</h1>
         <div
           className="flex mt-16	mb-16 justify-between"
           id={cstegoristyles.allBoxCategori}

@@ -1,8 +1,11 @@
 import React from "react";
 import Activestyles from "./active.module.css";
 import { CiShop } from "react-icons/ci";
+import { useTranslation } from "react-i18next";
 
 function Active() {
+  const { t } = useTranslation();
+
   return (
     <div>
       <div className={`group ${Activestyles.SallersBox}`}>
@@ -12,7 +15,7 @@ function Active() {
           </span>
         </div>
         <h1 className={`group-hover:text-white transition-colors duration-700 ${Activestyles.DELIVERY}`}>10.5k </h1>
-        <p className={`${Activestyles.DELIVERYText} group-hover:text-white transition-colors duration-700`}>Sallers active our site</p>
+        <p className={`${Activestyles.DELIVERYText} group-hover:text-white transition-colors duration-700`}>{t("Sallers active our site")}</p>
       </div>
     </div>
   );

@@ -4,34 +4,39 @@ import img1 from "../Section_one_main/img/50752d55f8b60f2aa2923183dadbc135.png";
 import img2 from "../Section_one_main/img/8cc24eeff489863523b63971c3ff8e4a.png";
 import img3 from "../Section_one_main/img/4444.png";
 import img4 from "../Section_one_main/img/5555.png";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 export default function Section_one() {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="container">
         <div className={styles.product_text_wrapper}>
           <span className={styles.text_span}>.</span>
-          <h5>Today's</h5>
+          <h5>{t("Today's")}</h5>
         </div>
         <div className={styles.product_whatc_wrapper}>
-          <h2>Flash Sales</h2>
+          <h2>{t("Flash Sales")}</h2>
           <div className={styles.product_whatc}>
             <div>
-              <span className={styles.whatc_span}>Days</span>
+              <span className={styles.whatc_span}>{t("Days")}</span>
               <h2 className={styles.num}>03</h2>
             </div>
             <span className={styles.span_red}>:</span>
             <div>
-              <span className={styles.whatc_span}>Hours</span>
+              <span className={styles.whatc_span}>{t("Hours")}</span>
               <h2 className={styles.num}>23</h2>
             </div>
             <span className={styles.span_red}>:</span>
             <div>
-              <span className={styles.whatc_span}>Minuts</span>
+              <span className={styles.whatc_span}>{t("Minuts")}</span>
               <h2 className={styles.num}>19</h2>
             </div>
             <span className={styles.span_red}>:</span>
             <div>
-              <span className={styles.whatc_span}>Seconds</span>
+              <span className={styles.whatc_span}>{t("Seconds")}</span>
               <h2 className={styles.num}>56</h2>
             </div>
           </div>
@@ -68,9 +73,9 @@ export default function Section_one() {
                   </div>
 
                   <img className={styles.product_img} src={img1} alt="" />
-                  <div className={styles.add_card}>Add To Card</div>
+                  <div className={styles.add_card}>{t("Add To Card")}</div>
                 </div>
-                <h2 className={styles.text_h2}>HAVIT HV-G92 Gamepad</h2>
+                <h2 className={styles.text_h2}>{t("HAVIT HV-G92 Gamepad")}</h2>
                 <div className={styles.star_icon}>
                   <span className={styles.product_value}>$120</span>
                   <span className={styles.text_line}>$160</span>
@@ -153,9 +158,9 @@ export default function Section_one() {
                   </div>
 
                   <img className={styles.card_img2} src={img2} alt="" />
-                  <div className={styles.add_card}>Add To Card</div>
+                  <div className={styles.add_card}>{t("Add To Card")}</div>
                 </div>
-                <h2 className={styles.text_h2}>AK-900 Wired Keyboard</h2>
+                <h2 className={styles.text_h2}>{t("AK-900 Wired Keyboard")}</h2>
                 <div className={styles.star_icon}>
                   <span className={styles.product_value}>$960</span>
                   <span className={styles.text_line}>$1160</span>
@@ -240,9 +245,11 @@ export default function Section_one() {
                   </div>
 
                   <img className={styles.card_img2} src={img3} alt="" />
-                  <div className={styles.add_card}>Add To Card</div>
+                  <div className={styles.add_card}>{t("Add To Card")}</div>
                 </div>
-                <h2 className={styles.text_h2}>IPS LCD Gaming Monitor</h2>
+                <h2 className={styles.text_h2}>
+                  {t("IPS LCD Gaming Monitor")}
+                </h2>
                 <div className={styles.star_icon}>
                   <span className={styles.product_value}>$370</span>
                   <span className={styles.text_line}>$400</span>
@@ -325,9 +332,11 @@ export default function Section_one() {
                   </div>
 
                   <img className={styles.card_img3} src={img4} alt="" />
-                  <div className={styles.add_card}>Add To Card</div>
+                  <div className={styles.add_card}>{t("Add To Card")}</div>
                 </div>
-                <h2 className={styles.text_h2}>S-Series Comfort Chair</h2>
+                <h2 className={styles.text_h2}>
+                  {t("S-Series Comfort Chair")}
+                </h2>
                 <div className={styles.star_icon}>
                   <span className={styles.product_value}>$375</span>
                   <span className={styles.text_line}>$400</span>
@@ -413,9 +422,9 @@ export default function Section_one() {
                   </div>
 
                   <img className={styles.product_img} src={img1} alt="" />
-                  <div className={styles.add_card}>Add To Card</div>
+                  <div className={styles.add_card}>{t("Add To Card")}</div>
                 </div>
-                <h2 className={styles.text_h2}>HAVIT HV-G92 Gamepad</h2>
+                <h2 className={styles.text_h2}>{t("HAVIT HV-G92 Gamepad")}</h2>
                 <div className={styles.star_icon}>
                   <span className={styles.product_value}>$120</span>
                   <span className={styles.text_line}>$160</span>
@@ -498,9 +507,9 @@ export default function Section_one() {
                   </div>
 
                   <img className={styles.card_img2} src={img2} alt="" />
-                  <div className={styles.add_card}>Add To Card</div>
+                  <div className={styles.add_card}>{t("Add To Card")}</div>
                 </div>
-                <h2 className={styles.text_h2}>AK-900 Wired Keyboard</h2>
+                <h2 className={styles.text_h2}>{t("AK-900 Wired Keyboard")}</h2>
                 <div className={styles.star_icon}>
                   <span className={styles.product_value}>$960</span>
                   <span className={styles.text_line}>$1160</span>
@@ -585,9 +594,9 @@ export default function Section_one() {
                   </div>
 
                   <img className={styles.card_img2} src={img3} alt="" />
-                  <div className={styles.add_card}>Add To Card</div>
+                  <div className={styles.add_card}>{t("Add To Card")}</div>
                 </div>
-                <h2 className={styles.text_h2}>IPS LCD Gaming Monitor</h2>
+                <h2 className={styles.text_h2}>{t("IPS LCD Gaming Monitor")}</h2>
                 <div className={styles.star_icon}>
                   <span className={styles.product_value}>$370</span>
                   <span className={styles.text_line}>$400</span>
@@ -670,9 +679,9 @@ export default function Section_one() {
                   </div>
 
                   <img className={styles.card_img3} src={img4} alt="" />
-                  <div className={styles.add_card}>Add To Card</div>
+                  <div className={styles.add_card}>{t("Add To Card")}</div>
                 </div>
-                <h2 className={styles.text_h2}>S-Series Comfort Chair</h2>
+                <h2 className={styles.text_h2}>{t("S-Series Comfort Chair")}</h2>
                 <div className={styles.star_icon}>
                   <span className={styles.product_value}>$375</span>
                   <span className={styles.text_line}>$400</span>
@@ -735,9 +744,9 @@ export default function Section_one() {
           </div>
         </div>
         <div className={styles.all_products_div}>
-          <a className={styles.all_products} href="#">
-            View Products All
-          </a>
+          <Link className={styles.all_products} to="/ViewAllProduct">
+          {t("View Products All")}
+          </Link>
         </div>
         <hr className={styles.HrFooter} />
       </div>

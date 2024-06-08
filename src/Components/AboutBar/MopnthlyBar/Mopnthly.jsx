@@ -1,8 +1,11 @@
 import React from "react";
 import Mopnthlystyles from "./mopnthly.module.css";
 import { TbCircleLetterS } from "react-icons/tb";
+import { useTranslation } from "react-i18next";
 
 function Mopnthly() {
+  const { t } = useTranslation();
+
   return (
     <div>
       <div className={`group ${Mopnthlystyles.SallersBox}`}>
@@ -12,7 +15,7 @@ function Mopnthly() {
           </span>
         </div>
         <h1 className={`group-hover:text-white transition-colors duration-700 ${Mopnthlystyles.DELIVERY}`}>33k </h1>
-        <p className={`${Mopnthlystyles.DELIVERYText} group-hover:text-white transition-colors duration-700`}>Mopnthly Produduct Sale</p>
+        <p className={`${Mopnthlystyles.DELIVERYText} group-hover:text-white transition-colors duration-700`}>{t("Mopnthly Produduct Sale")}</p>
       </div>
     </div>
   );

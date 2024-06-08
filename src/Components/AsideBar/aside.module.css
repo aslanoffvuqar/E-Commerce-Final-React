@@ -30,7 +30,8 @@
   display: flex;
 }
 .a_icon {
-  margin-left: 51px;
+  position: absolute;
+  left: 23%;
 }
 .a_icon2 {
   margin-left: 81px;
@@ -45,6 +46,26 @@
 }
 .mediaIconAndImput {
   display: none;
+}
+.mobileAsideBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: rgb(177, 167, 160);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  padding: 10px;
+  transform: translateX(-100%);
+  transition: transform 0.7s ease-in-out;
+  opacity: 0;
+}
+
+.mobileAsideBox.open {
+  transform: translateX(0);
+  opacity: 1;
+  top: 103px;
 }
 @media only screen and (max-width: 415px) {
 
@@ -85,6 +106,11 @@
     width: 15%;
     display: flex;
     justify-content: space-between;
+  }
+  .asideDiv {
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: 600;
   }
  
 }

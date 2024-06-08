@@ -11,31 +11,42 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Qrimg from "../FooterBar/Footer-Imge/Qrcode 1.png";
 import googleimg from "../FooterBar/Footer-Imge/GooglePlay.png";
 import AppStore from "../FooterBar/Footer-Imge/AppStore.png";
+import { useTranslation } from "react-i18next";
+
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <>
       <footer>
-        <div className={Footerstyles.footerBackground} id={Footerstyles.footerBackground}>
+        <div
+          className={Footerstyles.footerBackground}
+          id={Footerstyles.footerBackground}
+        >
           <div className="container">
             <div className={Footerstyles.allBoxFooter}>
               <div className={Footerstyles.BoxFooter}>
                 <h2 className={Footerstyles.Exclusive} responsive="fontSize">
-                  Exclusive
+                  {t("Exclusive")}
                 </h2>
-                <h3>
-                  <a className={Footerstyles.a} fontFooterRespons="fontFooterRespons" href="#">
-                    Subscribe
-                  </a>
-                </h3>
-                <p>
-                  <a className={Footerstyles.a} fontFooterRespons="fontFooterRespons" href="#">
-                    Get 10% off your first order
-                  </a>
-                </p>
+                <a
+                  className={Footerstyles.a}
+                  fontFooterRespons="fontFooterRespons"
+                  href="#"
+                >
+                  {t("Subscribe")}
+                </a>
+                <a
+                  className={Footerstyles.a}
+                  fontFooterRespons="fontFooterRespons"
+                  href="#"
+                >
+                  {t("Get 10% off your first order")}
+                </a>
                 <div className={Footerstyles.inputDivFooter}>
                   <input
                     type="text"
-                    placeholder="Enter your email"
+                    placeholder={t("Enter your email")}
                     className={Footerstyles.inputFooter}
                   />
                   <FontAwesomeIcon
@@ -46,86 +57,136 @@ function Footer() {
               </div>
               <div className={Footerstyles.BoxFooter}>
                 <h3 className={Footerstyles.h3} responsive="fontSize">
-                  Support
+                  {t("Support")}
                 </h3>
-                <p>
-                  <a className={Footerstyles.a}  fontFooterRespons="fontFooterRespons" href="#">
-                    111 Bijoy sarani, Dhaka, <br /> DH 1515, Bangladesh.
-                  </a>
-                </p>
-                <p>
-                  <a className={Footerstyles.a}  fontFooterRespons="fontFooterRespons" href="#">
-                    exclusive@gmail.com
-                  </a>
-                </p>
-                <a className={Footerstyles.a} fontFooterRespons="fontFooterRespons" href="#">
+                <a
+                  className={Footerstyles.a}
+                  fontFooterRespons="fontFooterRespons"
+                  href="#"
+                >
+                  {t("111 Bijoy sarani, Dhaka,")}
+                  <br /> {t("DH 1515, Bangladesh.")}
+                </a>
+                <a
+                  className={Footerstyles.a}
+                  fontFooterRespons="fontFooterRespons"
+                  href="#"
+                >
+                  exclusive@gmail.com
+                </a>
+                <a
+                  className={Footerstyles.a}
+                  fontFooterRespons="fontFooterRespons"
+                  href="#"
+                >
                   +88015-88888-9999
                 </a>
               </div>
               <div className={Footerstyles.BoxFooter}>
                 <h3 className={Footerstyles.h3_third} responsive="fontSize">
-                  Account
+                  {t("Account")}
                 </h3>
-                <p>
-                  <a className={Footerstyles.a_third}  fontFooterRespons="fontFooterRespons" href="#">
-                    My Account
+                <a
+                  className={Footerstyles.a_third}
+                  fontFooterRespons="fontFooterRespons"
+                  href="#"
+                >
+                  {t("My Account")}
+                </a>
+                <div>
+                  <a
+                    className={Footerstyles.a_third}
+                    fontFooterRespons="fontFooterRespons"
+                    href="#"
+                  >
+                    {t("Login")}
+                  </a>
+                  <span className="text-white	"> / </span>
+                  <a
+                    className={Footerstyles.a_third}
+                    fontFooterRespons="fontFooterRespons"
+                    href="#"
+                  >
+                    {t("Register")}
+                  </a>
+                </div>
+                <a
+                  className={Footerstyles.a_third}
+                  fontFooterRespons="fontFooterRespons"
+                  href="#"
+                >
+                  {t("Cart")}
+                </a>
+                <a
+                  className={Footerstyles.a_third}
+                  fontFooterRespons="fontFooterRespons"
+                  href="#"
+                >
+                  {t("Wishlist")}
+                </a>
+                <a
+                  className={Footerstyles.a_third}
+                  fontFooterRespons="fontFooterRespons"
+                  href="#"
+                >
+                  {t("Shop")}
+                </a>
+              </div>
+              <div className={Footerstyles.BoxFooter} Quick_div="Quick_div">
+                <h3 className={Footerstyles.h3} responsive="fontSize">
+                  {t("Quick Link")}
+                </h3>
+                <p className={Footerstyles.a}>
+                  <a
+                    className={Footerstyles.a}
+                    fontFooterRespons="fontFooterRespons"
+                    href="#"
+                  >
+                    {t("Privacy Policy")}
                   </a>
                 </p>
-                <p>
-                  <a className={Footerstyles.a_third}  fontFooterRespons="fontFooterRespons" href="#">
-                    Login / Register
+                <p className={Footerstyles.a}>
+                  <a
+                    className={Footerstyles.a}
+                    fontFooterRespons="fontFooterRespons"
+                    href="#"
+                  >
+                    {t("Terms Of Use")}
                   </a>
                 </p>
-                <p>
-                  <a className={Footerstyles.a_third}  fontFooterRespons="fontFooterRespons" href="#">
-                    Cart
+                <p className={Footerstyles.a}>
+                  <a
+                    className={Footerstyles.a}
+                    fontFooterRespons="fontFooterRespons"
+                    href="#"
+                  >
+                    {t("FAQ")}
                   </a>
                 </p>
-                <p>
-                  <a className={Footerstyles.a_third}  fontFooterRespons="fontFooterRespons" href="#">
-                    Wishlist
-                  </a>
-                </p>
-                <p>
-                  <a className={Footerstyles.a_third}  fontFooterRespons="fontFooterRespons" href="#">
-                    Shop
+                <p className={Footerstyles.a}>
+                  <a
+                    className={Footerstyles.a}
+                    fontFooterRespons="fontFooterRespons"
+                    href="#"
+                  >
+                    {t("Contact")}
                   </a>
                 </p>
               </div>
-              <div className={Footerstyles.BoxFooter}Quick_div="Quick_div">
+              <div
+                className={Footerstyles.BoxFooter}
+                Download_App="Download_App"
+              >
                 <h3 className={Footerstyles.h3} responsive="fontSize">
-                  Quick Link
+                  {t("Download App")}
                 </h3>
-                <p className={Footerstyles.a} >
-                  <a className={Footerstyles.a}  fontFooterRespons="fontFooterRespons"  href="#">
-                    Privacy Policy
-                  </a>
-                </p>
-                <p className={Footerstyles.a} >
-                  <a className={Footerstyles.a}  fontFooterRespons="fontFooterRespons"  href="#">
-                    Terms Of Use
-                  </a>
-                </p>
-                <p className={Footerstyles.a} >
-                  <a className={Footerstyles.a}  fontFooterRespons="fontFooterRespons"  href="#">
-                    FAQ
-                  </a>
-                </p>
-                <p className={Footerstyles.a} >
-                  <a className={Footerstyles.a}  fontFooterRespons="fontFooterRespons"  href="#">
-                    Contact
-                  </a>
-                </p>
-              </div>
-              <div className={Footerstyles.BoxFooter} Download_App="Download_App">
-                <h3 className={Footerstyles.h3} responsive="fontSize">
-                  Download App
-                </h3>
-                <p>
-                  <a className={Footerstyles.Doownload_a} fontFooterRespons="fontFooterRespons" href="#">
-                    Save $3 with App New User Only
-                  </a>
-                </p>
+                <a
+                  className={Footerstyles.Doownload_a}
+                  fontFooterRespons="fontFooterRespons"
+                  href="#"
+                >
+                  {t("Save $3 with App New User Only")}
+                </a>
                 <div className={Footerstyles.allImgFooter}>
                   <img
                     src={Qrimg}
@@ -134,33 +195,47 @@ function Footer() {
                     id={Footerstyles.QrImg}
                   />
                   <div className={Footerstyles.googleAppImg}>
-                    <img src={googleimg} alt="" className={Footerstyles.GooglApp} />
-                    <img src={AppStore} alt="" className={Footerstyles.GooglApp} />
+                    <img
+                      src={googleimg}
+                      alt=""
+                      className={Footerstyles.GooglApp}
+                    />
+                    <img
+                      src={AppStore}
+                      alt=""
+                      className={Footerstyles.GooglApp}
+                    />
                   </div>
                 </div>
                 <div className={Footerstyles.allIconFooter}>
                   <FontAwesomeIcon
                     icon={faFacebookF}
-                    className={Footerstyles.icons}
+                    className={Footerstyles.iconsFa}
                   />
-                  <FontAwesomeIcon icon={faTwitter} className={Footerstyles.icons} />
+                  <FontAwesomeIcon
+                    icon={faTwitter}
+                    className={Footerstyles.iconsTw}
+                  />
                   <FontAwesomeIcon
                     icon={faInstagram}
-                    className={Footerstyles.icons}
+                    className={Footerstyles.iconsIns}
                   />
-                  <FontAwesomeIcon icon={faLinkedin} className={Footerstyles.icons} />
+                  <FontAwesomeIcon
+                    icon={faLinkedin}
+                    className={Footerstyles.iconsLi}
+                  />
                 </div>
               </div>
             </div>
           </div>
           <div className={Footerstyles.hrAllBox}>
-          <hr className={Footerstyles.HrFooter} />
-          <div className={Footerstyles.logoFooter}>
-            <span className={Footerstyles.logospan}>C</span>
-            <p className={Footerstyles.logo_P}>
-              Copyright Rimel 2022. All right reserved
-            </p>
-          </div>
+            <hr className={Footerstyles.HrFooter} />
+            <div className={Footerstyles.logoFooter}>
+              <span className={Footerstyles.logospan}>C</span>
+              <p className={Footerstyles.logo_P}>
+                {t("Copyright Rimel 2022. All right reserved")}
+              </p>
+            </div>
           </div>
         </div>
       </footer>

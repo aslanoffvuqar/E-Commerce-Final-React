@@ -8,20 +8,25 @@ import img5 from '../Explore_product/img/5.png'
 import img6 from '../Explore_product/img/66.png'
 import img7 from '../Explore_product/img/77.png'
 import img8 from '../Explore_product/img/888.png'
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 export default function ExploreProduct() {
+  const { t } = useTranslation();
+
     return (
         <>
             <div className={styles.container}>
 
                 <div className={styles.product_text_wrapper}>
                     <span className={styles.text_span}>.</span>
-                    <h5>This Month</h5>
+                    <h5>{t("This Month")}</h5>
                 </div>
                 <div className={styles.all_view}>
-                    <h1>Best Selling Products</h1>
+                    <h1>{t("Best Selling Products")}</h1>
 
                 </div>
-                <div className={styles.wrapper}>
+                <div className={styles.wrapper1}>
 
 
 
@@ -38,9 +43,9 @@ export default function ExploreProduct() {
 
 
                                 <img className={styles.product_img} src={img1} alt="" />
-                                <div className={styles.add_card}>Add To Card</div>
+                                <div className={styles.add_card}>{t("Add To Card")}</div>
                             </div>
-                            <h2 className={styles.text_h2}>Breed Dry Dog Food</h2>
+                            <h2 className={styles.text_h2}>{t("Breed Dry Dog Food")}</h2>
                             <div className={styles.star_icon}>
                                 <span className={styles.product_value}>$100</span>
                                 <div className={styles.star_icon}>
@@ -68,9 +73,9 @@ export default function ExploreProduct() {
 
 
                                 <img className={styles.card_img2} src={img2} alt="" />
-                                <div className={styles.add_card}>Add To Card</div>
+                                <div className={styles.add_card}>{t("Add To Card")}</div>
                             </div>
-                            <h2 className={styles.text_h2}>CANON EOS DSLR Camera</h2>
+                            <h2 className={styles.text_h2}>{t("CANON EOS DSLR Camera")}</h2>
                             <div className={styles.star_icon}>
                                 <span className={styles.product_value}>$360</span>
                                 <div className={styles.star_icon}>
@@ -100,9 +105,9 @@ export default function ExploreProduct() {
 
 
                                 <img className={styles.card_img3} src={img3} alt="" />
-                                <div className={styles.add_card}>Add To Card</div>
+                                <div className={styles.add_card}>{t("Add To Card")}</div>
                             </div>
-                            <h2 className={styles.text_h2}>ASUS FHD Gaming Laptop</h2>
+                            <h2 className={styles.text_h2}>{t("ASUS FHD Gaming Laptop")}</h2>
                             <div className={styles.star_icon}>
                                 <span className={styles.product_value}>$700</span>
                                 <div className={styles.star_icon}>
@@ -130,9 +135,9 @@ export default function ExploreProduct() {
 
 
                                 <img className={styles.card_img4} src={img4} alt="" />
-                                <div className={styles.add_card}>Add To Card</div>
+                                <div className={styles.add_card}>{t("Add To Card")}</div>
                             </div>
-                            <h2 className={styles.text_h2}>Curology Product Set </h2>
+                            <h2 className={styles.text_h2}>{t("Curology Product Set")}</h2>
                             <div className={styles.star_icon}>
                                 <span className={styles.product_value}>$500</span>
                                 <div className={styles.star_icon}>
@@ -152,7 +157,7 @@ export default function ExploreProduct() {
                 </div>
 
 
-                <div className={styles.wrapper}>
+                <div className={styles.wrapper2}>
 
 
 
@@ -169,9 +174,9 @@ export default function ExploreProduct() {
 
 
                                 <img className={styles.card_img5} src={img5} alt="" />
-                                <div className={styles.add_card}>Add To Card</div>
+                                <div className={styles.add_card}>{t("Add To Card")}</div>
                             </div>
-                            <h2 className={styles.text_h2}>Kids Electric Car</h2>
+                            <h2 className={styles.text_h2}>{t("Kids Electric Car")}</h2>
                             <div className={styles.star_icon}>
                                 <span className={styles.product_value}>$960</span>
 
@@ -200,9 +205,9 @@ export default function ExploreProduct() {
 
 
                                 <img className={styles.card_img2} src={img6} alt="" />
-                                <div className={styles.add_card}>Add To Card</div>
+                                <div className={styles.add_card}>{t("Add To Card")}</div>
                             </div>
-                            <h2 className={styles.text_h2}>Jr. Zoom Soccer Cleats</h2>
+                            <h2 className={styles.text_h2}>{t("Jr. Zoom Soccer Cleats")}</h2>
                             <div className={styles.star_icon}>
                                 <span className={styles.product_value}>$1180</span>
 
@@ -233,9 +238,9 @@ export default function ExploreProduct() {
 
 
                                 <img className={styles.card_img7} src={img7} alt="" />
-                                <div className={styles.add_card}>Add To Card</div>
+                                <div className={styles.add_card}>{t("Add To Card")}</div>
                             </div>
-                            <h2 className={styles.text_h2}>GP11 Shooter USB Gamepad</h2>
+                            <h2 className={styles.text_h2}>{t("GP11 Shooter USB Gamepad")}</h2>
                             <div className={styles.star_icon}>
                                 <span className={styles.product_value}>$660</span>
                                 <div className={styles.star_icon}>
@@ -263,9 +268,9 @@ export default function ExploreProduct() {
 
 
                                 <img className={styles.card_img8} src={img8} alt="" />
-                                <div className={styles.add_card}>Add To Card</div>
+                                <div className={styles.add_card}>{t("Add To Card")}</div>
                             </div>
-                            <h2 className={styles.text_h2}>Quilted Satin Jacket</h2>
+                            <h2 className={styles.text_h2}>{t("Quilted Satin Jacket")}</h2>
                             <div className={styles.star_icon}>
                                 <span className={styles.product_value}>$660</span>
                                 <div className={styles.star_icon}>
@@ -284,7 +289,7 @@ export default function ExploreProduct() {
                     </div>
                 </div>
                 <div className={styles.all_products_div}>
-                   <a className={styles.all_products} href="/#">View Products All</a>
+                   <Link className={styles.all_products} to="/ViewAllProduct">{t("View Products All")}</Link>
                 </div>
                
             </div >

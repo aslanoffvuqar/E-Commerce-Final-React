@@ -4,17 +4,22 @@ import img1 from "../Best_product/img/1e9f94261b28e16ea21bacb4144473e8.png";
 import img2 from "../Best_product/img/2722dbdf98f25179d3c0b785988c513d.png";
 import img3 from "../Best_product/img/c218c97b645d616c8188a4f2e6aaf84b.png";
 import img4 from "../Best_product/img/7777.png";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 export default function BestProducts() {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className={styles.container}>
         <div className={styles.product_text_wrapper}>
           <span className={styles.text_span}>.</span>
-          <h5>This Month</h5>
+          <h5>{t("This Month")}</h5>
         </div>
         <div className={styles.all_view}>
-          <h1>Best Selling Products</h1>
-          <a href="#">View All</a>
+          <h1>{t("Best Selling Products")}</h1>
+          <Link to="/ViewAllProduct">{t("View All")}</Link>
         </div>
         <div className={styles.wrapper}>
           {/* <div className={styles.card_img_wraper}> */}
@@ -40,9 +45,9 @@ export default function BestProducts() {
               </div>
 
               <img className={styles.product_img} src={img1} alt="" />
-              <div className={styles.add_card}>Add To Card</div>
+              <div className={styles.add_card}>{t("Add To Card")}</div>
             </div>
-            <h2 className={styles.text_h2}>The north coat</h2>
+            <h2 className={styles.text_h2}>{t("The north coat")}</h2>
             <div className={styles.star_icon}>
               <span className={styles.product_value}>$260</span>
               <span className={styles.text_line}>$360</span>
@@ -124,9 +129,9 @@ export default function BestProducts() {
               </div>
 
               <img className={styles.card_img2} src={img2} alt="" />
-              <div className={styles.add_card}>Add To Card</div>
+              <div className={styles.add_card}>{t("Add To Card")}</div>
             </div>
-            <h2 className={styles.text_h2}>Gucci duffle bag</h2>
+            <h2 className={styles.text_h2}>{t("Gucci duffle bag")}</h2>
             <div className={styles.star_icon}>
               <span className={styles.product_value}>$960</span>
               <span className={styles.text_line}>$1160</span>
@@ -186,8 +191,7 @@ export default function BestProducts() {
             </div>
           </div>
 
-          {/* </div> */}
-          {/* <div className={styles.card_img_wraper}> */}
+          
           <div>
             <div className={styles.products}>
               <div className={styles.product_icon}>
@@ -210,9 +214,9 @@ export default function BestProducts() {
               </div>
 
               <img className={styles.card_img3} src={img3} alt="" />
-              <div className={styles.add_card}>Add To Card</div>
+              <div className={styles.add_card}>{t("Add To Card")}</div>
             </div>
-            <h2 className={styles.text_h2}>RGB liquid CPU Cooler</h2>
+            <h2 className={styles.text_h2}>{t("RGB liquid CPU Cooler")}</h2>
             <div className={styles.star_icon}>
               <span className={styles.product_value}>$160</span>
               <span className={styles.text_line}>$170</span>
@@ -294,9 +298,9 @@ export default function BestProducts() {
               </div>
 
               <img className={styles.card_img4} src={img4} alt="" />
-              <div className={styles.add_card}>Add To Card</div>
+              <div className={styles.add_card}>{t("Add To Card")}</div>
             </div>
-            <h2 className={styles.text_h2}>Small BookSelf</h2>
+            <h2 className={styles.text_h2}>{t("Small BookSelf")}</h2>
             <div className={styles.star_icon}>
               <span className={styles.product_value}>$360</span>
             </div>
@@ -355,7 +359,6 @@ export default function BestProducts() {
             </div>
           </div>
 
-          {/* </div> */}
         </div>
       </div>
     </>

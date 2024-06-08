@@ -1,8 +1,11 @@
 import React from "react";
 import Salestyles from "./sale.module.css";
 import { AiOutlineDollarCircle } from "react-icons/ai";
+import { useTranslation } from "react-i18next";
 
 function Sale() {
+  const { t } = useTranslation();
+
   return (
     <div>
       <div className={`group ${Salestyles.SallersBox}`}>
@@ -14,7 +17,7 @@ function Sale() {
         <h1 className={`group-hover:text-white transition-colors duration-700 ${Salestyles.DELIVERY}`}>
           25k
         </h1>
-        <p className={`${Salestyles.DELIVERYText} group-hover:text-white transition-colors duration-700`}>Anual gross sale in our site</p>
+        <p className={`${Salestyles.DELIVERYText} group-hover:text-white transition-colors duration-700`}>{t("Anual gross sale in our site")}</p>
       </div>
     </div>
   );
