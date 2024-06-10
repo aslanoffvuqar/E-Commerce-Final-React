@@ -127,7 +127,7 @@ function Aside() {
                 </Link>
               </li>
               <li className={Navstyles.navBar_li}>
-                <Link className={Navstyles.navBar_a} to="/Login">
+                <Link className={Navstyles.navBar_a} to="/SignUp">
                   {t("Sign Up")}
                 </Link>
               </li>

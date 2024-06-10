@@ -1,206 +1,137 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-.container {
-    width:1385px;
-    height: 470px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+.img_login2 {
+  display: flex;
+  width: 835px;
+  height: 706px;
+  margin-top: 60px;
+  margin-bottom: 180px;
 }
-
-.img_login > img {
-    width: 805px;
-    height: 778px;
-    object-fit: contain;
-    position: absolute;
-    bottom: 24%;
-    top: 24%;
+.allBox {
+  position: relative;
 }
-
-
-
-
 .form_main {
-    width: 345px;
-    display: flex;
-    flex-direction: column;
-    margin: 48px 0;
-    position: absolute;
-    top: 60%;
-    bottom: 7%;
-    left: 70%;
+  width: 371px;
+  height: 530px;
+  position: absolute;
+  top: 30%;
+  left: 67%;
 }
 
 .exclusive {
-    color: rgb(0, 0, 0);
-    font-family: Poppins;
-    font-size: 36px;
-    font-weight: 500;
-    line-height: 30px;
-    letter-spacing: 4%;
-    text-align: left;
-    padding-bottom: 16px;
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 4%;
+  text-align: left;
+  padding-bottom: 16px;
 }
 
 .details {
-    color: rgb(0, 0, 0);
-    font-family: Poppins;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0%;
-    text-align: left;
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
 }
 
 .input_email,
 .input_password {
-    width: 346px;
-    height: 32px;
-    opacity: 0.8;
-    color: rgb(0, 0, 0);
-    font-family: Poppins;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0%;
-    text-align: left;
-    margin: 20px 0;
-    border: none;
-    border-bottom: 1px solid rgb(0, 0, 0);
-    background: none;
-    outline: none;
-    padding: 8px 0;
-    transition: border-color 0.3s ease, opacity 0.3s ease;
+  width: 346px;
+  height: 32px;
+  opacity: 0.8;
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  margin: 20px 0;
+  border: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  background: none;
+  outline: none;
+  padding: 8px 0;
+  transition: border-color 0.3s ease, opacity 0.3s ease;
 }
 
 .input_email:focus,
 .input_password:focus {
-    border-bottom: 2px solid rgb(219, 68, 68);
-    opacity: 1;
+  border-bottom: 2px solid rgb(219, 68, 68);
+  opacity: 1;
 }
 
 .button_1 {
-    width: 143px;
-    height: 56px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px 48px;
-    margin: 16px 0;
-    border-radius: 4px;
-    background: rgb(219, 68, 68);
-    color: rgb(250, 250, 250);
-    font-family: Poppins;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0%;
-    text-align: left;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    cursor: pointer;
+  width: 143px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0;
+  border-radius: 4px;
+  background: rgb(219, 68, 68);
+  color: rgb(250, 250, 250);
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  transition: color 0.8s ease, 0.8s ease;
 }
 
 .button_1:hover {
-    background-color: rgb(200, 50, 50);
-    transform: scale(1.05);
+  background-color: #ffff;
+  color: #db4444;
+  transition: color 0.8s ease, 0.8s ease;
+  border: 1px solid #db4444;
 }
 
 .forget_passsword2 {
-    width: 141px;
-    height: 24px;
-    margin: 0 43px;
-    color: rgb(219, 68, 68);
-    font-family: Poppins;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0%;
-    text-align: left;
-    transition: color 0.3s ease;
-    text-decoration: none;
+  width: 141px;
+  height: 24px;
+  margin: 0 0 0 50px;
+  color: rgb(219, 68, 68);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .forget_passsword2:hover {
-    color: rgb(200, 50, 50);
-    text-decoration: underline;
+  color: rgb(200, 50, 50);
+  text-decoration: underline;
 }
 
 .botton_buttons {
-    width: 371px;
-    height: 56px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 40px 0;
+  width: 371px;
+  height: 56px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 40px 0;
 }
 
-/* Медиа-запросы для различных размеров экрана */
-@media (max-width: 1024px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .img_login > img {
-        width: 100%;
-        position: static;
-        margin-bottom: 20px;
-    }
+@media only screen and (max-width: 415px) {
 
-    .form_main {
-        width: 90%;
-        margin: 0;
-    }
+.img_login2{
+    display: none;
 }
-
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-        height: auto;
-        left: 0;
-        right: 0;
-        top: 0;
-    }
-
-    .exclusive {
-        font-size: 28px;
-    }
-
-    .details {
-        font-size: 14px;
-    }
-
-    .input_email,
-    .input_password {
-        width: 100%;
-        margin: 15px 0;
-    }
-
-    .button_1 {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .forget_passsword2 {
-        margin: 10px 0;
-    }
+.form_main{
+    position: unset;
+    margin-top: 40px;
+    height: 350px;
 }
-
-@media (max-width: 480px) {
-    .exclusive {
-        font-size: 24px;
-    }
-
-    .details {
-        font-size: 12px;
-    }
-
-    .button_1 {
-        font-size: 12px;
-        padding: 10px 30px;
-    }
-
-    .forget_passsword2 {
-        font-size: 14px;
-    }
 }

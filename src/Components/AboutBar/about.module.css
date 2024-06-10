@@ -73,16 +73,14 @@
   transition: all 0.95s;
   transform: rotateY(360deg);
 }
-.mediaIconAndImput {
-  display: none;
-}
+
 .mobileAsideBox {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: auto;
-  background-color: rgb(177, 167, 160);
+  background-color: rgb(18, 17, 17);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   z-index: 1000;
   padding: 10px;
@@ -160,6 +158,15 @@
     font-size: 20px;
     font-weight: 600;
   }
+  .a{
+    color: #fff;
+   }
+   .a:hover{
+    color: #EA4343;
+   }
+   .navBar_a{
+    color: #EA4343;
+   }
   /* mobil */
   .inputDivNav {
     display: flex;
@@ -176,12 +183,7 @@
     font-size: 17px;
     background-color: #f5f5f5;
   }
-  .inputDivNav_input {
-    border: none;
-    outline: none;
-    font-size: 17px;
-    background-color: #f5f5f5;
-  }
+ 
   .HeartShoppingIcon {
     width: 15%;
     display: flex;

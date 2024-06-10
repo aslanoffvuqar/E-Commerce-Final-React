@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef ,useState } from "react";
 import Contactstyles from "./contact.module.css";
 import { Link } from "react-router-dom";
 import { BsTelephone } from "react-icons/bs";
@@ -49,16 +49,26 @@ function Contact() {
   const { t } = useTranslation();
 
 // Language
+
+// asideBar Mobil
+const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+const toggleSidebar = () => {
+  setIsSidebarOpen(!isSidebarOpen);
+};
+// asideBar Mobil
+
   return (
     <div>
       <div className="container">
-        {/* ****************** Mobil*************************** */}
-        <div className={Contactstyles.mediaIconAndImput}>
-          <FontAwesomeIcon icon={faBars} className={Contactstyles.iconBars} />
-          <div
-            className={Contactstyles.inputDivNav}
-            id={Contactstyles.inputDivNav}
-          >
+          {/* ****************** Mobil*************************** */}
+          <div className={Contactstyles.mediaIconAndImput}>
+          <FontAwesomeIcon
+            icon={faBars}
+            className={Contactstyles.iconBars}
+            onClick={toggleSidebar}
+          />
+          <div className={Contactstyles.inputDivNav} id={Contactstyles.inputDivNav}>
             <input
               className={Contactstyles.inputDivNav_input}
               id={Contactstyles.inputDivNav_input}
@@ -86,6 +96,76 @@ function Contact() {
             />
           </div>
         </div>
+
+
+        <aside
+          className={`${Contactstyles.mobileAsideBox} ${
+            isSidebarOpen ? Contactstyles.open : ""
+          }`}
+        >
+          <div className={Contactstyles.asideDiv}>
+            <div className="flex w-full justify-between ">
+              <li className={Contactstyles.navBar_li}>
+                <Link className={Contactstyles.navBar_a} to="/Home">
+                  {t("Home")}
+                </Link>
+              </li>
+              <li className={Contactstyles.navBar_li}>
+                <Link className={Contactstyles.navBar_a} to="/Contact">
+                  {t("Contact")}
+                </Link>
+              </li>
+              <li className={Contactstyles.navBar_li}>
+                <Link className={Contactstyles.navBar_a} to="/About">
+                  {t("About")}
+                </Link>
+              </li>
+              <li className={Contactstyles.navBar_li}>
+                <Link className={Contactstyles.navBar_a} to="/Login">
+                  {t("Sign Up")}
+                </Link>
+              </li>
+            </div>
+            <div className={Contactstyles.asideDiv}>
+              <a className={Contactstyles.a} href="#">
+                {t("Woman’s Fashion")}
+              </a>
+              <a className={Contactstyles.a} href="#">
+                {t("Men’s Fashion")}
+              </a>
+              <a className={Contactstyles.a} href="#">
+                {t("Electronics")}
+                
+              </a>
+              <a className={Contactstyles.a} href="#">
+                {t("Home & Lifestyle")}
+                
+              </a>
+              <a className={Contactstyles.a} href="#">
+                {t("Medicine")}
+                
+              </a>
+              <a className={Contactstyles.a} href="#">
+                {t("Sports & Outdoor")}
+                
+              </a>
+              <a className={Contactstyles.a} href="#">
+                {t("Baby’s & Toys")}
+                
+              </a>
+              <a className={Contactstyles.a} href="#">
+                {t("Groceries & Pets")}
+                
+              </a>
+              <a className={Contactstyles.a} href="#">
+                {t("Health & Beauty")}
+                
+              </a>
+            </div>
+          </div>
+        </aside>
+        {/* ****************** Mobil*************************** */}
+        
         {/* ****************** Mobil*************************** */}
         <div
           className="flex gap-1 mt-20 mb-20"
@@ -172,6 +252,8 @@ function Contact() {
             </form>
           </div>
         </section>
+         
+
       </div>
     </div>
   );

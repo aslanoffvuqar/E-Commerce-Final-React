@@ -36,12 +36,12 @@ nav {
 }
 
 .navBar_a {
-  color: black;
-  font-family: "Poppins", sans-serif;
-}
-.navBar_a:hover {
-  border-bottom: 2px solid gray;
-}
+    color: black;
+    font-family: "Poppins", sans-serif;
+  }
+  .navBar_a:hover {
+    border-bottom: 2px solid gray;
+  }
 .selectHeader{
   display: none;
 }
@@ -67,5 +67,12 @@ nav {
   }
   #selectHeader{
     display: block;
+  }
+  .navBar_a {
+    color:#EF4444;
+    font-family: "Poppins", sans-serif;
+  }
+  .navBar_a:hover {
+    border-bottom: 2px solid #EF4444;
   }
 }

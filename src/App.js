@@ -6,9 +6,9 @@ import Footer from "./Components/FooterBar/Footer";
 import Home from "./Components/Home";
 import Login from "./Components/Login/Login";
 import SignUp from "./Components/Sign-up/Sign_up"; // Обновленный путь
+// import Aside from "./Components/AsideBar/Aside";
 import Aside from "./Components/AsideBar/Aside";
-import Aside from "./Components/AsideBar/Aside";
-import Login from "./Components/Login/Login";
+// import Login from "./Components//Login/Login";
 import About from "./Components/AboutBar/About";
 import Section_one from "./Components/Section_one_main/Section_one";
 import Categories from "./Components/Categories/Categories";

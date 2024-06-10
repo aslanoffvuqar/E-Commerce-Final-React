@@ -1,408 +1,191 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-
-.container_signup{
-position: relative;
-width: 1085px;
-height: 943px;
-display: flex;
-flex-direction: row;
-justify-content: flex-start;
-align-items: center;
-padding: 0px;
+.mediaIconAndImput {
+  display: none;
 }
-
-
-
-
-
-
-.create_account{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin: 48px 0px;
-    left: 59%;
-    top: 17%;
+.allBox {
+  display: flex;
+  position: relative;
 }
-
-
-.img_sign_up>img{
-width: 99%;
-height: 100%;
+.img_sign_up {
+  display: flex;
+  width: 835px;
+  height: 706px;
+  margin-top: 60px;
+  margin-bottom: 180px;
 }
- 
-.img_sign_up{
-  width: 77%;
-    height: 87%;
-    position: absolute;
-    bottom: 11%;
+.create_account {
+  width: 371px;
+  height: 530px;
+  position: absolute;
+  top: 45%;
+  left: 67%;
 }
-
-
-.main_text{
-width: 32%;
-margin-bottom: 35px;
-
-}
-
-
-
 .exclusive_h1 {
-    color: rgb(0, 0, 0);
-    font-family: Poppins;
-    font-size: 36px;
-    font-weight: 500;
-    line-height: 30px;
-    letter-spacing: 4%;
-    text-align: left;
-    padding-bottom: 16px;
+  color: rgb(0, 0, 0);
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 4%;
 }
-
 .details_p {
-    color: rgb(0, 0, 0);
-    font-family: Poppins;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0%;
-    text-align: left;
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 24px;
+  margin-bottom: 8px;
 }
-
-
 .input_email,
 .input_password,
 .input_name {
-    width: 346px;
-    height: 32px;
-    opacity: 0.8;
-    color: rgb(0, 0, 0);
-    font-family: Poppins;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0%;
-    text-align: left;
-    margin: 20px 0;
-    border: none;
-    border-bottom: 1px solid rgb(0, 0, 0);
-    background: none;
-    outline: none;
-    padding: 8px 0;
-    transition: border-color 0.3s ease, opacity 0.3s ease;
+  width: 346px;
+  height: 32px;
+  opacity: 0.8;
+  color: rgb(0, 0, 0);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  margin: 20px 0;
+  border: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  background: none;
+  outline: none;
+  padding: 8px 0;
+  transition: border-color 0.3s ease, opacity 0.3s ease;
 }
-
 .input_email:focus,
 .input_password:focus,
-.input_name:focus{
-    border-bottom: 2px solid rgb(219, 68, 68);
-    opacity: 1;
+.input_name:focus {
+  border-bottom: 2px solid rgb(219, 68, 68);
+  opacity: 1;
+}
+.button_create,
+.button_google {
+  width: 57%;
+  max-width: 353px;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.button_create {
+  background-color: #db4444;
+  color: white;
+  transition: color 0.8s ease, 0.8s ease;
+  margin-top: 20px;
+}
+.button_google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  margin-bottom: 32px;
 }
 
-.buttons_div {
-    width: 100%;
+.button_google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  transition: color 0.8s ease, 0.8s ease;
+}
+
+.button_google:hover {
+  background-color: #dddbdb;
+  transition: color 0.8s ease, 0.8s ease;
+}
+.button_create,
+.button_google {
+  width: 100%;
+}
+.button_create:hover {
+  background-color: #fff;
+  border: 1px solid #c23329;
+  color: #c23329;
+  transition: color 0.8s ease, 0.8s ease;
+}
+
+.buttonImage {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+.footer_signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.LoginLine {
+  text-decoration: Underline;
+  transition: color 0.8s ease, 0.8s ease;
+
+}
+.LoginLine:hover{
+  color: #c23329 ;
+  transition: color 0.8s ease, 0.8s ease;
+
+}
+@media only screen and (max-width: 415px) {
+  .mediaIconAndImput {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    padding: 22px;
-    
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
-  
-  .button_create, .button_google {
-    width: 57%;
-    max-width: 353px;
-    padding: 0.75rem;
+  .iconBars {
+    display: flex;
+    font-size: 20px;
+  }
+  .inputDivNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f5f5f5;
+    gap: 10px;
+  }
+  .inputDivNav_input {
     border: none;
-    border-radius: 4px;
+    outline: none;
+    font-size: 17px;
+    background-color: #f5f5f5;
+  }
+  .HeartShoppingIcon {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .HeartIcon,
+  .ShoppinghIcon {
+    font-size: 20px;
     cursor: pointer;
-    margin-bottom: 1rem;
   }
-  
-  .button_create {
-    background-color: #f04e3e;
-    color: white;
-  }
-  
-  .button_google {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    color: black;
-    border: 1px solid #ccc;
-  }
-  
-  .buttonImage {
-    width: 20px;
-    height: 20px;
-    margin-right: 0.5rem;
-  }
-  
-  .footer_signup {
-    display: flex;
-    width: 47%;
-    max-width: 400px;
-    margin-top: 1rem;
-    align-content: flex-end;
-    align-items: stretch;
-    justify-content: space-evenly;
-    position: absolute;
-    top: 52%;
-  }
-
-  .have_account{
-color: rgb(0, 0, 0);
-font-family: Poppins;
-font-size: 16px;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0%;
-text-align: left;
-opacity: 0.7;
-
-  }
-
-  .havelog{
-color: rgb(0, 0, 0);
-font-family: Poppins;
-font-size: 16px;
-font-weight: 500;
-line-height: 24px;
-letter-spacing: 0%;
-text-align: left;
-opacity: 0.7;
-
-
-  }
-
-
-  .havelog a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #f04e3e;
-    transition: width 0.3s;
-  }
-  
-  .havelog a:hover::after {
-    width: 100%;
-  }
-
-
-  .have_account a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #f04e3e;
-    transition: width 0.3s ease, transform 0.3s ease;
-    position: absolute;
-    bottom: -2px;
-    left: 3;
-  }
-  
-  .have_account a:hover::after {
-    width: 47%;
-    transform: scaleX(1);
-  }
-  
-  .havelog a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #f04e3e;
-    transition: width 0.3s;
-  }
-  
-  .havelog a:hover::after {
-    width: 100%;
-  }
-
-
-  .button_create:hover {
-    background-color: #d84333;
-    transform: translateY(-2px);
-    transition: transform 500ms ease;
-  }
-  
-  .button_create:active {
-    background-color: #c23329;
-    transform: translateY(1px);
-  }
-  
-  .button_google {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    color: black;
-    border: 1px solid #ccc;
-  }
-  
-  .button_google:hover {
-    background-color: #f7f7f7;
-    transform: translateY(-2px);
-    transition: transform 500ms ease;
-  }
-  
-  .button_google:active {
-    background-color: #e0e0e0;
-    transform: translateY(1px);
-
-  }
-
-
-  .mediaIconAndImput{
+  .img_sign_up{
     display: none;
   }
-
-  @media only screen and (max-width: 415px) {
-
-    
-    .img_sign_up>img{
-
-      width: 40%;
-      height: 100%;
-      object-fit: cover; 
-    }
-
-    .img_sign_up{
-      width: 85%;
-      height: 31%;
-      position: absolute;
-      bottom: 63%;
-      left: 1%;
-
-    }
-
-
-  
-    .inputDivNav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-radius: 5px;
-      padding: 5px;
-      background-color: #f5f5f5;
-      gap: 10px;
-    }
-    .inputDivNav_input {
-      border: none;
-      outline: none;
-      font-size: 17px;
-      background-color: #f5f5f5;
-    }
-    .inputDivNav_input {
-      border: none;
-      outline: none;
-      font-size: 17px;
-      background-color: #f5f5f5;
-    }
-    .HeartShoppingIcon {
-      width: 15%;
-      display: flex;
-      justify-content: space-between;
-    }
-    .HeartIcon,
-    .ShoppinghIcon {
-      font-size: 20px;
-      cursor: pointer;
-    }
-    .mediaIconAndImput {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 0px;
-      margin-bottom: 8px;
-      width: 34%;
-      height: 100%;
-      position: absolute;
-      bottom: 46%;
-    }
-    .iconBars {
-      display: flex;
-      font-size: 20px;
-      margin-left: 13px;
-    }
-
-    .create_account{
-    position: absolute;
-    width: 25%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin: 48px 0px;
-    left: 6%;
-    top: 34%;
-    }
-
-    .main_text{   
-    width: 100%;
-    margin-right: 29%;
+  .create_account{
+    position:unset;
   }
-
-
-
   .exclusive_h1{
-  font-size: 22px;
+    margin-top: 40px;
+  }
 }
-
-.button_create,.button_google {
-  width: 100%;
-
-}
-
-.footer_signup {
-  width: 100%;
-  position: absolute;
-  top: 51%;
-}
-
-
-.have_account a:hover::after {
-  width: 70%;
-  transform: scaleX(1);
-}
-
-.have_account{
-  margin-right: 29px;
-}
-
-.inputDivNav_input::placeholder {
-  color: #999;
-  font-size: 16px;
-  font-style: italic;
-  opacity: 1; 
-}
-
-.details_p{
-font-size: 13px;
-
-
-}
-
-
-}
-  
