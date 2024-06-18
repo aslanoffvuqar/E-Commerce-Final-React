@@ -8,6 +8,9 @@ import { useTranslation } from "react-i18next";
 
 export default function Sign_up() {
   const { t } = useTranslation();
+  const handleIconClick = (url) => {
+    window.open(url, '_blank');
+  }
 
   return (
     <div className={style.container_signup}>
@@ -52,13 +55,14 @@ export default function Sign_up() {
                     <button className={style.button_create} type="submit">
                       {t("Create Account")}
                     </button>
-                    <button className={style.button_google} type="submit">
+                    <button  onClick={() => handleIconClick('https://mail.google.com/')} className={style.button_google} type="submit">
                       <img
                         className={style.buttonImage}
                         src={googleImage}
                         alt="Google"
                       />
                       <span>{t("Sign up with Google")}</span>
+                     
                     </button>
                   </div>
                 </form>

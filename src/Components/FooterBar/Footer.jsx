@@ -16,6 +16,10 @@ import { useTranslation } from "react-i18next";
 function Footer() {
   const { t } = useTranslation();
 
+
+  const handleIconClick = (url) => {
+    window.open(url, '_blank');
+};
   return (
     <>
       <footer>
@@ -209,20 +213,24 @@ function Footer() {
                 </div>
                 <div className={Footerstyles.allIconFooter}>
                   <FontAwesomeIcon
-                    icon={faFacebookF}
+                    icon={faFacebookF }
                     className={Footerstyles.iconsFa}
+                    onClick={() => handleIconClick('https://www.facebook.com/')}
                   />
                   <FontAwesomeIcon
-                    icon={faTwitter}
+                    icon={faTwitter }
                     className={Footerstyles.iconsTw}
+                    onClick={() => handleIconClick('https://twitter.com/')}
                   />
                   <FontAwesomeIcon
                     icon={faInstagram}
                     className={Footerstyles.iconsIns}
+                    onClick={() => handleIconClick('https://www.instagram.com/')}
                   />
                   <FontAwesomeIcon
                     icon={faLinkedin}
                     className={Footerstyles.iconsLi}
+                    onClick={() => handleIconClick('https://www.linkedin.com/')}
                   />
                 </div>
               </div>
