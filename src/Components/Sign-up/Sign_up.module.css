@@ -116,9 +116,9 @@
 }
 .button_create:hover {
   background-color: #fff;
-  border: 1px solid #c23329;
-  color: #c23329;
-  transition: color 0.8s ease, 0.8s ease;
+  color: rgb(219, 68, 68);
+  transition: color 0.9s ease, 0.9s ease;
+  border: 1px solid rgb(219, 68, 68);
 }
 
 .buttonImage {

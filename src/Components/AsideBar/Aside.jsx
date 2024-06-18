@@ -20,6 +20,7 @@ function Aside() {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
   const { t } = useTranslation();
 
   return (
@@ -29,18 +30,370 @@ function Aside() {
           <aside className={Asidestyles.asideBox}>
             <div className={Asidestyles.allBox}>
               <div className={Asidestyles.asideDiv}>
-                <a className={Asidestyles.a} href="#">
-                  {t("Woman’s Fashion")}
-                  <span className={Asidestyles.a_icon}>
-                    <FontAwesomeIcon icon={faChevronRight} />
-                  </span>
-                </a>
-                <a className={Asidestyles.a} href="#">
-                  {t("Men’s Fashion")}
-                  <span className={Asidestyles.a_icon}>
-                    <FontAwesomeIcon icon={faChevronRight} />
-                  </span>
-                </a>
+                <div className={Asidestyles.dropdown}>
+                  <a className={Asidestyles.a} href="#">
+                    {t("Woman’s Fashion")}
+                    <span className={Asidestyles.a_icon}>
+                      <FontAwesomeIcon icon={faChevronRight} />
+                    </span>
+                  </a>
+                  <div className={Asidestyles.dropdownContent}>
+                  <div>
+                    <h1 className="font-bold	">Clothes</h1>
+                      <a href="#">{t("Dresses")}</a>
+                      <a href="#">{t("T-shirt")}</a>
+                      <a href="#">{t("Shirt")}</a>
+                      <a href="#">{t("Jeans")}</a>
+                      <a href="#">{t("Trousers")}</a>
+                      <a href="#">{t("Blouse")}</a>
+                      <a href="#">{t("Jacket")}</a>
+                      <a href="#">{t("Skirt")}</a>
+                      <a href="#">{t("Jumper")}</a>
+                      <a href="#">{t("Big size")}</a>
+                      <a href="#">{t("Trench coat")}</a>
+                      <a href="#">{t("Raincoat")}</a>
+                      <a href="#">{t("Windbreaker")}</a>
+                      <a href="#">{t("Sweatshirt")}</a>
+                      <a href="#">{t("Coat")}</a>
+                      <a href="#">{t("Cardigan")}</a>
+                    </div>
+                    <div>
+                    <h1 className="font-bold	">Clothes</h1>
+                      <a href="#">{t("Dresses")}</a>
+                      <a href="#">{t("T-shirt")}</a>
+                      <a href="#">{t("Shirt")}</a>
+                      <a href="#">{t("Jeans")}</a>
+                      <a href="#">{t("Trousers")}</a>
+                      <a href="#">{t("Blouse")}</a>
+                      <a href="#">{t("Jacket")}</a>
+                      <a href="#">{t("Skirt")}</a>
+                      <a href="#">{t("Jumper")}</a>
+                      <a href="#">{t("Big size")}</a>
+                      <a href="#">{t("Trench coat")}</a>
+                      <a href="#">{t("Raincoat")}</a>
+                      <a href="#">{t("Windbreaker")}</a>
+                      <a href="#">{t("Sweatshirt")}</a>
+                      <a href="#">{t("Coat")}</a>
+                      <a href="#">{t("Cardigan")}</a>
+                    </div>
+                    <div>
+                    <h1 className="font-bold	">Clothes</h1>
+                      <a href="#">{t("Dresses")}</a>
+                      <a href="#">{t("T-shirt")}</a>
+                      <a href="#">{t("Shirt")}</a>
+                      <a href="#">{t("Jeans")}</a>
+                      <a href="#">{t("Trousers")}</a>
+                      <a href="#">{t("Blouse")}</a>
+                      <a href="#">{t("Jacket")}</a>
+                      <a href="#">{t("Skirt")}</a>
+                      <a href="#">{t("Jumper")}</a>
+                      <a href="#">{t("Big size")}</a>
+                      <a href="#">{t("Trench coat")}</a>
+                      <a href="#">{t("Raincoat")}</a>
+                      <a href="#">{t("Windbreaker")}</a>
+                      <a href="#">{t("Sweatshirt")}</a>
+                      <a href="#">{t("Coat")}</a>
+                      <a href="#">{t("Cardigan")}</a>
+                    </div>
+                    <div>
+                    <h1 className="font-bold	">Clothes</h1>
+                      <a href="#">{t("Dresses")}</a>
+                      <a href="#">{t("T-shirt")}</a>
+                      <a href="#">{t("Shirt")}</a>
+                      <a href="#">{t("Jeans")}</a>
+                      <a href="#">{t("Trousers")}</a>
+                      <a href="#">{t("Blouse")}</a>
+                      <a href="#">{t("Jacket")}</a>
+                      <a href="#">{t("Skirt")}</a>
+                      <a href="#">{t("Jumper")}</a>
+                      <a href="#">{t("Big size")}</a>
+                      <a href="#">{t("Trench coat")}</a>
+                      <a href="#">{t("Raincoat")}</a>
+                      <a href="#">{t("Windbreaker")}</a>
+                      <a href="#">{t("Sweatshirt")}</a>
+                      <a href="#">{t("Coat")}</a>
+                      <a href="#">{t("Cardigan")}</a>
+                    </div>
+                    <div>
+                    <h1 className="font-bold	">Clothes</h1>
+                      <a href="#">{t("Dresses")}</a>
+                      <a href="#">{t("T-shirt")}</a>
+                      <a href="#">{t("Shirt")}</a>
+                      <a href="#">{t("Jeans")}</a>
+                      <a href="#">{t("Trousers")}</a>
+                      <a href="#">{t("Blouse")}</a>
+                      <a href="#">{t("Jacket")}</a>
+                      <a href="#">{t("Skirt")}</a>
+                      <a href="#">{t("Jumper")}</a>
+                      <a href="#">{t("Big size")}</a>
+                      <a href="#">{t("Trench coat")}</a>
+                      <a href="#">{t("Raincoat")}</a>
+                      <a href="#">{t("Windbreaker")}</a>
+                      <a href="#">{t("Sweatshirt")}</a>
+                      <a href="#">{t("Coat")}</a>
+                      <a href="#">{t("Cardigan")}</a>
+                    </div>
+                    <div>
+                    <h1 className="font-bold	">Clothes</h1>
+                      <a href="#">{t("Dresses")}</a>
+                      <a href="#">{t("T-shirt")}</a>
+                      <a href="#">{t("Shirt")}</a>
+                      <a href="#">{t("Jeans")}</a>
+                      <a href="#">{t("Trousers")}</a>
+                      <a href="#">{t("Blouse")}</a>
+                      <a href="#">{t("Jacket")}</a>
+                      <a href="#">{t("Skirt")}</a>
+                      <a href="#">{t("Jumper")}</a>
+                      <a href="#">{t("Big size")}</a>
+                      <a href="#">{t("Trench coat")}</a>
+                      <a href="#">{t("Raincoat")}</a>
+                      <a href="#">{t("Windbreaker")}</a>
+                      <a href="#">{t("Sweatshirt")}</a>
+                      <a href="#">{t("Coat")}</a>
+                      <a href="#">{t("Cardigan")}</a>
+                    </div>
+                    <div>
+                    <h1 className="font-bold	">Clothes</h1>
+                      <a href="#">{t("Dresses")}</a>
+                      <a href="#">{t("T-shirt")}</a>
+                      <a href="#">{t("Shirt")}</a>
+                      <a href="#">{t("Jeans")}</a>
+                      <a href="#">{t("Trousers")}</a>
+                      <a href="#">{t("Blouse")}</a>
+                      <a href="#">{t("Jacket")}</a>
+                      <a href="#">{t("Skirt")}</a>
+                      <a href="#">{t("Jumper")}</a>
+                      <a href="#">{t("Big size")}</a>
+                      <a href="#">{t("Trench coat")}</a>
+                      <a href="#">{t("Raincoat")}</a>
+                      <a href="#">{t("Windbreaker")}</a>
+                      <a href="#">{t("Sweatshirt")}</a>
+                      <a href="#">{t("Coat")}</a>
+                      <a href="#">{t("Cardigan")}</a>
+                    </div>
+                    <div>
+                    <h1 className="font-bold	">Clothes</h1>
+                      <a href="#">{t("Dresses")}</a>
+                      <a href="#">{t("T-shirt")}</a>
+                      <a href="#">{t("Shirt")}</a>
+                      <a href="#">{t("Jeans")}</a>
+                      <a href="#">{t("Trousers")}</a>
+                      <a href="#">{t("Blouse")}</a>
+                      <a href="#">{t("Jacket")}</a>
+                      <a href="#">{t("Skirt")}</a>
+                      <a href="#">{t("Jumper")}</a>
+                      <a href="#">{t("Big size")}</a>
+                      <a href="#">{t("Trench coat")}</a>
+                      <a href="#">{t("Raincoat")}</a>
+                      <a href="#">{t("Windbreaker")}</a>
+                      <a href="#">{t("Sweatshirt")}</a>
+                      <a href="#">{t("Coat")}</a>
+                      <a href="#">{t("Cardigan")}</a>
+                    </div>
+                    <div>
+                    <h1 className="font-bold	">Clothes</h1>
+                      <a href="#">{t("Dresses")}</a>
+                      <a href="#">{t("T-shirt")}</a>
+                      <a href="#">{t("Shirt")}</a>
+                      <a href="#">{t("Jeans")}</a>
+                      <a href="#">{t("Trousers")}</a>
+                      <a href="#">{t("Blouse")}</a>
+                      <a href="#">{t("Jacket")}</a>
+                      <a href="#">{t("Skirt")}</a>
+                      <a href="#">{t("Jumper")}</a>
+                      <a href="#">{t("Big size")}</a>
+                      <a href="#">{t("Trench coat")}</a>
+                      <a href="#">{t("Raincoat")}</a>
+                      <a href="#">{t("Windbreaker")}</a>
+                      <a href="#">{t("Sweatshirt")}</a>
+                      <a href="#">{t("Coat")}</a>
+                      <a href="#">{t("Cardigan")}</a>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div className={Asidestyles.dropdown}>
+                  <a className={Asidestyles.a} href="#">
+                    {t("Men’s Fashion")}
+                    <span className={Asidestyles.a_icon}>
+                      <FontAwesomeIcon icon={faChevronRight} />
+                    </span>
+                  </a>
+                  <div className={Asidestyles.dropdownContent}>
+                  <div>
+                    <h1 className="font-bold	">Clothes</h1>
+                      <a href="#">{t("Dresses")}</a>
+                      <a href="#">{t("T-shirt")}</a>
+                      <a href="#">{t("Shirt")}</a>
+                      <a href="#">{t("Jeans")}</a>
+                      <a href="#">{t("Trousers")}</a>
+                      <a href="#">{t("Blouse")}</a>
+                      <a href="#">{t("Jacket")}</a>
+                      <a href="#">{t("Skirt")}</a>
+                      <a href="#">{t("Jumper")}</a>
+                      <a href="#">{t("Big size")}</a>
+                      <a href="#">{t("Trench coat")}</a>
+                      <a href="#">{t("Raincoat")}</a>
+                      <a href="#">{t("Windbreaker")}</a>
+                      <a href="#">{t("Sweatshirt")}</a>
+                      <a href="#">{t("Coat")}</a>
+                      <a href="#">{t("Cardigan")}</a>
+                    </div>
+                    <div>
+                    <h1 className="font-bold	">Clothes</h1>
+                      <a href="#">{t("Dresses")}</a>
+                      <a href="#">{t("T-shirt")}</a>
+                      <a href="#">{t("Shirt")}</a>
+                      <a href="#">{t("Jeans")}</a>
+                      <a href="#">{t("Trousers")}</a>
+                      <a href="#">{t("Blouse")}</a>
+                      <a href="#">{t("Jacket")}</a>
+                      <a href="#">{t("Skirt")}</a>
+                      <a href="#">{t("Jumper")}</a>
+                      <a href="#">{t("Big size")}</a>
+                      <a href="#">{t("Trench coat")}</a>
+                      <a href="#">{t("Raincoat")}</a>
+                      <a href="#">{t("Windbreaker")}</a>
+                      <a href="#">{t("Sweatshirt")}</a>
+                      <a href="#">{t("Coat")}</a>
+                      <a href="#">{t("Cardigan")}</a>
+                    </div>
+                    <div>
+                    <h1 className="font-bold	">Clothes</h1>
+                      <a href="#">{t("Dresses")}</a>
+                      <a href="#">{t("T-shirt")}</a>
+                      <a href="#">{t("Shirt")}</a>
+                      <a href="#">{t("Jeans")}</a>
+                      <a href="#">{t("Trousers")}</a>
+                      <a href="#">{t("Blouse")}</a>
+                      <a href="#">{t("Jacket")}</a>
+                      <a href="#">{t("Skirt")}</a>
+                      <a href="#">{t("Jumper")}</a>
+                      <a href="#">{t("Big size")}</a>
+                      <a href="#">{t("Trench coat")}</a>
+                      <a href="#">{t("Raincoat")}</a>
+                      <a href="#">{t("Windbreaker")}</a>
+                      <a href="#">{t("Sweatshirt")}</a>
+                      <a href="#">{t("Coat")}</a>
+                      <a href="#">{t("Cardigan")}</a>
+                    </div>
+                    <div>
+                    <h1 className="font-bold	">Clothes</h1>
+                      <a href="#">{t("Dresses")}</a>
+                      <a href="#">{t("T-shirt")}</a>
+                      <a href="#">{t("Shirt")}</a>
+                      <a href="#">{t("Jeans")}</a>
+                      <a href="#">{t("Trousers")}</a>
+                      <a href="#">{t("Blouse")}</a>
+                      <a href="#">{t("Jacket")}</a>
+                      <a href="#">{t("Skirt")}</a>
+                      <a href="#">{t("Jumper")}</a>
+                      <a href="#">{t("Big size")}</a>
+                      <a href="#">{t("Trench coat")}</a>
+                      <a href="#">{t("Raincoat")}</a>
+                      <a href="#">{t("Windbreaker")}</a>
+                      <a href="#">{t("Sweatshirt")}</a>
+                      <a href="#">{t("Coat")}</a>
+                      <a href="#">{t("Cardigan")}</a>
+                    </div>
+                    <div>
+                    <h1 className="font-bold	">Clothes</h1>
+                      <a href="#">{t("Dresses")}</a>
+                      <a href="#">{t("T-shirt")}</a>
+                      <a href="#">{t("Shirt")}</a>
+                      <a href="#">{t("Jeans")}</a>
+                      <a href="#">{t("Trousers")}</a>
+                      <a href="#">{t("Blouse")}</a>
+                      <a href="#">{t("Jacket")}</a>
+                      <a href="#">{t("Skirt")}</a>
+                      <a href="#">{t("Jumper")}</a>
+                      <a href="#">{t("Big size")}</a>
+                      <a href="#">{t("Trench coat")}</a>
+                      <a href="#">{t("Raincoat")}</a>
+                      <a href="#">{t("Windbreaker")}</a>
+                      <a href="#">{t("Sweatshirt")}</a>
+                      <a href="#">{t("Coat")}</a>
+                      <a href="#">{t("Cardigan")}</a>
+                    </div>
+                    <div>
+                    <h1 className="font-bold	">Clothes</h1>
+                      <a href="#">{t("Dresses")}</a>
+                      <a href="#">{t("T-shirt")}</a>
+                      <a href="#">{t("Shirt")}</a>
+                      <a href="#">{t("Jeans")}</a>
+                      <a href="#">{t("Trousers")}</a>
+                      <a href="#">{t("Blouse")}</a>
+                      <a href="#">{t("Jacket")}</a>
+                      <a href="#">{t("Skirt")}</a>
+                      <a href="#">{t("Jumper")}</a>
+                      <a href="#">{t("Big size")}</a>
+                      <a href="#">{t("Trench coat")}</a>
+                      <a href="#">{t("Raincoat")}</a>
+                      <a href="#">{t("Windbreaker")}</a>
+                      <a href="#">{t("Sweatshirt")}</a>
+                      <a href="#">{t("Coat")}</a>
+                      <a href="#">{t("Cardigan")}</a>
+                    </div>
+                    <div>
+                    <h1 className="font-bold	">Clothes</h1>
+                      <a href="#">{t("Dresses")}</a>
+                      <a href="#">{t("T-shirt")}</a>
+                      <a href="#">{t("Shirt")}</a>
+                      <a href="#">{t("Jeans")}</a>
+                      <a href="#">{t("Trousers")}</a>
+                      <a href="#">{t("Blouse")}</a>
+                      <a href="#">{t("Jacket")}</a>
+                      <a href="#">{t("Skirt")}</a>
+                      <a href="#">{t("Jumper")}</a>
+                      <a href="#">{t("Big size")}</a>
+                      <a href="#">{t("Trench coat")}</a>
+                      <a href="#">{t("Raincoat")}</a>
+                      <a href="#">{t("Windbreaker")}</a>
+                      <a href="#">{t("Sweatshirt")}</a>
+                      <a href="#">{t("Coat")}</a>
+                      <a href="#">{t("Cardigan")}</a>
+                    </div>
+                    <div>
+                    <h1 className="font-bold	">Clothes</h1>
+                      <a href="#">{t("Dresses")}</a>
+                      <a href="#">{t("T-shirt")}</a>
+                      <a href="#">{t("Shirt")}</a>
+                      <a href="#">{t("Jeans")}</a>
+                      <a href="#">{t("Trousers")}</a>
+                      <a href="#">{t("Blouse")}</a>
+                      <a href="#">{t("Jacket")}</a>
+                      <a href="#">{t("Skirt")}</a>
+                      <a href="#">{t("Jumper")}</a>
+                      <a href="#">{t("Big size")}</a>
+                      <a href="#">{t("Trench coat")}</a>
+                      <a href="#">{t("Raincoat")}</a>
+                      <a href="#">{t("Windbreaker")}</a>
+                      <a href="#">{t("Sweatshirt")}</a>
+                      <a href="#">{t("Coat")}</a>
+                      <a href="#">{t("Cardigan")}</a>
+                    </div>
+                    <div>
+                    <h1 className="font-bold	">Clothes</h1>
+                      <a href="#">{t("Dresses")}</a>
+                      <a href="#">{t("T-shirt")}</a>
+                      <a href="#">{t("Shirt")}</a>
+                      <a href="#">{t("Jeans")}</a>
+                      <a href="#">{t("Trousers")}</a>
+                      <a href="#">{t("Blouse")}</a>
+                      <a href="#">{t("Jacket")}</a>
+                      <a href="#">{t("Skirt")}</a>
+                      <a href="#">{t("Jumper")}</a>
+                      <a href="#">{t("Big size")}</a>
+                      <a href="#">{t("Trench coat")}</a>
+                      <a href="#">{t("Raincoat")}</a>
+                      <a href="#">{t("Windbreaker")}</a>
+                      <a href="#">{t("Sweatshirt")}</a>
+                      <a href="#">{t("Coat")}</a>
+                      <a href="#">{t("Cardigan")}</a>
+                    </div>
+                    
+                  </div>
+                </div>
                 <a className={Asidestyles.a} href="#">
                   {t("Electronics")}
                 </a>
@@ -68,7 +421,7 @@ function Aside() {
           </aside>
           <Slider />
         </div>
-        {/* ****************** Mobil*************************** */}
+        {/* ****************** Mobile*************************** */}
         <div className={Asidestyles.mediaIconAndImput}>
           <FontAwesomeIcon
             icon={faBars}
@@ -103,7 +456,7 @@ function Aside() {
             />
           </div>
         </div>
-        {/* ****************** Mobil*************************** */}
+        {/* ****************** Mobile*************************** */}
         <aside
           className={`${Asidestyles.mobileAsideBox} ${
             isSidebarOpen ? Asidestyles.open : ""
@@ -133,39 +486,50 @@ function Aside() {
               </li>
             </div>
             <div className={Asidestyles.asideDiv}>
-              <a className={Asidestyles.a} href="#">
-                {t("Woman’s Fashion")}
-              </a>
-              <a className={Asidestyles.a} href="#">
-                {t("Men’s Fashion")}
-              </a>
+              <div className={Asidestyles.dropdown}>
+                <a className={Asidestyles.a} href="#">
+                  {t("Woman’s Fashion")}
+                </a>
+                <div className={Asidestyles.dropdownContent}>
+                  <div>
+                    <a href="#">{t("Dresses")}</a>
+                    <a href="#">{t("Tops")}</a>
+                    <a href="#">{t("Accessories")}</a>
+                  </div>
+                </div>
+              </div>
+              <div className={Asidestyles.dropdown}>
+                <a className={Asidestyles.a} href="#">
+                  {t("Men’s Fashion")}
+                </a>
+                <div className={Asidestyles.dropdownContent}>
+                  <div>
+                    <a href="#">{t("Shirts")}</a>
+                    <a href="#">{t("Pants")}</a>
+                    <a href="#">{t("Accessories")}</a>
+                  </div>
+                </div>
+              </div>
               <a className={Asidestyles.a} href="#">
                 {t("Electronics")}
-                
               </a>
               <a className={Asidestyles.a} href="#">
                 {t("Home & Lifestyle")}
-                
               </a>
               <a className={Asidestyles.a} href="#">
                 {t("Medicine")}
-                
               </a>
               <a className={Asidestyles.a} href="#">
                 {t("Sports & Outdoor")}
-                
               </a>
               <a className={Asidestyles.a} href="#">
                 {t("Baby’s & Toys")}
-                
               </a>
               <a className={Asidestyles.a} href="#">
                 {t("Groceries & Pets")}
-                
               </a>
               <a className={Asidestyles.a} href="#">
                 {t("Health & Beauty")}
-                
               </a>
             </div>
           </div>
