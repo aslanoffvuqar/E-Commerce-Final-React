@@ -12,7 +12,7 @@ export default function BestProducts() {
 
   return (
     <>
-      <div className={styles.container}>
+      <div className="container">
         <div className={styles.product_text_wrapper}>
           <span className={styles.text_span}>.</span>
           <h5>{t("This Month")}</h5>

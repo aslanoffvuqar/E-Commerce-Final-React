@@ -10,7 +10,7 @@ function Header() {
 
   return (
     <header>
-      <div className={Headerstyles.container}>
+      <div className="container">
         <div className={Headerstyles.headerClass}>
           <div className={Headerstyles.header_P_A}>
             <p className={Headerstyles.headerClass_P}>

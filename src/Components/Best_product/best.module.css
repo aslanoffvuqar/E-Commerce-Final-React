@@ -188,7 +188,8 @@
 
   .all_view a {
     padding: 0;
-    width: 120px;
+    width: 140px;
+    height: 60px;
     justify-content: center;
 
   }
@@ -196,5 +197,8 @@
   .wrapper {
     flex-direction: column;
     align-items: center;
+  }
+  .products{
+    margin-top: 20px;
   }
 }

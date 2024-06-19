@@ -6,9 +6,12 @@ import img3 from "../Section_one_main/img/4444.png";
 import img4 from "../Section_one_main/img/5555.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
+import useCountdown from "../Section_four_main/useCountdown"
 export default function Section_one() {
   const { t } = useTranslation();
+  const initialTime =
+    5 * 24 * 60 * 60 * 1000 + 23 * 60 * 60 * 1000 + 59 * 60 * 1000 + 35 * 1000;
+  const { days, hours, minutes, seconds } = useCountdown(initialTime);
 
   return (
     <>
@@ -22,22 +25,22 @@ export default function Section_one() {
           <div className={styles.product_whatc}>
             <div>
               <span className={styles.whatc_span}>{t("Days")}</span>
-              <h2 className={styles.num}>03</h2>
+              <h2 className={styles.num}>{String(days).padStart(2, "0")}</h2>
             </div>
             <span className={styles.span_red}>:</span>
             <div>
               <span className={styles.whatc_span}>{t("Hours")}</span>
-              <h2 className={styles.num}>23</h2>
+              <h2 className={styles.num}>{String(hours).padStart(2, "0")}</h2>
             </div>
             <span className={styles.span_red}>:</span>
             <div>
               <span className={styles.whatc_span}>{t("Minuts")}</span>
-              <h2 className={styles.num}>19</h2>
+              <h2 className={styles.num}>{String(minutes).padStart(2, "0")}</h2>
             </div>
             <span className={styles.span_red}>:</span>
             <div>
               <span className={styles.whatc_span}>{t("Seconds")}</span>
-              <h2 className={styles.num}>56</h2>
+              <h2 className={styles.num}>{String(seconds).padStart(2, "0")}</h2>
             </div>
           </div>
         </div>
