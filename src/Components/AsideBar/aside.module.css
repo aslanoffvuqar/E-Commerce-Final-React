@@ -89,8 +89,8 @@
 
 .dropdownContent div {
   display: flex;
-  flex-direction: column; /* Ensure items inside each div are vertical */
-  margin-right: 20px; /* Add some spacing between the columns */
+  flex-direction: column; 
+  margin-right: 20px; 
 }
 
 

@@ -486,7 +486,7 @@ function Aside() {
               </li>
             </div>
             <div className={Asidestyles.asideDiv}>
-              <div className={Asidestyles.dropdown}>
+              
                 <a className={Asidestyles.a} href="#">
                   {t("Woman’s Fashion")}
                 </a>
@@ -497,7 +497,7 @@ function Aside() {
                     <a href="#">{t("Accessories")}</a>
                   </div>
                 </div>
-              </div>
+              
               <div className={Asidestyles.dropdown}>
                 <a className={Asidestyles.a} href="#">
                   {t("Men’s Fashion")}

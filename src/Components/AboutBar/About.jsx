@@ -21,6 +21,7 @@ import {
   faBars,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
+import Navstyles from "../NavBar/nav.module.css"
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SlBasket } from "react-icons/sl";
@@ -80,23 +81,23 @@ function About() {
         >
           <div className={Aboutstyles.asideDiv}>
             <div className="flex w-full justify-between ">
-              <li className={Aboutstyles.navBar_li}>
-                <Link className={Aboutstyles.navBar_a} to="/Home">
+              <li className={Navstyles.navBar_li}>
+                <Link className={Navstyles.navBar_a} to="/Home">
                   {t("Home")}
                 </Link>
               </li>
-              <li className={Aboutstyles.navBar_li}>
-                <Link className={Aboutstyles.navBar_a} to="/Contact">
+              <li className={Navstyles.navBar_li}>
+                <Link className={Navstyles.navBar_a} to="/Contact">
                   {t("Contact")}
                 </Link>
               </li>
-              <li className={Aboutstyles.navBar_li}>
-                <Link className={Aboutstyles.navBar_a} to="/About">
+              <li className={Navstyles.navBar_li}>
+                <Link className={Navstyles.navBar_a} to="/About">
                   {t("About")}
                 </Link>
               </li>
-              <li className={Aboutstyles.navBar_li}>
-                <Link className={Aboutstyles.navBar_a} to="/Login">
+              <li className={Navstyles.navBar_li}>
+                <Link className={Navstyles.navBar_a} to="/SignUp">
                   {t("Sign Up")}
                 </Link>
               </li>
