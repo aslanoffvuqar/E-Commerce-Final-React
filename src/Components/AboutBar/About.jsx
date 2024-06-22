@@ -34,6 +34,9 @@ function About() {
   };
   const { t } = useTranslation();
 
+  const handleIconClick = (url) => {
+    window.open(url, '_blank');
+  }
   return (
     <div>
       <div className="container">
@@ -208,9 +211,9 @@ function About() {
             <h1 className={Aboutstyles.name}>{t("Tom Cruise")}</h1>
             <p className={Aboutstyles.position}>{t("Founder & Chairman")}</p>
             <div className="flex gap-4" id={Aboutstyles.SosialMedia}>
-              <RxTwitterLogo className="w-5	 h-5	" />
-              <FaInstagram className="w-5	 h-5	" />
-              <RiLinkedinLine className="w-5	 h-5	" />
+              <RxTwitterLogo onClick={() => handleIconClick('https://twitter.com/')} className="w-5	 h-5	cursor-pointer ..." />
+              <FaInstagram onClick={() => handleIconClick('https://www.instagram.com/')} className="w-5	 h-5	cursor-pointer ..." />
+              <RiLinkedinLine onClick={() => handleIconClick('https://www.linkedin.com/')} className="w-5	 h-5	cursor-pointer ..." />
             </div>
           </div>
           <div className="FounderData">
@@ -218,9 +221,9 @@ function About() {
             <h1 className={Aboutstyles.name}>{t("Emma Watson")}</h1>
             <p className={Aboutstyles.position}>{t("Managing Director")}</p>
             <div className="flex gap-4" id={Aboutstyles.SosialMedia}>
-              <RxTwitterLogo className="w-5	 h-5	" />
-              <FaInstagram className="w-5	 h-5	" />
-              <RiLinkedinLine className="w-5	 h-5	" />
+            <RxTwitterLogo onClick={() => handleIconClick('https://twitter.com/')} className="w-5	 h-5	cursor-pointer ..." />
+              <FaInstagram onClick={() => handleIconClick('https://www.instagram.com/')} className="w-5	 h-5	cursor-pointer ..." />
+              <RiLinkedinLine onClick={() => handleIconClick('https://www.linkedin.com/')} className="w-5	 h-5	cursor-pointer ..." />
             </div>
           </div>
           <div className="FounderData">
@@ -228,9 +231,9 @@ function About() {
             <h1 className={Aboutstyles.name}>{t("Will Smith")}</h1>
             <p className={Aboutstyles.position}>{t("Product Designer")}</p>
             <div className="flex gap-4">
-              <RxTwitterLogo className="w-5	 h-5	" />
-              <FaInstagram className="w-5	 h-5	" />
-              <RiLinkedinLine className="w-5	 h-5	" />
+            <RxTwitterLogo onClick={() => handleIconClick('https://twitter.com/')} className="w-5	 h-5	cursor-pointer ..." />
+              <FaInstagram onClick={() => handleIconClick('https://www.instagram.com/')} className="w-5	 h-5	cursor-pointer ..." />
+              <RiLinkedinLine onClick={() => handleIconClick('https://www.linkedin.com/')} className="w-5	 h-5	cursor-pointer ..." />
             </div>
           </div>
         </section>
