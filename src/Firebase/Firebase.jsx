@@ -1,16 +1,18 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-
+import { getAuth } from 'firebase/auth'
 const firebaseConfig = {
-  apiKey: "AIzaSyA9aMiwCpVmdiB3L7PMCtQQKjrVWTnK4nc",
-  authDomain: "e-commerce-450cb.firebaseapp.com",
-  projectId: "e-commerce-450cb",
-  storageBucket: "e-commerce-450cb.appspot.com",
-  messagingSenderId: "988068290161",
-  appId: "1:988068290161:web:1cb4cabffbbe3f3d02c5d0",
+  apiKey: "AIzaSyCISI2aO6xv5cZxJnusGITuVMTWX42XJJI",
+  authDomain: "e-commerce-final-20598.firebaseapp.com",
+  projectId: "e-commerce-final-20598",
+  storageBucket: "e-commerce-final-20598.appspot.com",
+  messagingSenderId: "203829064025",
+  appId: "1:203829064025:web:34940ece0610a3969b1c48"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
+const auth = getAuth(app)
+export { auth }

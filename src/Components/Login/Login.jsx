@@ -1,11 +1,25 @@
 import React from "react";
+import { useState } from "react";
 import style from "./login.module.css";
 import loginImage from "./Side Image (1).jpg";
 import { useTranslation } from "react-i18next";
+import { auth } from '../../Firebase/Firebase'
+import { signInWithEmailAndPassword } from "firebase/auth";
+
 
 export default function Login() {
   const { t } = useTranslation();
-
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      await signInWithEmailAndPassword(auth, email, password)
+      console.log("login successfully");
+    } catch (err) {
+      console.log(err);
+    }
+  }
   return (
     <div>
       <div className={style.allBox}>
@@ -15,11 +29,12 @@ export default function Login() {
             <h1 className={style.exclusive}>{t("Log in to Exclusive")}</h1>
             <p className={style.details}>{t("Enter your details below")}</p>
             <div className={style.frame755}>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div>
                   <input
                     type="text"
                     className={style.input_email}
+                    onChange={(e) => setEmail(e.target.value)}
                     id="emailOrPhone"
                     placeholder={t("Email or Phone Number")}
                   />
@@ -28,18 +43,19 @@ export default function Login() {
                   <input
                     type="password"
                     className={style.input_password}
+                    onChange={(e) => setPassword(e.target.value)}
                     id="password"
                     placeholder={t("Password")}
                   />
                 </div>
                 <div className={style.botton_buttons}>
                   <button className={style.button_1} type="submit">
-                    
+
                     {t("Log In")}
                   </button>
                   <p className={style.forget_passsword}>
                     <a className={style.forget_passsword2} href="#">
-                      
+
                       {t("Forget Password?")}
                     </a>
                   </p>

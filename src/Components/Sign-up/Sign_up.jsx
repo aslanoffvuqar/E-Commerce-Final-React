@@ -1,17 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./Sign_up.module.css";
 import signImage from "./Side Image.jpg";
 import googleImage from "./google.png";
 
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
+import { auth } from '../../Firebase/Firebase'
+import { createUserWithEmailAndPassword } from "firebase/auth";
 export default function Sign_up() {
   const { t } = useTranslation();
   const handleIconClick = (url) => {
     window.open(url, '_blank');
   }
-
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      await createUserWithEmailAndPassword(auth, email, password)
+      console.log("account creat");
+    } catch (err) {
+      console.log(err);
+    }
+  }
   return (
     <div className={style.container_signup}>
       <div className="allBox">
@@ -25,7 +36,7 @@ export default function Sign_up() {
 
             <div className={style.form_signup}>
               <div className={style.div_for_form}>
-                <form className={style.form_input}>
+                <form className={style.form_input} onSubmit={handleSubmit}>
                   <div>
                     <input
                       type="text"
@@ -38,6 +49,7 @@ export default function Sign_up() {
                     <input
                       type="text"
                       className={style.input_email}
+                      signInWithEmailAndPassword
                       id="emailOrPhone"
                       placeholder={t("Email or Phone Number")}
                     />
@@ -46,6 +58,7 @@ export default function Sign_up() {
                     <input
                       type="password"
                       className={style.input_password}
+                      onChange={(e) => setPassword(e.target.value)}
                       id="password"
                       placeholder={t("Password")}
                     />
@@ -55,14 +68,14 @@ export default function Sign_up() {
                     <button className={style.button_create} type="submit">
                       {t("Create Account")}
                     </button>
-                    <button  onClick={() => handleIconClick('https://mail.google.com/')} className={style.button_google} type="submit">
+                    <button onClick={() => handleIconClick('https://mail.google.com/')} className={style.button_google} type="submit">
                       <img
                         className={style.buttonImage}
                         src={googleImage}
                         alt="Google"
                       />
                       <span>{t("Sign up with Google")}</span>
-                     
+
                     </button>
                   </div>
                 </form>
