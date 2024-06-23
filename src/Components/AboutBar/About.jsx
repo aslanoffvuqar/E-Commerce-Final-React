@@ -21,6 +21,7 @@ import {
   faBars,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
+import Navstyles from "../NavBar/nav.module.css"
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SlBasket } from "react-icons/sl";
@@ -33,6 +34,9 @@ function About() {
   };
   const { t } = useTranslation();
 
+  const handleIconClick = (url) => {
+    window.open(url, '_blank');
+  }
   return (
     <div>
       <div className="container">
@@ -80,23 +84,23 @@ function About() {
         >
           <div className={Aboutstyles.asideDiv}>
             <div className="flex w-full justify-between ">
-              <li className={Aboutstyles.navBar_li}>
-                <Link className={Aboutstyles.navBar_a} to="/Home">
+              <li className={Navstyles.navBar_li}>
+                <Link className={Navstyles.navBar_a} to="/Home">
                   {t("Home")}
                 </Link>
               </li>
-              <li className={Aboutstyles.navBar_li}>
-                <Link className={Aboutstyles.navBar_a} to="/Contact">
+              <li className={Navstyles.navBar_li}>
+                <Link className={Navstyles.navBar_a} to="/Contact">
                   {t("Contact")}
                 </Link>
               </li>
-              <li className={Aboutstyles.navBar_li}>
-                <Link className={Aboutstyles.navBar_a} to="/About">
+              <li className={Navstyles.navBar_li}>
+                <Link className={Navstyles.navBar_a} to="/About">
                   {t("About")}
                 </Link>
               </li>
-              <li className={Aboutstyles.navBar_li}>
-                <Link className={Aboutstyles.navBar_a} to="/Login">
+              <li className={Navstyles.navBar_li}>
+                <Link className={Navstyles.navBar_a} to="/SignUp">
                   {t("Sign Up")}
                 </Link>
               </li>
@@ -207,9 +211,9 @@ function About() {
             <h1 className={Aboutstyles.name}>{t("Tom Cruise")}</h1>
             <p className={Aboutstyles.position}>{t("Founder & Chairman")}</p>
             <div className="flex gap-4" id={Aboutstyles.SosialMedia}>
-              <RxTwitterLogo className="w-5	 h-5	" />
-              <FaInstagram className="w-5	 h-5	" />
-              <RiLinkedinLine className="w-5	 h-5	" />
+              <RxTwitterLogo onClick={() => handleIconClick('https://twitter.com/')} className="w-5	 h-5	cursor-pointer ..." />
+              <FaInstagram onClick={() => handleIconClick('https://www.instagram.com/')} className="w-5	 h-5	cursor-pointer ..." />
+              <RiLinkedinLine onClick={() => handleIconClick('https://www.linkedin.com/')} className="w-5	 h-5	cursor-pointer ..." />
             </div>
           </div>
           <div className="FounderData">
@@ -217,9 +221,9 @@ function About() {
             <h1 className={Aboutstyles.name}>{t("Emma Watson")}</h1>
             <p className={Aboutstyles.position}>{t("Managing Director")}</p>
             <div className="flex gap-4" id={Aboutstyles.SosialMedia}>
-              <RxTwitterLogo className="w-5	 h-5	" />
-              <FaInstagram className="w-5	 h-5	" />
-              <RiLinkedinLine className="w-5	 h-5	" />
+            <RxTwitterLogo onClick={() => handleIconClick('https://twitter.com/')} className="w-5	 h-5	cursor-pointer ..." />
+              <FaInstagram onClick={() => handleIconClick('https://www.instagram.com/')} className="w-5	 h-5	cursor-pointer ..." />
+              <RiLinkedinLine onClick={() => handleIconClick('https://www.linkedin.com/')} className="w-5	 h-5	cursor-pointer ..." />
             </div>
           </div>
           <div className="FounderData">
@@ -227,9 +231,9 @@ function About() {
             <h1 className={Aboutstyles.name}>{t("Will Smith")}</h1>
             <p className={Aboutstyles.position}>{t("Product Designer")}</p>
             <div className="flex gap-4">
-              <RxTwitterLogo className="w-5	 h-5	" />
-              <FaInstagram className="w-5	 h-5	" />
-              <RiLinkedinLine className="w-5	 h-5	" />
+            <RxTwitterLogo onClick={() => handleIconClick('https://twitter.com/')} className="w-5	 h-5	cursor-pointer ..." />
+              <FaInstagram onClick={() => handleIconClick('https://www.instagram.com/')} className="w-5	 h-5	cursor-pointer ..." />
+              <RiLinkedinLine onClick={() => handleIconClick('https://www.linkedin.com/')} className="w-5	 h-5	cursor-pointer ..." />
             </div>
           </div>
         </section>

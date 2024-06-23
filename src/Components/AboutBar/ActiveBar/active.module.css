@@ -16,7 +16,10 @@
   line-height: 24px;
   transition: color 0.7s ease;
 }
-
+#services:hover #iconRotate {
+  transition: all 0.95s;
+  transform: rotateY(360deg);
+}
 .SallersBox {
   color: rgb(0, 0, 0);
   font-family: Poppins;

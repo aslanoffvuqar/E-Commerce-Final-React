@@ -31,7 +31,7 @@ function AppContent() {
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Login" element={<Login />} />
-        <Route path="/SignUp" element={<SignUp />} /> {/* Добавьте маршрут */}
+        <Route path="/SignUp" element={<SignUp />} /> 
         <Route path="/ViewAllProduct" element={<Product_page />} />
       </Routes>
 

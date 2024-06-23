@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { SlBasket } from "react-icons/sl";
-
+import Navstyles from "../NavBar/nav.module.css"
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../Firebase/Firebase";
 import { useTranslation } from "react-i18next";
@@ -105,23 +105,23 @@ const toggleSidebar = () => {
         >
           <div className={Contactstyles.asideDiv}>
             <div className="flex w-full justify-between ">
-              <li className={Contactstyles.navBar_li}>
-                <Link className={Contactstyles.navBar_a} to="/Home">
+              <li className={Navstyles.navBar_li}>
+                <Link className={Navstyles.navBar_a} to="/Home">
                   {t("Home")}
                 </Link>
               </li>
-              <li className={Contactstyles.navBar_li}>
-                <Link className={Contactstyles.navBar_a} to="/Contact">
+              <li className={Navstyles.navBar_li}>
+                <Link className={Navstyles.navBar_a} to="/Contact">
                   {t("Contact")}
                 </Link>
               </li>
-              <li className={Contactstyles.navBar_li}>
-                <Link className={Contactstyles.navBar_a} to="/About">
+              <li className={Navstyles.navBar_li}>
+                <Link className={Navstyles.navBar_a} to="/About">
                   {t("About")}
                 </Link>
               </li>
-              <li className={Contactstyles.navBar_li}>
-                <Link className={Contactstyles.navBar_a} to="/Login">
+              <li className={Navstyles.navBar_li}>
+                <Link className={Navstyles.navBar_a} to="/SignUp">
                   {t("Sign Up")}
                 </Link>
               </li>
