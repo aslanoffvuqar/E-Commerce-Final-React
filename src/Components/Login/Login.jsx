@@ -5,10 +5,12 @@ import loginImage from "./Side Image (1).jpg";
 import { useTranslation } from "react-i18next";
 import { auth } from '../../Firebase/Firebase'
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 
 export default function Login() {
   const { t } = useTranslation();
+  const history = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const handleSubmit = async (e) => {
@@ -16,6 +18,7 @@ export default function Login() {
     try {
       await signInWithEmailAndPassword(auth, email, password)
       console.log("login successfully");
+      history('/Home')
     } catch (err) {
       console.log(err);
     }

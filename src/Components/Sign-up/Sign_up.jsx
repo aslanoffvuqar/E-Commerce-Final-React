@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import style from "./Sign_up.module.css";
 import signImage from "./Side Image.jpg";
 import googleImage from "./google.png";
-
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { auth } from '../../Firebase/Firebase'
@@ -12,13 +12,15 @@ export default function Sign_up() {
   const handleIconClick = (url) => {
     window.open(url, '_blank');
   }
+  const history = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await createUserWithEmailAndPassword(auth, email, password)
+      createUserWithEmailAndPassword(auth, email, password)
       console.log("account creat");
+      history('/Login')
     } catch (err) {
       console.log(err);
     }
@@ -49,7 +51,7 @@ export default function Sign_up() {
                     <input
                       type="text"
                       className={style.input_email}
-                      signInWithEmailAndPassword
+                      onChange={(e) => setEmail(e.target.value)}
                       id="emailOrPhone"
                       placeholder={t("Email or Phone Number")}
                     />
