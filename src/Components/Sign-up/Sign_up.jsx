@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { auth } from '../../Firebase/Firebase'
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import Swal from 'sweetalert2'
 export default function Sign_up() {
   const { t } = useTranslation();
   const handleIconClick = (url) => {
@@ -19,7 +20,11 @@ export default function Sign_up() {
     e.preventDefault()
     try {
       createUserWithEmailAndPassword(auth, email, password)
-      console.log("account creat");
+      Swal.fire({
+        title: "Good job!",
+        text: "You success create account!",
+        icon: "success"
+      });
       history('/Login')
     } catch (err) {
       console.log(err);
