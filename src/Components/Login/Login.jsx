@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { auth } from '../../Firebase/Firebase'
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2'
 
 
 export default function Login() {
@@ -16,11 +17,21 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await signInWithEmailAndPassword(auth, email, password)
-      console.log("login successfully");
+      await signInWithEmailAndPassword(auth, email, password);
+      
+      Swal.fire({
+        title: "Good job!",
+        text: "You success login!",
+        icon: "success"
+      });
       history('/Home')
     } catch (err) {
-      console.log(err);
+      Swal.fire({
+        title: 'Error!',
+        text: 'Check your email address or password',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      })
     }
   }
   return (
