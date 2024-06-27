@@ -227,6 +227,7 @@
     }
     .card_img_wraper{
         flex-direction: column;
+        align-items: center;
     }
     .wrapper1{
         display: none;
