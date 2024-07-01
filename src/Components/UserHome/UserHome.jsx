@@ -12,13 +12,13 @@ import Navstyles from "../NavBar/nav.module.css";
 import "../NavBar/navMedia.css";
 import UserModule from "./use.module.css";
 import { Link } from "react-router-dom";
-
 import Input from "../NavBar/Folder-Input/Input";
 import { PiShoppingCart } from "react-icons/pi";
 import { useTranslation } from "react-i18next";
 import { LuUser } from "react-icons/lu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
+
 function UserHome() {
   const { t } = useTranslation();
   const { i18n } = useTranslation();
