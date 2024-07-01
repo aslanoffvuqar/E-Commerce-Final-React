@@ -12,6 +12,7 @@ import Qrimg from "../FooterBar/Footer-Imge/Qrcode 1.png";
 import googleimg from "../FooterBar/Footer-Imge/GooglePlay.png";
 import AppStore from "../FooterBar/Footer-Imge/AppStore.png";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const { t } = useTranslation();
@@ -98,21 +99,21 @@ function Footer() {
                   {t("My Account")}
                 </a>
                 <div>
-                  <a
+                  <Link to="/Login"
                     className={Footerstyles.a_third}
                     fontFooterRespons="fontFooterRespons"
-                    href="#"
+                    
                   >
                     {t("Login")}
-                  </a>
+                  </Link>
                   <span className="text-white	"> / </span>
-                  <a
+                  <Link to="/SignUp"
                     className={Footerstyles.a_third}
                     fontFooterRespons="fontFooterRespons"
-                    href="#"
+                    
                   >
                     {t("Register")}
-                  </a>
+                  </Link>
                 </div>
                 <a
                   className={Footerstyles.a_third}

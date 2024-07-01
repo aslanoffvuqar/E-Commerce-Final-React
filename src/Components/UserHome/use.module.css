@@ -1,0 +1,14 @@
+.allInputBox{
+    display: flex;
+    align-items: center;
+    width: 35%;
+}
+.HeartIcon {
+    font-size: 27px;
+    cursor: pointer;
+    padding-left: 40px;
+  }
+  .ShoppinghIcon {
+    font-size: 27px;
+    cursor: pointer;
+  }
