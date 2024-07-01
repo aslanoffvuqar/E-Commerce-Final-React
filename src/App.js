@@ -19,27 +19,35 @@ import ExploreProduct from "./Components/Explore_product/ExploreProduct";
 import Contact from "./Components/Contact/Contact";
 import Product_page from "./Components/Product_page/Product_page";
 import "./i18n";
+import BasketCard from "./Components/NavBar/Folder-Basket/BasketCard";
+import ProductDetails from "./Components/ProductDetails/ProductDeatils";
+
 
 function AppContent() {
   const location = useLocation();
   return (
     <>
       <Header />
+      
       <Nav />
       <Routes>
         <Route path="/Home" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Login" element={<Login />} />
-        <Route path="/SignUp" element={<SignUp />} /> 
+        <Route path="/SignUp" element={<SignUp />} />
         <Route path="/ViewAllProduct" element={<Product_page />} />
+        <Route path="/basket" element={<BasketCard />} />
+        <Route path="/ProductDetails" element={<ProductDetails />} />
       </Routes>
 
       {location.pathname !== "/About" &&
         location.pathname !== "/Contact" &&
         location.pathname !== "/Login" &&
-        location.pathname !== "/SignUp" && 
-        location.pathname !== "/ViewAllProduct" && (
+        location.pathname !== "/SignUp" &&
+        location.pathname !== "/ViewAllProduct" &&
+        location.pathname !== "/Basket" &&
+        location.pathname !== "/ProductDetails" && (
 
           <>
             <Aside />
@@ -49,6 +57,7 @@ function AppContent() {
             <SectionFour />
             <ExploreProduct />
             <NewArrival />
+            
           </>
         )}
       <Footer />
