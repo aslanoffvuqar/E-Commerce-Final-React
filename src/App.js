@@ -16,7 +16,7 @@ import BestProducts from "./Components/Best_product/BestProduct";
 import ExploreProduct from "./Components/Explore_product/ExploreProduct";
 import Contact from "./Components/Contact/Contact";
 import Product_page from "./Components/Product_page/Product_page";
-import UserHome from "./Components/UserHome/UserHome";                                                                
+import UserHome from "./Components/UserHome/UserHome";
 import "./i18n";
 import BasketCard from "./Components/NavBar/Folder-Basket/BasketCard";
 import ProductDetails from "./Components/ProductDetails/ProductDeatils";
@@ -25,15 +25,15 @@ import ProductDetails from "./Components/ProductDetails/ProductDeatils";
 function AppContent() {
   const location = useLocation();
   const isUserHome = location.pathname === "/UserHome";
-  
+
   return (
     <>
 
-      <Header />
-      
-      <Nav />
+      {/* <Header /> */}
 
-    
+      {/* <Nav /> */}
+
+
       {!isUserHome && <Header />}
       {!isUserHome && <Nav />}
 
@@ -48,7 +48,7 @@ function AppContent() {
         <Route path="/basket" element={<BasketCard />} />
         <Route path="/ProductDetails" element={<ProductDetails />} />
 
-        <Route path="/UserHome" element={<UserHome />} /> 
+        <Route path="/UserHome" element={<UserHome />} />
 
       </Routes>
 
@@ -61,23 +61,25 @@ function AppContent() {
         location.pathname !== "/Basket" &&
         location.pathname !== "/ProductDetails" && (
 
-        location.pathname !== "/ViewAllProduct" && (
+          location.pathname !== "/ViewAllProduct" && (
 
-          <>
-            <Aside />
-            <Section_one />
-            <Categories />
-            <BestProducts />
-            <SectionFour />
-            <ExploreProduct />
-            <NewArrival />
-            
-          </>
+            <>
+              <Aside />
+              <Section_one />
+              <Categories />
+              <BestProducts />
+              <SectionFour />
+              <ExploreProduct />
+              <NewArrival />
+
+            </>
+          )
         )}
-        
-      {!isUserHome && <Footer />}
+       {!isUserHome && <Footer />}
+
+
     </>
-  );
+  )
 }
 
 function App() {

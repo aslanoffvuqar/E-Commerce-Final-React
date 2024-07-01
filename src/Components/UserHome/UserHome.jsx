@@ -29,7 +29,7 @@ function UserHome() {
   };
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       {/* <Nav/> */}
       <div className="container" id={Navstyles.container}>
         <nav className={Navstyles.nav}>
