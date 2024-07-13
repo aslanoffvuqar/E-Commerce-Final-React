@@ -20,62 +20,45 @@ import UserHome from "./Components/UserHome/UserHome";
 import "./i18n";
 import BasketCard from "./Components/NavBar/Folder-Basket/BasketCard";
 import ProductDetails from "./Components/ProductDetails/ProductDeatils";
+import Admin from "./Components/Admin/Admin";
+import LoginForm from "./Components/Admin/LoginAdmin";
 
 
 function AppContent() {
   const location = useLocation();
-  const isUserHome = location.pathname === "/UserHome";
+  ;
 
   return (
     <>
-
-      {/* <Header /> */}
-
-      {/* <Nav /> */}
-
-
-      {!isUserHome && <Header />}
-      {!isUserHome && <Nav />}
+      {location.pathname !== "/admin" &&
+        location.pathname !== "/adminpanel" && (
+          <>
+            <Header />
+            <Nav />
+          </>
+        )}
 
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/admin" element={<LoginForm />} />
+        <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/ViewAllProduct" element={<Product_page />} />
-
+        <Route path="/adminpanel" element={<Admin />} />
         <Route path="/basket" element={<BasketCard />} />
         <Route path="/ProductDetails" element={<ProductDetails />} />
-
         <Route path="/UserHome" element={<UserHome />} />
-
       </Routes>
 
-      {!isUserHome && location.pathname !== "/About" &&
-        location.pathname !== "/Contact" &&
-        location.pathname !== "/Login" &&
-        location.pathname !== "/SignUp" &&
 
-        location.pathname !== "/ViewAllProduct" &&
-        location.pathname !== "/Basket" &&
-        location.pathname !== "/ProductDetails" && (
-
-          location.pathname !== "/ViewAllProduct" && (
-
-            <>
-              <Aside />
-              <Section_one />
-              <Categories />
-              <BestProducts />
-              <SectionFour />
-              <ExploreProduct />
-              <NewArrival />
-
-            </>
-          )
+      {location.pathname !== "/adminpanel" &&
+        location.pathname !== "/admin" && (
+          <>
+            <Footer />
+          </>
         )}
-       {!isUserHome && <Footer />}
 
 
     </>
