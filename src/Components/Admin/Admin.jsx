@@ -5,7 +5,7 @@ import { HiMenu, HiX } from 'react-icons/hi';
 import { SidebarData } from '../Server/Sidebar';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { imgDB } from '../../Firebase/Firebase';
-import { v4 as uuidv4, v4 } from 'uuid';
+// import { v4 as uuidv4, v4 } from 'uuid';
 import { collection, addDoc, getDocs } from "firebase/firestore";
 import { db } from "../../Firebase/Firebase";
 
@@ -19,30 +19,55 @@ const AddProducts = () => {
     const closeMenu = () => {
         setIsOpen(false);
     };
-    const [imageUrl, setImageUrl] = useState('');
 
+    const [images, setImages] = useState([]);
+    const [urls, setUrls] = useState([]);
 
-
-
-    const [imgUrl, setImgUrl] = useState('');
-
-    const handleUpload = (e) => {
-        const file = e.target.files[0];
-        const imgRef = ref(imgDB, `Imgs/${v4 ()}`); // Storage referansı oluşturuyoruz
-
-        // Dosyayı Storage'e yükleme işlemi
-        uploadBytes(imgRef, file).then((snapshot) => {
-            console.log('Dosya başarıyla yüklendi');
-
-            // Yükleme işlemi tamamlandıktan sonra dosyanın URL'sini alma
-            getDownloadURL(snapshot.ref).then((downloadURL) => {
-                console.log('Dosya şu adreste bulunabilir:', downloadURL);
-                setImgUrl(downloadURL); // State'i güncelleyerek resmi ekranda gösteriyoruz
-            });
-        }).catch((error) => {
-            console.error('Dosya yükleme hatası:', error);
-        });
+    const handleChange = (e) => {
+        if (e.target.files) {
+            const fileList = Array.from(e.target.files);
+            setImages(fileList);
+        }
     };
+
+    const handleUpload = () => {
+        const promises = images.map((image) => {
+            const imageRef = ref(imgDB, `images / ${image.name}`);
+            return uploadBytes(imageRef, image)
+                .then(() => getDownloadURL(imageRef))
+                .catch((error) => {
+                    console.error('Error uploading image:', error);
+                    return null;
+                });
+        });
+
+        Promise.all(promises)
+            .then((downloadUrls) => {
+                setUrls((prevUrls) => [...prevUrls, ...downloadUrls.filter(Boolean)]);
+            })
+            .catch((error) => {
+                console.error('Error fetching download URLs:', error);
+            });
+    };
+
+
+    // const handleUpload = (e) => {
+    //     const file = e.target.files[0];
+    //     const imgRef = ref(imgDB, `Imgs/${v4 ()}`); // Storage referansı oluşturuyoruz
+
+    //     // Dosyayı Storage'e yükleme işlemi
+    //     uploadBytes(imgRef, file).then((snapshot) => {
+    //         console.log('Dosya başarıyla yüklendi');
+
+    //         // Yükleme işlemi tamamlandıktan sonra dosyanın URL'sini alma
+    //         getDownloadURL(snapshot.ref).then((downloadURL) => {
+    //             console.log('Dosya şu adreste bulunabilir:', downloadURL);
+    //             setImgUrl(downloadURL); // State'i güncelleyerek resmi ekranda gösteriyoruz
+    //         });
+    //     }).catch((error) => {
+    //         console.error('Dosya yükleme hatası:', error);
+    //     });
+    // };
 
 
 
@@ -82,6 +107,7 @@ const AddProducts = () => {
 
         fetchData();
     }, []);
+
 
     return (
         <>
@@ -136,12 +162,13 @@ const AddProducts = () => {
                             <input
                                 type='file'
                                 className={AddCss.formControl}
-                                onChange={handleUpload}
+                                onChange={handleChange}
                             />
+                            {/* <button className={AddCss.buttonAdd} onClick={handleUpload}></button> */}
                         </div>
 
                         <br />
-                        <button type='submit' className={AddCss.buttonAdd}>
+                        <button type='submit' onClick={handleUpload} className={AddCss.buttonAdd}>
                             ADD
                         </button>
 
@@ -156,8 +183,10 @@ const AddProducts = () => {
                 <ul>
                     {productsList.map(product => (
                         <li key={product.id}>
-                            <strong>Ürün: </strong> {product.text} <strong>Fiyat:$ </strong> {product.price}
-                            {imgUrl && <img src={imgUrl} alt="Yüklenen Resim" style={{ maxWidth: '100%' }} />}
+                            {/* <strong>Ürün: </strong> {product.text} <strong>Fiyat:$ </strong> {product.price} */}
+                            {urls.map((url, index) => (
+                                <img key={index} src={url} alt={`Uploaded file ${index + 1}`} />
+                            ))}
                         </li>
                     ))}
                 </ul>

@@ -7,6 +7,7 @@ import SectionFour from "./Section_four_main/SectionFour";
 import ExploreProduct from "./Explore_product/ExploreProduct";
 import NewArrival from "./NewArrivalBar/NewArrival";
 
+
 function Home() {
   return (
     <div>
@@ -17,7 +18,7 @@ function Home() {
       <SectionFour />
       <ExploreProduct />
       <NewArrival />
-
+  
     </div>
   );
 }

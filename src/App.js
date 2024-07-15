@@ -24,6 +24,7 @@ import Admin from "./Components/Admin/Admin";
 import LoginForm from "./Components/Admin/LoginAdmin";
 
 
+
 function AppContent() {
   const location = useLocation();
   ;
@@ -39,8 +40,8 @@ function AppContent() {
         )}
 
       <Routes>
-        <Route path="/admin" element={<LoginForm />} />
         <Route path="/" element={<Home />} />
+        <Route path="/admin" element={<LoginForm />} />
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Login" element={<Login />} />
@@ -50,6 +51,7 @@ function AppContent() {
         <Route path="/basket" element={<BasketCard />} />
         <Route path="/ProductDetails" element={<ProductDetails />} />
         <Route path="/UserHome" element={<UserHome />} />
+      
       </Routes>
 
 
@@ -59,7 +61,6 @@ function AppContent() {
             <Footer />
           </>
         )}
-
 
     </>
   )
