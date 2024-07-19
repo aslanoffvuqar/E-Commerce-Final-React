@@ -1,10 +1,11 @@
+import React, { useState, useEffect } from 'react';
 import AddCss from '../Admin/Add.module.css';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { SidebarData } from '../Server/Sidebar';
-import React, { useState, useEffect } from 'react';
-import { db, imgDB } from '../../Firebase/Firebase';
+import { db, imgDB } from "../../Firebase/Firebase";
 import { collection, addDoc, updateDoc, deleteDoc, doc, getDocs } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL, deleteObject } from 'firebase/storage';
+
 
 const AddProducts = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,12 +15,16 @@ const AddProducts = () => {
     const closeMenu = () => {
         setIsOpen(false);
     };
+
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');
     const [image, setImage] = useState(null);
     const [items, setItems] = useState([]);
     const [editingItemId, setEditingItemId] = useState(null);
     const [imageUrl, setImageUrl] = useState('');
+    const [isBest, setIsBest] = useState(false);
+    const [isDiscount, setIsDiscount] = useState(false);
+
 
     useEffect(() => {
         fetchItems();
@@ -34,6 +39,8 @@ const AddProducts = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        setIsBest(false);
+        setIsDiscount(false);
         let newImageUrl = imageUrl;
 
         if (image) {
@@ -43,13 +50,13 @@ const AddProducts = () => {
         }
 
         if (editingItemId) {
-           
+
             const itemDoc = doc(db, 'items', editingItemId);
             await updateDoc(itemDoc, { name, price, imageUrl: newImageUrl });
             setEditingItemId(null);
         } else {
-          
-            await addDoc(collection(db, 'items'), { name, price, imageUrl: newImageUrl });
+
+            await addDoc(collection(db, 'items'), { name, price, imageUrl: newImageUrl, isBest, isDiscount });
         }
 
         setName('');
@@ -68,11 +75,11 @@ const AddProducts = () => {
     };
 
     const handleDelete = async (itemId, imageUrl) => {
-        
+
         const imageRef = ref(imgDB, imageUrl);
         await deleteObject(imageRef);
 
-        
+
         await deleteDoc(doc(db, 'items', itemId));
         fetchItems();
     };
@@ -86,66 +93,112 @@ const AddProducts = () => {
         setItems(itemsList);
     };
 
-    return (
-        <>
-            <div className='container' style={{ display: 'flex', marginTop: '30px' }}>
-                <div className={AddCss.dropMenu}>
-                    <HiMenu className={AddCss.menuIcon} onClick={toggleMenu} />
 
-                    <div className={`${AddCss.sidebar} ${isOpen ? AddCss.open : ''}`}>
-                        <div className={AddCss.sidebarHeader}>
-                            <HiX className={AddCss.closeIcon} onClick={closeMenu} />
-                        </div>
-                        {SidebarData.map((category, index) => (
-                            <div key={index} className={AddCss.category}>
-                                <h2>{category.title}</h2>
-                            </div>
-                        ))}
+
+    return (
+        <div className='container' style={{ display: 'flex', marginTop: '30px' }}>
+            <div className={AddCss.dropMenu}>
+                <HiMenu className={AddCss.menuIcon} onClick={toggleMenu} />
+
+                <div className={`${AddCss.sidebar} ${isOpen ? AddCss.open : ''}`}>
+                    <div className={AddCss.sidebarHeader}>
+                        <HiX className={AddCss.closeIcon} onClick={closeMenu} />
                     </div>
+                    {SidebarData.map((category, index) => (
+                        <div key={index} className={AddCss.category}>
+                            <h2>{category.title}</h2>
+                        </div>
+                    ))}
                 </div>
             </div>
             <br />
+            <div style={{ width: '100%' }}>
+                <h2>ADD PRODUCTS</h2>
+                <hr />
 
-            <div>
-                <form onSubmit={handleSubmit} className={AddCss.formGroup}>
-                    <input
-                        className={AddCss.formControl}
-                        type="text"
-                        placeholder="Ad"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                    />
-                    <input
-                        className={AddCss.formControl}
-                        type="number"
-                        placeholder="Fiyat"
-                        value={price}
-                        onChange={(e) => setPrice(e.target.value)}
-                    />
-                    <input
-                        className={AddCss.formControl}
-                        type="file"
-                        onChange={handleImageChange}
-                    />
-                    <button className={AddCss.buttonAdd} type="submit">
+                <form autoComplete='off' onSubmit={handleSubmit} className={AddCss.formGroup}>
+                    <div className={AddCss.inputForProduct}>
+                        <label htmlFor='product-name'>Product Name:</label>
+                        <input
+                            type='text'
+                            className={AddCss.formControl}
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+
+                        />
+                    </div>
+
+                    <br />
+                    <div className={AddCss.inputForProduct}>
+                        <label htmlFor='product-price'>Product Price</label>
+                        <input
+                            type='number'
+                            className={AddCss.formControl}
+                            value={price}
+                            onChange={(e) => setPrice(e.target.value)}
+                        />
+                    </div>
+
+                    <br />
+
+                    <div className={AddCss.inputForProduct}>
+                        <label htmlFor='product-img'>Product Image</label>
+                        <input
+                            type='file'
+                            className={AddCss.formControl}
+                            onChange={handleImageChange}
+                        />
+                    </div>
+
+                    <br />
+                    <div className={AddCss.inputForProduct}>
+                        <label htmlFor='product-img'>Best Seller</label>
+                        <input
+                            type="checkbox"
+                            className={AddCss.formControl}
+                            value={isBest} checked={isBest}
+                            onChange={() => setIsBest(!isBest)}
+                        />
+
+                    </div>
+                    <br />
+
+                    <div className={AddCss.inputForProduct}>
+                        <label htmlFor='product-img'> Is Discount</label>
+                        <input
+                            type="checkbox"
+                            className={AddCss.formControl}
+                            value={isDiscount} checked={isDiscount}
+                            onChange={() => setIsDiscount(!isDiscount)}
+                        />
+
+                    </div>
+
+                    <br />
+                    <button type='submit' className={AddCss.buttonAdd}>
                         {editingItemId ? 'UPDATE' : 'ADD'}
                     </button>
                 </form>
 
                 <div>
                     {items.map((item) => (
-                        <div key={item.id}>
-                            <h3>{item.name}</h3>
-                            <p>{item.price} $</p>
-                            <img src={item.imageUrl} alt={item.name} style={{ width: '200px', height: '200px', objectFit: 'cover' }} />
-                            <button onClick={() => handleEdit(item)}>EDIT</button>
-                            <button onClick={() => handleDelete(item.id, item.imageUrl)}>DELETE</button>
+                        <div key={item.id} className={AddCss.productDetails}>
+                            <img src={item.imageUrl} alt={item.name} style={{ width: '120px', height: '120px', objectFit: 'cover', cursor: "pointer" }} />
+                            <h3 className={AddCss.productDetailName}>{item.name}</h3>
+                            <p className={AddCss.productDetailPrice}>{item.price} $</p>
+                            <p className={AddCss.productCheck}>{"Best-" + item.isBest}</p>
+                            <p className={AddCss.productCheck}>{"Discount-" + item.isDiscount}</p>
+                            <div className={AddCss.editDeleteButtons}>
+                                <button onClick={() => handleEdit(item)} className={AddCss.editBtn}>EDIT</button>
+                                <button onClick={() => handleDelete(item.id, item.imageUrl)} className={AddCss.deleteBtn}>DELETE</button>
+                            </div>
+
                         </div>
                     ))}
                 </div>
+
             </div>
-        </>
+        </div>
     );
 };
-
 export default AddProducts;

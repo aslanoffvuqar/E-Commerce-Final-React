@@ -399,6 +399,7 @@ h1 {
     border: 1px solid black;
     border-radius: 5px;
     padding: 4px 10px;
+    cursor: pointer;
 }
 
 label{
@@ -422,4 +423,50 @@ label{
     color: rgb(219, 68, 68);
     transition: color 0.9s ease, 0.9s ease;
     border: 1px solid rgb(219, 68, 68);
+}
+
+.productDetails{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+    padding: 20px 20px;
+}
+.productDetailName{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Poppins";
+    text-transform: capitalize;
+}
+
+.productDetailPrice{
+    font-size: 20px;
+    font-family: "Poppins";
+}
+
+.editDeleteButtons{
+    width: 14%;
+    display: flex;
+    justify-content: space-between;
+}
+.editBtn,.deleteBtn{
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: red;
+    padding: 8px 15px;
+
+}
+
+.editBtn:hover,.deleteBtn:hover{
+    background-color: #fff;
+    color: rgb(219, 68, 68);
+    transition: color 0.9s ease, 0.9s ease;
+    border: 1px solid rgb(219, 68, 68);
+}
+
+.productCheck{
+    cursor: pointer;
 }
