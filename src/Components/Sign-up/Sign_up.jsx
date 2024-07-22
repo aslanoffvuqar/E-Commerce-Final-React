@@ -27,7 +27,12 @@ export default function Sign_up() {
       });
       history('/Login')
     } catch (err) {
-      console.log(err);
+      Swal.fire({
+        title: 'error',
+        text: 'Check your email address or password',
+        icon: 'error',
+        confirmButtonText: 'Okay'
+      });
     }
   }
   return (

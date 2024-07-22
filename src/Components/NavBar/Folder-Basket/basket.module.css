@@ -1,8 +1,3 @@
-.ShoppinghIcon {
-  font-size: 23px;
-  cursor: pointer;
-}
-
 .cartContainer {
   width: 80%;
   margin: 0 auto;
@@ -10,7 +5,6 @@
 
 .breadcrumb {
   margin: 80px 0px;
-  justify-content: start;
 }
 
 .breadcrumb a {
@@ -71,6 +65,8 @@
   height: 60px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px;
 }
 
 .btn {
@@ -140,12 +136,8 @@
   border: 1px solid #ccc;
   padding: 20px;
   width: 300px;
-}
-
-.cartTotal_div {
-  display: flex;
-  justify-content: end;
-  margin-bottom: 40px;
+  margin: 0 auto;
+  margin-left: 70%;
 }
 
 .cartTotal p {
@@ -168,15 +160,13 @@
   background-color: #ff5c5c;
 }
 
+.ShoppinghIcon {
+  width: 25px;
+  height: 30px;
+}
 
 .wishlistIcon {
   font-size: 23px;
   MARGIN-TOP: 5PX;
   color: black;
-}
-
-@media only screen and (max-width: 415px) {
-  .cartTotal_div {
-    justify-content: center;
-  }
 }

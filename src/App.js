@@ -18,7 +18,7 @@ import Contact from "./Components/Contact/Contact";
 import Product_page from "./Components/Product_page/Product_page";
 import UserHome from "./Components/UserHome/UserHome";
 import "./i18n";
-import BasketCard from "./Components/NavBar/Folder-Basket/BasketCard";
+import BasketCard from "./Components/NavBar/Folder-Basket/Cart";
 import ProductDetails from "./Components/ProductDetails/ProductDeatils";
 import Admin from "./Components/Admin/Admin";
 import LoginForm from "./Components/Admin/LoginAdmin";
@@ -34,8 +34,8 @@ function AppContent() {
       {location.pathname !== "/admin" &&
         location.pathname !== "/adminpanel" && (
           <>
-            <Header />
-            <Nav />
+            {/* <Header />
+            <Nav /> */}
           </>
         )}
 
@@ -58,7 +58,7 @@ function AppContent() {
       {location.pathname !== "/adminpanel" &&
         location.pathname !== "/admin" && (
           <>
-            <Footer />
+            {/* <Footer /> */}
           </>
         )}
 

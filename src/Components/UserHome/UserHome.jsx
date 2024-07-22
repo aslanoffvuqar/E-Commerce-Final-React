@@ -18,7 +18,7 @@ import { useTranslation } from "react-i18next";
 import { LuUser } from "react-icons/lu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
-
+import Basketstyles from "../NavBar/Folder-Basket/basket.module.css";
 function UserHome() {
   const { t } = useTranslation();
   const { i18n } = useTranslation();
@@ -45,6 +45,7 @@ function UserHome() {
             <li className={Navstyles.navBar_li}>
               <Link className={Navstyles.navBar_a} to="/Contact">
                 {t("contact")}
+
               </Link>
             </li>
             <li className={Navstyles.navBar_li}>
@@ -61,18 +62,22 @@ function UserHome() {
           <div className={UserModule.allInputBox}>
             <Input />
             <div className={Navstyles.HeartShoppingIcon}>
+
               <FontAwesomeIcon
                 icon={faHeart}
                 className={UserModule.HeartIcon}
                 id={UserModule.HeartIcon}
               />
-              <PiShoppingCart
-                className={UserModule.ShoppinghIcon}
-                id={UserModule.ShoppinghIcon}
-              />
+
+              <Link to='/Basket'><PiShoppingCart
+                className={Basketstyles.ShoppinghIcon}
+                id={Basketstyles.ShoppinghIcon}
+              /></Link>
+
               <div className="h-8 w-8 bg-red-600 rounded-full justify-center flex items-center	text-white	">
                 <LuUser />
               </div>
+
             </div>
           </div>
           {/* <Language/> */}
