@@ -22,12 +22,11 @@ import BasketCard from "./Components/NavBar/Folder-Basket/Cart";
 import ProductDetails from "./Components/ProductDetails/ProductDeatils";
 import Admin from "./Components/Admin/Admin";
 import LoginForm from "./Components/Admin/LoginAdmin";
-
-
+import WhistList from "./Components/whistlist/WhistList";
+import { CartProvider } from './Components/cartcontext/CartContext'; 
 
 function AppContent() {
   const location = useLocation();
-  ;
 
   return (
     <>
@@ -51,9 +50,8 @@ function AppContent() {
         <Route path="/basket" element={<BasketCard />} />
         <Route path="/ProductDetails" element={<ProductDetails />} />
         <Route path="/UserHome" element={<UserHome />} />
-      
+        <Route path="/WhistList" element={<WhistList />} />
       </Routes>
-
 
       {location.pathname !== "/adminpanel" &&
         location.pathname !== "/admin" && (
@@ -61,15 +59,16 @@ function AppContent() {
             {/* <Footer /> */}
           </>
         )}
-
     </>
-  )
+  );
 }
 
 function App() {
   return (
     <BrowserRouter>
-      <AppContent />
+      <CartProvider>
+        <AppContent />
+      </CartProvider>
     </BrowserRouter>
   );
 }

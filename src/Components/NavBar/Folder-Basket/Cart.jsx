@@ -1,52 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from './basket.module.css';
-import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
-import { db } from "../../../Firebase/Firebase";
+import { useCart } from "../../cartcontext/CartContext";
+
 const Cart = () => {
-  const [cartItems, setCartItems] = useState([]);
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const querySnapshot = await getDocs(collection(db, 'cart'));
-        let productsList = [];
-        querySnapshot.forEach((doc) => {
-          productsList.push({ id: doc.id, ...doc.data() });
-        });
-        setCartItems(productsList);
-      } catch (error) {
-        console.error('Error fetching products: ', error);
-      }
-    };
-    fetchProducts();
-  }, []);
-  const handleQuantityChange = (id, newQuantity) => {
-    const updatedCartItems = cartItems.map(item =>
-      item.id === id ? { ...item, quantity: newQuantity } : item
-    );
-    setCartItems(updatedCartItems);
-  };
+  const { cartItems, handleQuantityChange, handleDeleteItem } = useCart();
+
   const calculateSubtotal = (price, quantity) => {
     return price * quantity;
   };
   const subtotal = cartItems.reduce((acc, item) => acc + calculateSubtotal(item.price, item.quantity), 0);
   const shipping = 0;
   const total = subtotal;
-  
-  const handleDeleteItem = async (id) => {
-    try {
-      const docRef = doc(db, 'cart', id);
-      console.log('Deleting document with reference:', docRef);
-      await deleteDoc(docRef);
-      console.log('Document deleted successfully');
-      setCartItems(prevItems => prevItems.filter(item => item.id !== id));
-    } catch (error) {
-      console.error('Error deleting document:', error);
-    }
-  };
+
   return (
     <div className={styles.cartContainer}>
       <nav className={styles.breadcrumb}>
-        <a href="/">Home</a> / <span>Cart</span>
+        <a href="/userhome">Home</a> / <span>Cart</span>
       </nav>
       <div className={styles.cartTable}>
         <div className={`${styles.cartTr} ${styles.cartHeader}`}>
@@ -103,4 +72,5 @@ const Cart = () => {
     </div>
   );
 };
+
 export default Cart;

@@ -62,13 +62,13 @@ function UserHome() {
           <div className={UserModule.allInputBox}>
             <Input />
             <div className={Navstyles.HeartShoppingIcon}>
-
-              <FontAwesomeIcon
-                icon={faHeart}
-                className={UserModule.HeartIcon}
-                id={UserModule.HeartIcon}
-              />
-
+              <Link to='/WhistList'>
+                <FontAwesomeIcon
+                  icon={faHeart}
+                  className={UserModule.HeartIcon}
+                  id={UserModule.HeartIcon}
+                />
+              </Link>
               <Link to='/Basket'><PiShoppingCart
                 className={Basketstyles.ShoppinghIcon}
                 id={Basketstyles.ShoppinghIcon}

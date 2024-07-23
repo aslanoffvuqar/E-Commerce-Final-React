@@ -10,14 +10,14 @@ import { FaStar } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import Footer from '../FooterBar/Footer';
 function ProductView() {
-    const [selectedImage, setSelectedImage] = useState(img5); // Başlangıçta gösterilen büyük resmi ayarla
+    const [selectedImage, setSelectedImage] = useState(img5); 
     const [counter, setCounter] = useState(0);
     const { t } = useTranslation();
-    // Resmi değiştiren işlev
-    const handleThumbnailClick = (image) => {
+   
+    const handleClick = (image) => {
         setSelectedImage(image);
     };
-    // Artırma, azaltma ve sıfırlama işlevleri
+    
     const increase = () => setCounter(count => count + 1);
     const decrease = () => setCounter(count => count - 1);
     const reset = () => setCounter(0);
@@ -35,16 +35,16 @@ function ProductView() {
                 <div className={ProductViewCss.info}>
                     <div className={ProductViewCss.leftSide}>
                         <div className={ProductViewCss.firstSide}>
-                            <div className={ProductViewCss.frame} onClick={() => handleThumbnailClick(img1)}>
+                            <div className={ProductViewCss.frame} onClick={() => handleClick(img1)}>
                                 <img src={img1} className={ProductViewCss.img} alt="" />
                             </div>
-                            <div className={ProductViewCss.frame} onClick={() => handleThumbnailClick(img2)}>
+                            <div className={ProductViewCss.frame} onClick={() => handleClick(img2)}>
                                 <img src={img2} className={ProductViewCss.img} alt="" />
                             </div>
-                            <div className={ProductViewCss.frame} onClick={() => handleThumbnailClick(img3)}>
+                            <div className={ProductViewCss.frame} onClick={() => handleClick(img3)}>
                                 <img src={img3} className={ProductViewCss.img} alt="" />
                             </div>
-                            <div className={ProductViewCss.frame} onClick={() => handleThumbnailClick(img4)}>
+                            <div className={ProductViewCss.frame} onClick={() => handleClick(img4)}>
                                 <img src={img4} className={ProductViewCss.img} alt="" />
                             </div>
                         </div>

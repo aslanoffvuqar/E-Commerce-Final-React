@@ -31,6 +31,7 @@
     font-weight: 600;
     font-family: "Inter";
 }
+
 .svg_product {
     width: 25px;
     padding: 3px;
@@ -39,7 +40,7 @@
     margin: 0px 0px 10px;
     position: relative;
     z-index: 2;
-  }
+}
 
 .productBg {
     background-color: #f5f5f5;
@@ -177,5 +178,9 @@
     border: none;
     outline: none;
     background-color: #000;
-   
+
+}
+
+.svg_product:hover {
+    background-color: red;
 }

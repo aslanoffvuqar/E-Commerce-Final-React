@@ -64,7 +64,7 @@ export default function BestProducts() {
               <div className={styles.downSide}>
                 <h1 className={styles.downSideText}>{product.name}</h1>
                 <div className={styles.price}>
-                  <span className={styles.firstPrice}>${product.currentPrice}</span>
+                  <span className={styles.firstPrice}>${product.price}</span>
                   {product.originalPrice && (
                     <span className={styles.line}>${product.originalPrice}</span>
                   )}

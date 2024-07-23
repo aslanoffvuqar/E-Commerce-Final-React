@@ -170,3 +170,18 @@
   MARGIN-TOP: 5PX;
   color: black;
 }
+.ShoppinghIconContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.cartCount {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 12px;
+}
